@@ -1,4 +1,4 @@
-# EcoGenomics
+# Devcloud
 
 A modern, full-stack React application built with TypeScript and a comprehensive UI component library. This project provides a solid foundation for building sophisticated web applications with a focus on accessibility, performance, and developer experience.
 

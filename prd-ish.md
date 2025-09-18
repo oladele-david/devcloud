@@ -188,6 +188,22 @@ The website should reflect our core values:
 - **Local Roots, Global Vision** - Canary Islands heritage with international reach
 - **Results-Driven** - Focus on measurable outcomes and client success
 
+## Services
+
+### Cloud Cost Optimization (FinOps)
+A service to reduce and control cloud spending: we audit consumption, detect waste, implement technical and process optimizations (tagging, budgets, reservations) and charge a portion of the value generated (success fee). The goal: spend less without sacrificing performance or availability.
+
+### DevOps & Cloud Infrastructure Management
+An operations and automation service: we manage your cloud infrastructure (deploys, CI/CD, patches, backups, runbooks) so your team can focus on product while the platform runs reliably and repeatably.
+
+### Cloud Architecture & Migration
+Design and execution of robust cloud architectures and migrations: we assess your situation, design a scalable and secure architecture, and execute the migration minimizing risk and downtime.
+
+### Managed Cloud Services & Support
+A comprehensive operations and continuous support service: we combine monitoring, incident management, on-call and continuous improvement to ensure the client's platform runs 24/7 according to agreed SLAs.
+
+---
+
 ## Content Strategy
 
 - **Hero Section** - "The cloud should be a driver of growth, not a financial burden"
