@@ -34,11 +34,7 @@ const PartnerSection = () => {
     { name: "AWS", logo: "/partners/aws.png", hasImage: true },
     { name: "Claranet Cloud Platform", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgArpWfzsRsP9RbGGJsuwHMgSGiDA81w6haw&s", hasImage: true },
     { name: "Stackscale Grupo Aire", logo: "/partners/stackscale.png", hasImage: true },
-    { name: "SARENET", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoDMEdhQwIesvJjzWNziHKQaDaS8Ha4nK6sw&s", hasImage: true },
-    { name: "Altostratus", logo: "/partners/placeholder.svg", hasImage: false },
-    { name: "Accenture", logo: "/partners/placeholder.svg", hasImage: false },
-    { name: "Minsait", logo: "/partners/placeholder.svg", hasImage: false },
-    { name: "Izertis", logo: "/partners/placeholder.svg", hasImage: false }
+    { name: "SARENET", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoDMEdhQwIesvJjzWNziHKQaDaS8Ha4nK6sw&s", hasImage: true }
   ]
 
   return (

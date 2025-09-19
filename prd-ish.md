@@ -204,6 +204,28 @@ A comprehensive operations and continuous support service: we combine monitoring
 
 ---
 
+## Why Choose Us
+
+### Radical Transparency
+Clear processes, verifiable metrics, and open communication. You always know what you're paying for and what results you're getting.
+
+### Technical Excellence
+Best practices in Cloud, DevOps, and FinOps with leading partners (AWS, Azure, Google Cloud) to deliver world-class solutions.
+
+### Success-Based Model
+We only charge a portion of the value we generate. No risks, no hidden costs - only measurable results.
+
+### Local Impact, Global Reach
+Investing in Canary Islands talent while delivering digital services worldwide, positioning the islands as a tech hub.
+
+### Genuine Collaboration
+We integrate as partners within your team, sharing both successes and risks. Not just providers, but true collaborators.
+
+### 24/7 Support
+Comprehensive operations and continuous support ensuring your platform runs according to agreed SLAs.
+
+---
+
 ## Content Strategy
 
 - **Hero Section** - "The cloud should be a driver of growth, not a financial burden"

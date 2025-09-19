@@ -64,7 +64,7 @@ const Header = () => {
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* CTA Button */}
-            <button className="bg-brand-primary hover:bg-brand-primary-700 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200">
+            <button className="bg-brand-accent hover:bg-brand-accent-700 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200">
               Contact
             </button>
 

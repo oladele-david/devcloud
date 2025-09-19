@@ -72,15 +72,15 @@ const ServicesSection = () => {
           <div className="flex space-x-3">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200"
+              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-brand-accent flex items-center justify-center transition-colors duration-200 group"
             >
-              <HugeiconsIcon icon={ArrowLeft01Icon} size={20} className="text-gray-600" />
+              <HugeiconsIcon icon={ArrowLeft01Icon} size={20} className="text-gray-600 group-hover:text-white" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 rounded-full bg-brand-primary hover:bg-brand-primary-700 flex items-center justify-center transition-colors duration-200"
+              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-brand-accent flex items-center justify-center transition-colors duration-200 group"
             >
-              <HugeiconsIcon icon={ArrowRight01Icon} size={20} className="text-white" />
+              <HugeiconsIcon icon={ArrowRight01Icon} size={20} className="text-gray-600 group-hover:text-white" />
             </button>
           </div>
         </div>
