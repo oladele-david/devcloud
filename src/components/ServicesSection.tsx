@@ -13,28 +13,28 @@ const ServicesSection = () => {
       title: "Cloud Cost Optimization",
       subtitle: "FinOps Excellence",
       description: "Reduce and control cloud spending with our comprehensive FinOps service",
-      image: "/services/finops.jpg",
+      image: "/services/cloud.png",
       badge: "FinOps"
     },
     {
       title: "DevOps & Infrastructure",
       subtitle: "Automated Operations",
       description: "Manage your cloud infrastructure with reliable automation and CI/CD",
-      image: "/services/devops.jpg",
+      image: "/services/devops.png",
       badge: "DevOps"
     },
     {
       title: "Cloud Architecture",
       subtitle: "Migration & Design",
       description: "Design and execute robust cloud architectures and seamless migrations",
-      image: "/services/architecture.jpg",
+      image: "/services/architecture.png",
       badge: "Architecture"
     },
     {
       title: "Managed Services",
       subtitle: "24/7 Support",
       description: "Comprehensive operations and continuous support with agreed SLAs",
-      image: "/services/managed.jpg",
+      image: "/services/managed.png",
       badge: "Support"
     }
   ]
@@ -117,7 +117,7 @@ const ServicesSection = () => {
 
                     {/* Text Content */}
                     <div className="space-y-3">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-brand-accent transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-white transition-colors duration-300">
                         {service.title}
                       </h3>
                       <p className="text-white/90 text-lg font-medium">

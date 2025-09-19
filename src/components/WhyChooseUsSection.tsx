@@ -17,37 +17,37 @@ const WhyChooseUsSection = () => {
     {
       title: "Success-Based Model",
       description: "You pay from the value we generate—no risks, no hidden costs.",
-      image: "/services/model.webp",
+      image: "/choose/model.webp",
       size: "large" // This will be the main featured card
     },
     {
       title: "Technical Excellence",
       description: "Cloud, DevOps, and FinOps done right with leading partners.",
-      image: "/services/cloud.png",
+      image: "/choose/cloud.png",
       size: "medium"
     },
     {
       title: "Radical Transparency",
       description: "Clear processes, verifiable metrics, and open communication.",
-      image: "/services/transparency.png",
+      image: "/choose/transparency.png",
       size: "medium"
     },
     {
       title: "24/7 Support",
       description: "Always-on operations and support with clear SLAs.",
-      image: "/services/support.png",
+      image: "/choose/support.png",
       size: "small"
     },
     {
       title: "Genuine Collaboration",
       description: "We embed with your team—shared risks, shared success.",
-      image: "/services/collaboration.png",
+      image: "/choose/collaboration.png",
       size: "small"
     },
     {
       title: "Local Impact, Global Reach",
       description: "Canary Islands talent, global delivery—building a true tech hub.",
-      image: "/services/global.png",
+      image: "/choose/global.png",
       size: "small"
     }
   ]
