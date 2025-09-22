@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface StatItem {
   label: string;
@@ -57,19 +58,20 @@ const StatCard = ({ item }: { item: StatItem }) => {
 };
 
 const StatsSection = () => {
+  const { t } = useTranslation();
   const stats: StatItem[] = [
-    { value: 40, suffix: "%", label: "Average cost reduction", decimals: 0 },
-    { value: 99.9, suffix: "%", label: "Uptime with SLA", decimals: 1 },
-    { value: 50, suffix: "+", label: "Successful migrations", decimals: 0 },
-    { value: 24, suffix: "/7", label: "Expert support", decimals: 0 },
+    { value: 40, suffix: "%", label: t('stats.a'), decimals: 0 },
+    { value: 99.9, suffix: "%", label: t('stats.b'), decimals: 1 },
+    { value: 50, suffix: "+", label: t('stats.c'), decimals: 0 },
+    { value: 24, suffix: "/7", label: t('stats.d'), decimals: 0 },
   ];
 
   return (
     <section className="py-10 md:py-12 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 md:mb-8">
-          <h3 className="text-xl md:text-3xl font-bold text-gray-900 font-display">Proven Results</h3>
-          <p className="text-gray-600 mt-1.5 md:mt-2 text-sm md:text-base">Clear outcomes from efficiency to reliability.</p>
+          <h3 className="text-xl md:text-3xl font-bold text-gray-900 font-display">{t('stats.heading')}</h3>
+          <p className="text-gray-600 mt-1.5 md:mt-2 text-sm md:text-base">{t('stats.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">

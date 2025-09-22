@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
+import { useTranslation } from "react-i18next"
 
 const WhyChooseUsSection = () => {
+  const { t } = useTranslation()
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -15,38 +17,38 @@ const WhyChooseUsSection = () => {
 
   const reasons = [
     {
-      title: "Success-Based Model",
-      description: "You pay from the value we generate—no risks, no hidden costs.",
+      title: t('why_items.success.title'),
+      description: t('why_items.success.desc'),
       image: "/choose/model.webp",
       size: "large" // This will be the main featured card
     },
     {
-      title: "Technical Excellence",
-      description: "Cloud, DevOps, and FinOps done right with leading partners.",
+      title: t('why_items.tech.title'),
+      description: t('why_items.tech.desc'),
       image: "/choose/cloud.png",
       size: "medium"
     },
     {
-      title: "Radical Transparency",
-      description: "Clear processes, verifiable metrics, and open communication.",
+      title: t('why_items.transparency.title'),
+      description: t('why_items.transparency.desc'),
       image: "/choose/transparency.png",
       size: "medium"
     },
     {
-      title: "24/7 Support",
-      description: "Always-on operations and support with clear SLAs.",
+      title: t('why_items.support.title'),
+      description: t('why_items.support.desc'),
       image: "/choose/support.png",
       size: "small"
     },
     {
-      title: "Genuine Collaboration",
-      description: "We embed with your team—shared risks, shared success.",
+      title: t('why_items.collaboration.title'),
+      description: t('why_items.collaboration.desc'),
       image: "/choose/collaboration.png",
       size: "small"
     },
     {
-      title: "Local Impact, Global Reach",
-      description: "Canary Islands talent, global delivery—building a true tech hub.",
+      title: t('why_items.global.title'),
+      description: t('why_items.global.desc'),
       image: "/choose/global.png",
       size: "small"
     }
@@ -59,7 +61,7 @@ const WhyChooseUsSection = () => {
         <div className="text-center mb-16">
           <p className="text-brand-primary text-sm font-medium mb-4">Why Choose Us</p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-display mb-6">
-            The DevCloud Partners Difference
+            {t('why.heading')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We don't just provide cloud services - we become your strategic partner in digital transformation
@@ -112,11 +114,10 @@ const WhyChooseUsSection = () => {
         {/* Bottom CTA */}
         <div className="text-center">
           <p className="text-gray-600 text-base md:text-lg mb-6 max-w-3xl mx-auto">
-            Ready to experience the difference? Let's discuss how we can help optimize your cloud infrastructure 
-            and transform your business with transparent, results-driven cloud solutions.
+            {t('why.ready')}
           </p>
           <button className="bg-brand-accent hover:bg-brand-accent-700 text-white px-6 py-3 rounded-full text-base md:text-sm font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
-            Start Your Cloud Journey
+            {t('why.start')}
           </button>
         </div>
       </div>

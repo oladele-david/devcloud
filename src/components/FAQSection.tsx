@@ -2,8 +2,10 @@ import { useState, useRef, useEffect } from "react"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { Add01Icon, Remove01Icon } from "@hugeicons/core-free-icons"
 import { gsap } from "gsap"
+import { useTranslation } from "react-i18next"
 
 const FAQSection = () => {
+  const { t } = useTranslation()
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
 
@@ -16,32 +18,7 @@ const FAQSection = () => {
     }
   }, [])
 
-  const faqs = [
-    {
-      question: "How long does a typical cloud migration take?",
-      answer: "Most migrations take 2-6 weeks depending on complexity. We provide detailed timelines during our initial assessment and keep you updated throughout the process."
-    },
-    {
-      question: "What cloud providers do you work with?",
-      answer: "We're certified partners with AWS, Microsoft Azure, Google Cloud, and DigitalOcean. We choose the best platform for your specific needs and budget."
-    },
-    {
-      question: "How do you ensure zero downtime during migration?",
-      answer: "We use proven migration strategies including blue-green deployments, rolling updates, and comprehensive testing to ensure seamless transitions with no business disruption."
-    },
-    {
-      question: "What is your success-based pricing model?",
-      answer: "We only charge a percentage of the cost savings we generate for you. If we don't save you money, you don't pay us. This aligns our success with yours."
-    },
-    {
-      question: "Do you provide 24/7 support after migration?",
-      answer: "Yes, we offer comprehensive 24/7 monitoring, incident response, and ongoing optimization to ensure your cloud infrastructure runs smoothly around the clock."
-    },
-    {
-      question: "Can you help with existing cloud cost optimization?",
-      answer: "Absolutely. We audit your current cloud spend, identify waste, and implement optimizations that typically reduce costs by 30-50% without affecting performance."
-    }
-  ]
+  const faqs = (t('faq.qas', { returnObjects: true }) as Array<{ q: string; a: string }>).map((qa) => ({ question: qa.q, answer: qa.a }))
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -55,10 +32,10 @@ const FAQSection = () => {
           <div className="space-y-6">
             <div>
               <h2 className="text-2xl md:text-5xl font-bold text-gray-900 font-display mb-2.5 md:mb-4">
-                FAQs
+                {t('faq.title')}
               </h2>
               <p className="text-sm md:text-xl text-gray-600">
-                Your questions answered.
+                {t('faq.subtitle')}
               </p>
             </div>
             
@@ -69,7 +46,7 @@ const FAQSection = () => {
                   href="#contact" 
                   className="font-semibold text-brand-accent hover:text-brand-accent-700 transition-colors duration-200"
                 >
-                  customer support team
+                  {t('faq.support')}
                 </a>
               </p>
             </div>

@@ -2,8 +2,10 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import { MenuIcon, ArrowDown01Icon } from "@hugeicons/core-free-icons"
 import { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
+import { useTranslation } from "react-i18next"
 
 const Header = () => {
+  const { t, i18n } = useTranslation()
   const headerRef = useRef<HTMLDivElement>(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -60,35 +62,35 @@ const Header = () => {
           {/* Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             <a href="#services" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
-              Services
+              {t('nav.services')}
             </a>
             {/* About Us dropdown (hover with safe hover area) */}
             <div className="relative group">
               <button className="inline-flex items-center gap-1.5 text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
-                About Us
+                {t('nav.about')}
                 <HugeiconsIcon icon={ArrowDown01Icon} size={16} className="text-gray-400 group-hover:text-brand-primary transition-transform duration-200" />
               </button>
               {/* Use top-full and padding-top to avoid hover gap */}
               <div className="pointer-events-none absolute left-0 top-full pt-3 w-56 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
                 <div className="rounded-xl border border-gray-100 bg-white shadow-xl p-2">
-                  <a href="#about" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">Our Story</a>
-                  <a href="#methodology" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">Methodology</a>
+                  <a href="#about" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.ourStory')}</a>
+                  <a href="#methodology" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.methodology')}</a>
                 </div>
               </div>
             </div>
             <a href="#" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
-              Portfolio
+              {t('nav.portfolio')}
             </a>
             {/* Resources dropdown (Blog, Careers) */}
             <div className="relative group">
               <button className="inline-flex items-center gap-1.5 text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
-                Resources
+                {t('nav.resources')}
                 <HugeiconsIcon icon={ArrowDown01Icon} size={16} className="text-gray-400 group-hover:text-brand-primary transition-transform duration-200" />
               </button>
               <div className="pointer-events-none absolute left-0 top-full pt-3 w-56 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
                 <div className="rounded-xl border border-gray-100 bg-white shadow-xl p-2">
-                  <a href="#blog" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">Blog</a>
-                  <a href="#careers" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">Careers</a>
+                  <a href="#blog" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.blog')}</a>
+                  <a href="#careers" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.careers')}</a>
                 </div>
               </div>
             </div>
@@ -98,8 +100,22 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             {/* CTA Button */}
             <button className="hidden sm:inline-flex bg-brand-accent hover:bg-brand-accent-700 text-white px-5 py-2 rounded-full font-medium transition-colors duration-200">
-              Contact
+              {t('cta.contact')}
             </button>
+            {/* Language toggle */}
+            <div className="flex items-center">
+              <button
+                className="px-2 py-1 rounded-full text-xs font-semibold border border-gray-300 text-gray-700 hover:bg-gray-100"
+                onClick={() => {
+                  const next = i18n.language.startsWith('es') ? 'en' : 'es'
+                  i18n.changeLanguage(next)
+                  if ((window as any).switchLang) { (window as any).switchLang(next) }
+                }}
+                aria-label="Toggle language"
+              >
+                {i18n.language.startsWith('es') ? t('lang.en') : t('lang.es')}
+              </button>
+            </div>
 
             {/* Mobile menu button */}
             <button 
@@ -180,8 +196,8 @@ const Header = () => {
               className={`overflow-hidden transition-all duration-300 ${aboutOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
             >
               <div className="mt-1 ml-3 border-l border-gray-100">
-                <a href="#about" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">Our Story</a>
-                <a href="#methodology" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">Methodology</a>
+                <a href="#about" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">{t('nav.ourStory')}</a>
+                <a href="#methodology" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">{t('nav.methodology')}</a>
               </div>
             </div>
           </div>
@@ -202,8 +218,8 @@ const Header = () => {
               className={`overflow-hidden transition-all duration-300 ${resourcesOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
             >
               <div className="ml-3 border-l border-gray-100">
-                <a href="#blog" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">Blog</a>
-                <a href="#careers" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">Careers</a>
+                <a href="#blog" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">{t('nav.blog')}</a>
+                <a href="#careers" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">{t('nav.careers')}</a>
               </div>
             </div>
           </div>

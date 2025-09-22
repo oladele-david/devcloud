@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowLeft01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
+import { useTranslation } from "react-i18next"
 
 const ServicesSection = () => {
+  const { t } = useTranslation()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isTouching, setIsTouching] = useState(false)
   const touchStartX = useRef<number | null>(null)
@@ -13,37 +15,37 @@ const ServicesSection = () => {
 
   const services = [
     {
-      title: "Cloud Cost Optimization",
-      subtitle: "FinOps Excellence",
-      description: "Reduce and control cloud spending with our comprehensive FinOps service",
+      title: t('services.finops_title'),
+      subtitle: t('services.finops_sub'),
+      description: t('services.finops_desc'),
       image: "/services/cloud.png",
       badge: "FinOps"
     },
     {
-      title: "DevOps & Infrastructure",
-      subtitle: "Automated Operations",
-      description: "Manage your cloud infrastructure with reliable automation and CI/CD",
+      title: t('services.devops_title'),
+      subtitle: t('services.devops_sub'),
+      description: t('services.devops_desc'),
       image: "/services/devops.png",
       badge: "DevOps"
     },
     {
-      title: "Cloud Architecture",
-      subtitle: "Migration & Design",
-      description: "Design and execute robust cloud architectures and seamless migrations",
+      title: t('services.arch_title'),
+      subtitle: t('services.arch_sub'),
+      description: t('services.arch_desc'),
       image: "/services/architecture.png",
       badge: "Architecture"
     },
     {
-      title: "Managed Services",
-      subtitle: "24/7 Support",
-      description: "Comprehensive operations and continuous support with agreed SLAs",
+      title: t('services.mng_title'),
+      subtitle: t('services.mng_sub'),
+      description: t('services.mng_desc'),
       image: "/services/managed.png",
       badge: "Support"
     },
     {
-      title: "Software Engineering",
-      subtitle: "Product Development",
-      description: "Design, build, and scale reliable software products with modern engineering practices",
+      title: t('services.eng_title'),
+      subtitle: t('services.eng_sub'),
+      description: t('services.eng_desc'),
       image: "/services/technical.png",
       badge: "Engineering"
     }
@@ -93,9 +95,9 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-8 md:mb-12">
           <div>
-            <p className="text-brand-primary text-xs md:text-sm font-medium mb-1.5 md:mb-2">Our Services</p>
+            <p className="text-brand-primary text-xs md:text-sm font-medium mb-1.5 md:mb-2">{t('footer.services')}</p>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 font-display">
-              Comprehensive Cloud Solutions
+              {t('services.heading')}
             </h2>
           </div>
           
@@ -186,9 +188,7 @@ const ServicesSection = () => {
         {/* Bottom Description */}
         <div className="mt-12 text-center max-w-4xl mx-auto">
           <p className="text-gray-600 text-lg leading-relaxed">
-            We provide end-to-end cloud solutions that optimize costs, enhance performance, and ensure reliability. 
-            Our success-based model means you only pay for the value we deliver, with transparent reporting and 
-            measurable results across all our services.
+            {t('services_bottom')}
           </p>
         </div>
       </div>

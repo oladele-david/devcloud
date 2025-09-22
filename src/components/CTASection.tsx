@@ -1,8 +1,10 @@
 import { useRef, useEffect } from "react"
 import { gsap } from "gsap"
+import { useTranslation } from "react-i18next"
 
 const CTASection = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (sectionRef.current) {
@@ -23,18 +25,17 @@ const CTASection = () => {
           <div className="absolute top-1/2 right-10 w-3 h-3 md:w-4 md:h-4 bg-white/10 rounded-full"></div>
           
           <h2 className="text-2xl md:text-4xl font-bold text-white font-display mb-3 md:mb-6 relative z-10">
-            Ready to Transform Your Cloud Infrastructure?
+            {t('cta_section.title')}
           </h2>
           <p className="text-sm md:text-lg text-white/90 mb-5 md:mb-8 max-w-3xl mx-auto relative z-10">
-            Join the companies that trust DevCloud Partners for transparent, results-driven cloud solutions. 
-            Let's discuss how we can optimize your infrastructure and reduce costs.
+            {t('cta_section.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-2.5 md:gap-4 justify-center relative z-10">
             <button className="bg-white text-brand-accent px-5 md:px-8 py-2.5 md:py-4 rounded-full text-sm md:text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
-              Start Your Cloud Journey
+              {t('cta_section.primary')}
             </button>
             <button className="border-2 border-white text-white px-5 md:px-8 py-2.5 md:py-4 rounded-full text-sm md:text-lg font-semibold transition-all duration-200 hover:bg-white hover:text-brand-accent">
-              Schedule a Consultation
+              {t('cta_section.secondary')}
             </button>
           </div>
         </div>

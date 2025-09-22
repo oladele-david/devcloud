@@ -2,8 +2,10 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowRight01Icon, CloudIcon, ServerStackIcon } from "@hugeicons/core-free-icons"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
+import { useTranslation } from "react-i18next"
 
 const HeroSection = () => {
+  const { t } = useTranslation()
   const containerRef = useRef<HTMLDivElement>(null)
   const badgeRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
@@ -50,34 +52,33 @@ const HeroSection = () => {
             {/* Company Badge */}
             <div ref={badgeRef} className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/10 text-white text-xs md:text-sm font-medium mb-5 md:mb-8">
               <HugeiconsIcon icon={CloudIcon} size={16} className="mr-2" />
-              Born in the Canary Islands, Serving the World
+              {t('hero.badge')}
             </div>
             
             {/* Main Headline */}
             <h1 ref={titleRef} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white mb-4 md:mb-6 leading-snug font-display">
-              The cloud should be a driver of{" "}
+              {t('hero.title_line1')} {" "}
               <br />
-              <span className="text-brand-accent">growth</span>, not a{" "}
-              <span className="text-white">financial burden</span>
+              <span className="text-brand-accent">{t('hero.title_growth')}</span>
+              {t('hero.title_line2')}
+              <span className="text-white">{t('hero.title_burden')}</span>
             </h1>
             
             {/* Subheadline */}
             <p ref={subtitleRef} className="text-sm sm:text-base md:text-lg text-white/90 mb-5 md:mb-6 max-w-3xl mx-auto leading-relaxed">
-              We are your strategic partner in digital evolution. Fusing the precision of code 
-              with the scalability of the cloud to create innovative solutions that transform 
-              ideas into tangible projects.
+              {t('hero.subtitle')}
             </p>
             
             {/* CTA Buttons */}
             <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center">
               <button className="bg-brand-primary hover:bg-brand-primary-700 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold transition-colors duration-200 flex items-center justify-center group">
                 <HugeiconsIcon icon={ServerStackIcon} size={16} className="mr-2" />
-                Start Your Cloud Journey
+                {t('hero.cta_primary')}
                 <HugeiconsIcon icon={ArrowRight01Icon} size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
               <button className="border-2 border-white text-white hover:bg-white/10 px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold transition-colors duration-200 flex items-center justify-center">
                 <HugeiconsIcon icon={CloudIcon} size={16} className="mr-2" />
-                View Our Solutions
+                {t('hero.cta_secondary')}
               </button>
             </div>
           </div>

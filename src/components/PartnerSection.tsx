@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
+import { useTranslation } from "react-i18next"
 
 const PartnerSection = () => {
+  const { t } = useTranslation()
   const marqueeRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -45,10 +47,10 @@ const PartnerSection = () => {
         {/* Section Title */}
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-1.5 md:mb-2 font-display">
-            Trusted by Industry Leaders
+            {t('partners.title')}
           </h2>
           <p className="text-gray-600 text-sm md:text-base">
-            We partner with the world's leading technology companies
+            {t('partners.subtitle')}
           </p>
         </div>
 
