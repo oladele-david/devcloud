@@ -15,9 +15,11 @@ const PartnerSection = () => {
         marqueeContent.innerHTML += marqueeContent.innerHTML
         
         // GSAP animation for smooth infinite scroll
+        const isMobile = window.matchMedia('(max-width: 640px)').matches
+        const duration = isMobile ? 10 : 20
         gsap.to(marqueeContent, {
           x: '-50%',
-          duration: 20,
+          duration,
           ease: 'none',
           repeat: -1
         })
@@ -38,14 +40,14 @@ const PartnerSection = () => {
   ]
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-8 md:py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2 font-display">
+        <div className="text-center mb-6 md:mb-8">
+          <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-1.5 md:mb-2 font-display">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm md:text-base">
             We partner with the world's leading technology companies
           </p>
         </div>
@@ -54,20 +56,20 @@ const PartnerSection = () => {
         <div 
           ref={marqueeRef}
           className="overflow-hidden relative"
-          style={{ height: '80px' }}
+          style={{ height: '64px' }}
         >
-          <div className="marquee-content flex items-center space-x-12 h-full">
+          <div className="marquee-content flex items-center gap-8 md:gap-12 h-full">
             {partners.map((partner, index) => (
               <div
                 key={`${partner.name}-${index}`}
-                className="flex-shrink-0 flex items-center justify-center h-16 w-32 group cursor-pointer"
+                className="flex-shrink-0 flex items-center justify-center h-12 md:h-16 w-28 md:w-32 group cursor-pointer"
               >
-                <div className="w-24 h-12 flex items-center justify-center transition-all duration-300">
+                <div className="w-20 md:w-24 h-10 md:h-12 flex items-center justify-center transition-all duration-300">
                   {partner.hasImage ? (
                     <img
                       src={partner.logo}
                       alt={`${partner.name} logo`}
-                      className="max-h-10 max-w-20 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                      className="max-h-8 md:max-h-10 max-w-20 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                       onError={(e) => {
                         // Fallback to text if image fails to load
                         const target = e.target as HTMLImageElement
@@ -79,7 +81,7 @@ const PartnerSection = () => {
                       }}
                     />
                   ) : (
-                    <span className="text-gray-400 text-xs font-medium text-center px-2 group-hover:text-brand-primary transition-colors duration-300">
+                    <span className="text-gray-400 text-xs md:text-sm font-medium text-center px-2 group-hover:text-brand-primary transition-colors duration-300">
                       {partner.name}
                     </span>
                   )}

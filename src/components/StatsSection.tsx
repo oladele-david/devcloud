@@ -65,14 +65,14 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-10 md:py-12 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Proven Results</h3>
-          <p className="text-gray-600 mt-2">Clear outcomes from efficiency to reliability.</p>
+        <div className="text-center mb-6 md:mb-8">
+          <h3 className="text-xl md:text-3xl font-bold text-gray-900 font-display">Proven Results</h3>
+          <p className="text-gray-600 mt-1.5 md:mt-2 text-sm md:text-base">Clear outcomes from efficiency to reliability.</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           {stats.map((s, i) => (
             <StatCard key={i} item={s} />
           ))}

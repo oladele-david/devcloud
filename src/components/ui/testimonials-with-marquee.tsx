@@ -36,14 +36,15 @@ export function TestimonialsSection({
 
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
           <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row [--duration:40s]">
+            {/* Two lanes for seamless, alternating loop */}
             <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
-              {[...Array(4)].map((_, setIndex) => (
-                testimonials.map((testimonial, i) => (
-                  <TestimonialCard 
-                    key={`${setIndex}-${i}`}
-                    {...testimonial}
-                  />
-                ))
+              {testimonials.concat(testimonials).map((t, i) => (
+                <TestimonialCard key={`lane1-${i}`} {...t} />
+              ))}
+            </div>
+            <div className="hidden sm:flex shrink-0 justify-around [gap:var(--gap)] animate-marquee2 flex-row group-hover:[animation-play-state:paused]">
+              {testimonials.concat(testimonials).map((t, i) => (
+                <TestimonialCard key={`lane2-${i}`} {...t} />
               ))}
             </div>
           </div>

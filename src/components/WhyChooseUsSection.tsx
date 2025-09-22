@@ -53,7 +53,7 @@ const WhyChooseUsSection = () => {
   ]
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white">
+    <section ref={sectionRef} className="py-14 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -66,9 +66,9 @@ const WhyChooseUsSection = () => {
           </p>
         </div>
 
-        {/* Balanced 3x2 Grid */}
-        <div className="mb-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        {/* Balanced Grid */}
+        <div className="mb-12 md:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {reasons.map((reason, index) => {
               const bgClasses = [
                 "from-white via-white to-brand-secondary-100",
@@ -81,23 +81,23 @@ const WhyChooseUsSection = () => {
               const gradient = bgClasses[index % bgClasses.length];
               const spanClass = (index === 0 || index === 5) ? 'md:col-span-2' : '';
               const iconSize = (index === 0 || index === 5)
-                ? 'h-36 md:h-44'
-                : (index === 1 ? 'h-28 md:h-32' : 'h-24 md:h-28');
+                ? 'h-28 sm:h-32 md:h-44'
+                : (index === 1 ? 'h-24 sm:h-28 md:h-32' : 'h-20 sm:h-24 md:h-28');
               return (
                 <div
                   key={index}
-                  className={`group relative overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-96 ${spanClass}`.trim()}
+                  className={`group relative overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer h-72 sm:h-80 md:h-96 ${spanClass}`.trim()}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-b ${gradient}`} />
-                  <div className="relative z-10 h-full flex flex-col justify-between p-6">
+                  <div className="relative z-10 h-full flex flex-col justify-between p-5 sm:p-6">
                     <div className="space-y-2">
-                      <h3 className="text-2xl font-bold text-brand-dark font-display">
+                      <h3 className="text-xl sm:text-2xl font-bold text-brand-dark font-display">
                         {reason.title}
                       </h3>
-                      <p className="text-base text-gray-700 leading-relaxed">
+                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                         {reason.description}
                       </p>
-                      <div className="w-10 h-1 bg-brand-accent rounded-full mt-2 transition-all duration-300 group-hover:w-16" />
+                      <div className="w-8 sm:w-10 h-1 bg-brand-accent rounded-full mt-2 transition-all duration-300 group-hover:w-16" />
                     </div>
                     <div className="mt-6 w-full flex justify-center items-end">
                       <img src={reason.image} alt={reason.title} className={`${iconSize} object-contain`} />
@@ -111,11 +111,11 @@ const WhyChooseUsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
+          <p className="text-gray-600 text-base md:text-lg mb-6 max-w-3xl mx-auto">
             Ready to experience the difference? Let's discuss how we can help optimize your cloud infrastructure 
             and transform your business with transparent, results-driven cloud solutions.
           </p>
-          <button className="bg-brand-accent hover:bg-brand-accent-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <button className="bg-brand-accent hover:bg-brand-accent-700 text-white px-6 py-3 rounded-full text-base md:text-sm font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
             Start Your Cloud Journey
           </button>
         </div>

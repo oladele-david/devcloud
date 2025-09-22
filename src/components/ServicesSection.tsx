@@ -5,6 +5,9 @@ import { ArrowLeft01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
 
 const ServicesSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isTouching, setIsTouching] = useState(false)
+  const touchStartX = useRef<number | null>(null)
+  const touchDeltaX = useRef(0)
   const servicesRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
 
@@ -36,6 +39,13 @@ const ServicesSection = () => {
       description: "Comprehensive operations and continuous support with agreed SLAs",
       image: "/services/managed.png",
       badge: "Support"
+    },
+    {
+      title: "Software Engineering",
+      subtitle: "Product Development",
+      description: "Design, build, and scale reliable software products with modern engineering practices",
+      image: "/services/technical.png",
+      badge: "Engineering"
     }
   ]
 
@@ -56,20 +66,41 @@ const ServicesSection = () => {
     setCurrentSlide((prev) => (prev - 1 + services.length) % services.length)
   }
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    setIsTouching(true)
+    touchStartX.current = e.touches[0].clientX
+    touchDeltaX.current = 0
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (touchStartX.current == null) return
+    touchDeltaX.current = e.touches[0].clientX - touchStartX.current
+  }
+
+  const onTouchEnd = () => {
+    setIsTouching(false)
+    if (Math.abs(touchDeltaX.current) > 40) {
+      if (touchDeltaX.current < 0) nextSlide()
+      else prevSlide()
+    }
+    touchStartX.current = null
+    touchDeltaX.current = 0
+  }
+
   return (
-    <section ref={servicesRef} className="py-20 bg-white">
+    <section ref={servicesRef} className="py-14 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-8 md:mb-12">
           <div>
-            <p className="text-brand-primary text-sm font-medium mb-2">Our Services</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-display">
+            <p className="text-brand-primary text-xs md:text-sm font-medium mb-1.5 md:mb-2">Our Services</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 font-display">
               Comprehensive Cloud Solutions
             </h2>
           </div>
           
           {/* Navigation Controls */}
-          <div className="flex space-x-3">
+          <div className="hidden sm:flex space-x-3">
             <button
               onClick={prevSlide}
               className="w-12 h-12 rounded-full bg-gray-100 hover:bg-brand-accent flex items-center justify-center transition-colors duration-200 group"
@@ -90,10 +121,13 @@ const ServicesSection = () => {
           <div 
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
           >
             {services.map((service, index) => (
-              <div key={index} className="w-full flex-shrink-0 px-2">
-                <div className="relative h-96 rounded-3xl overflow-hidden shadow-lg group cursor-pointer">
+              <div key={index} className="w-full flex-shrink-0 px-1.5 sm:px-2">
+                <div className="relative h-80 sm:h-96 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg group cursor-pointer">
                   {/* Background Image */}
                   <div 
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -103,24 +137,24 @@ const ServicesSection = () => {
                     }}
                   >
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 h-full flex flex-col justify-between p-8">
+                  <div className="relative z-10 h-full flex flex-col justify-between p-6 sm:p-8">
                     {/* Badge */}
                     <div className="self-end">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/90 text-gray-900 text-sm font-medium">
+                      <span className="inline-flex items-center px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/90 text-gray-900 text-xs sm:text-sm font-medium">
                         {service.badge}
                       </span>
                     </div>
 
                     {/* Text Content */}
                     <div className="space-y-3">
-                      <h3 className="text-2xl font-bold text-white transition-colors duration-300">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white transition-colors duration-300">
                         {service.title}
                       </h3>
-                      <p className="text-white/90 text-lg font-medium">
+                      <p className="text-white/90 text-base sm:text-lg font-medium">
                         {service.subtitle}
                       </p>
                       <p className="text-white/80 text-sm leading-relaxed max-w-md">
@@ -132,6 +166,21 @@ const ServicesSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Swipe Dots */}
+        <div className="mt-4 flex justify-center gap-2 sm:hidden">
+          {services.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentSlide(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                currentSlide === i ? 'w-6 bg-brand-accent' : 'w-2 bg-gray-300'
+              }`}
+              style={{ minWidth: currentSlide === i ? 24 : 8 }}
+            />
+          ))}
         </div>
 
         {/* Bottom Description */}

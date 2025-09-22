@@ -48,16 +48,16 @@ const FAQSection = () => {
   }
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white">
+    <section ref={sectionRef} className="py-10 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
           {/* Left Column - Title and Support */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-display mb-4">
+              <h2 className="text-2xl md:text-5xl font-bold text-gray-900 font-display mb-2.5 md:mb-4">
                 FAQs
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-sm md:text-xl text-gray-600">
                 Your questions answered.
               </p>
             </div>
@@ -81,12 +81,12 @@ const FAQSection = () => {
               <div key={index} className="border-b border-gray-200 last:border-b-0">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full py-6 text-left flex items-center justify-between group hover:text-brand-primary transition-colors duration-200"
+                  className="w-full py-4 md:py-6 text-left flex items-center justify-between group hover:text-brand-primary transition-colors duration-200"
                 >
-                  <span className="text-lg font-medium pr-4">
+                  <span className="text-base md:text-lg font-medium pr-4">
                     {faq.question}
                   </span>
-                  <div className="flex-shrink-0">
+                  <div className={`flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
                     <HugeiconsIcon 
                       icon={openIndex === index ? Remove01Icon : Add01Icon} 
                       size={20} 
@@ -95,13 +95,17 @@ const FAQSection = () => {
                   </div>
                 </button>
                 
-                {openIndex === index && (
-                  <div className="pb-6 pr-12">
-                    <p className="text-gray-600 leading-relaxed">
-                      {faq.answer}
-                    </p>
+                <div 
+                  className={`grid transition-all duration-300 ease-out ${openIndex === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="pb-5 md:pb-6 pr-8 md:pr-12">
+                      <p className="text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
