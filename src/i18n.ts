@@ -35,7 +35,164 @@ const resources = {
         mng_desc: "Comprehensive operations and continuous support with agreed SLAs",
         eng_title: "Software Engineering",
         eng_sub: "Product Development",
-        eng_desc: "Design, build, and scale reliable software products with modern engineering practices"
+        eng_desc: "Design, build, and scale reliable software products with modern engineering practices",
+        sticky: {
+          badge: "Our Services",
+          title: "Cloud, DevOps, and FinOps that drive outcomes",
+          subtitle: "From cost control to resilient infrastructure, explore how we partner to deliver results.",
+          placeholder: "Image coming soon"
+        },
+        features: {
+          title: "What you get",
+          items: [
+            { title: "Unified Cloud Strategy", desc: "A single plan connecting cost, reliability, and delivery across teams." },
+            { title: "Secure by Design", desc: "Security baked into pipelines, infra, and operations from day one." },
+            { title: "Observability", desc: "Metrics, logs, and traces that enable rapid diagnostics and tuning." },
+            { title: "Automation Everywhere", desc: "IaC, CI/CD, policy-as-code, and self-service to move faster." }
+          ]
+        },
+        benefits: {
+          title: "Business outcomes",
+          items: [
+            { title: "Lower Spend", desc: "Typical 30–50% reduction via FinOps and right-sizing." },
+            { title: "Faster Delivery", desc: "Release more often with safer deployments and automation." },
+            { title: "Higher Uptime", desc: "Resilient architectures with SLAs that match your needs." },
+            { title: "Team Focus", desc: "Your team ships product while we run the platform." }
+          ]
+        },
+        process: {
+          title: "How we work",
+          steps: [
+            { title: "Assess", desc: "We start with a comprehensive assessment of your current cloud infrastructure, spending patterns, and business objectives. This includes technical audits, cost analysis, and stakeholder interviews." },
+            { title: "Design", desc: "Based on our findings, we develop a customized strategy and detailed implementation plan. We set clear objectives, define success metrics, and establish timelines with your team." },
+            { title: "Implement", desc: "We execute the plan in phases, implementing optimizations, automations, and improvements while maintaining full transparency and regular communication with your team." },
+            { title: "Operate", desc: "Continuous monitoring and optimization ensure sustained results. We provide regular reports, proactive recommendations, and ongoing support to maximize your cloud investment." }
+          ],
+          stats: {
+            a: "Average cost reduction",
+            b: "Projects delivered",
+            c: "SLA uptime",
+            d: "Cloud providers"
+          }
+        },
+        cta_section: {
+          title: "Ready to accelerate your cloud outcomes?",
+          desc: "Let’s align on goals and map a path that balances speed, reliability, and cost.",
+          primary: "Talk to an expert",
+          secondary: "See case studies"
+        },
+        detail: {
+          finops: {
+            features: [
+              "Comprehensive consumption audits",
+              "Automated waste detection",
+              "Budgeting and reservations strategy",
+              "Real-time cost monitoring",
+              "Success-fee pricing model",
+              "Transparent reporting"
+            ],
+            benefits: [
+              "Average 30–50% cost reduction",
+              "No upfront investment",
+              "Improved visibility & control",
+              "Optimized resource allocation"
+            ],
+            process: [
+              "Assess cloud spend",
+              "Identify opportunities",
+              "Implement savings measures",
+              "Monitor & iterate"
+            ]
+          },
+          devops: {
+            features: [
+              "CI/CD pipelines",
+              "Infrastructure as Code",
+              "Policy-as-code & guardrails",
+              "Platform engineering",
+              "GitOps & automation",
+              "Observability"
+            ],
+            benefits: [
+              "Faster, safer releases",
+              "Reduced toil",
+              "Improved reliability",
+              "Developer productivity"
+            ],
+            process: [
+              "Assess delivery & ops",
+              "Design pipelines & IaC",
+              "Automate & enable",
+              "Operate & optimize"
+            ]
+          },
+          arch: {
+            features: [
+              "Well-Architected designs",
+              "Scalability & resilience",
+              "Security baselines",
+              "Data & networking",
+              "Disaster recovery",
+              "Migration plans"
+            ],
+            benefits: [
+              "Right-sized architecture",
+              "Improved performance",
+              "Security by default",
+              "Faster migrations"
+            ],
+            process: [
+              "Assess current state",
+              "Target architecture",
+              "Migration execution",
+              "Validation & hardening"
+            ]
+          },
+          mng: {
+            features: [
+              "24/7 monitoring & on-call",
+              "Incident response",
+              "Runbooks & SRE",
+              "Backups & patching",
+              "Capacity planning",
+              "Continuous improvement"
+            ],
+            benefits: [
+              "Higher uptime",
+              "Predictable operations",
+              "Reduced incident impact",
+              "Clear SLAs"
+            ],
+            process: [
+              "Onboarding & SLAs",
+              "Operational baselines",
+              "Run & report",
+              "Optimize proactively"
+            ]
+          },
+          eng: {
+            features: [
+              "Product discovery",
+              "Modern architectures",
+              "Quality engineering",
+              "Security & privacy",
+              "Performance & scalability",
+              "DevEx improvements"
+            ],
+            benefits: [
+              "Faster time-to-market",
+              "Higher quality",
+              "Lower maintenance cost",
+              "Scalable foundations"
+            ],
+            process: [
+              "Discover & align",
+              "Design & plan",
+              "Build & test",
+              "Launch & evolve"
+            ]
+          }
+        }
       },
       services_bottom: "We provide end-to-end cloud solutions that optimize costs, enhance performance, and ensure reliability. Our success-based model means you only pay for the value we deliver, with transparent reporting and measurable results across all our services.",
       why: {
@@ -147,7 +304,164 @@ const resources = {
         mng_desc: "Operación continua y soporte con SLAs acordados",
         eng_title: "Ingeniería de Software",
         eng_sub: "Desarrollo de Producto",
-        eng_desc: "Diseñamos y escalamos productos fiables con prácticas modernas"
+        eng_desc: "Diseñamos y escalamos productos fiables con prácticas modernas",
+        sticky: {
+          badge: "Nuestros Servicios",
+          title: "Cloud, DevOps y FinOps que impulsan resultados",
+          subtitle: "De control de costes a infraestructura resiliente: así logramos resultados juntos.",
+          placeholder: "Imagen disponible pronto"
+        },
+        features: {
+          title: "Lo que obtienes",
+          items: [
+            { title: "Estrategia Cloud Unificada", desc: "Un plan que conecta coste, fiabilidad y entrega entre equipos." },
+            { title: "Seguro por Diseño", desc: "Seguridad integrada en pipelines, infraestructura y operaciones." },
+            { title: "Observabilidad", desc: "Métricas, logs y trazas para diagnosticar y optimizar rápido." },
+            { title: "Automatización Total", desc: "IaC, CI/CD, políticas como código y autoservicio para ir más rápido." }
+          ]
+        },
+        benefits: {
+          title: "Resultados de negocio",
+          items: [
+            { title: "Menor Gasto", desc: "Reducción típica del 30–50% con FinOps y right-sizing." },
+            { title: "Entrega Más Rápida", desc: "Lanza más a menudo con despliegues seguros y automatización." },
+            { title: "Mayor Disponibilidad", desc: "Arquitecturas resilientes con SLAs a tu medida." },
+            { title: "Enfoque del Equipo", desc: "Tu equipo crea producto mientras nosotros operamos la plataforma." }
+          ]
+        },
+        process: {
+          title: "Cómo trabajamos",
+          steps: [
+            { title: "Evaluar", desc: "Comenzamos con una evaluación integral de tu infraestructura cloud, patrones de gasto y objetivos de negocio. Incluye auditorías técnicas, análisis de costes y entrevistas con stakeholders." },
+            { title: "Diseñar", desc: "Con base en los hallazgos, diseñamos una estrategia y plan de implementación a medida. Definimos objetivos claros, métricas de éxito y cronograma junto a tu equipo." },
+            { title: "Implementar", desc: "Ejecutamos el plan por fases: optimizaciones, automatizaciones y mejoras, con transparencia total y comunicación regular con tu equipo." },
+            { title: "Operar", desc: "Monitoreo y optimización continuos para resultados sostenidos. Entregamos informes, recomendaciones proactivas y soporte continuo para maximizar tu inversión en la nube." }
+          ],
+          stats: {
+            a: "Reducción de costes promedio",
+            b: "Proyectos entregados",
+            c: "Disponibilidad con SLA",
+            d: "Proveedores cloud"
+          }
+        },
+        cta_section: {
+          title: "¿Listo para acelerar tus resultados en la nube?",
+          desc: "Alineemos objetivos y un plan que equilibre velocidad, fiabilidad y coste.",
+          primary: "Habla con un experto",
+          secondary: "Ver casos de éxito"
+        },
+        detail: {
+          finops: {
+            features: [
+              "Auditorías de consumo",
+              "Detección de desperdicio",
+              "Estrategia de presupuestos y reservas",
+              "Monitoreo de costes en tiempo real",
+              "Modelo de precio por éxito",
+              "Informes transparentes"
+            ],
+            benefits: [
+              "Reducción del 30–50%",
+              "Sin inversión inicial",
+              "Mayor visibilidad y control",
+              "Asignación óptima de recursos"
+            ],
+            process: [
+              "Evaluar gasto cloud",
+              "Identificar oportunidades",
+              "Implementar ahorros",
+              "Monitorear y mejorar"
+            ]
+          },
+          devops: {
+            features: [
+              "Pipelines CI/CD",
+              "Infraestructura como código",
+              "Políticas como código",
+              "Plataforma de desarrollo",
+              "GitOps y automatización",
+              "Observabilidad"
+            ],
+            benefits: [
+              "Lanzamientos más rápidos",
+              "Menos trabajo repetitivo",
+              "Más fiabilidad",
+              "Productividad de desarrollo"
+            ],
+            process: [
+              "Evaluar delivery y ops",
+              "Diseñar pipelines e IaC",
+              "Automatizar y habilitar",
+              "Operar y optimizar"
+            ]
+          },
+          arch: {
+            features: [
+              "Diseños Well-Architected",
+              "Escalabilidad y resiliencia",
+              "Bases de seguridad",
+              "Datos y redes",
+              "Recuperación ante desastres",
+              "Planes de migración"
+            ],
+            benefits: [
+              "Arquitectura dimensionada",
+              "Mejor rendimiento",
+              "Seguridad por defecto",
+              "Migraciones más rápidas"
+            ],
+            process: [
+              "Evaluar estado actual",
+              "Arquitectura objetivo",
+              "Ejecución de migración",
+              "Validación y endurecimiento"
+            ]
+          },
+          mng: {
+            features: [
+              "Monitoreo 24/7 y guardias",
+              "Respuesta a incidentes",
+              "Runbooks y SRE",
+              "Backups y parches",
+              "Planificación de capacidad",
+              "Mejora continua"
+            ],
+            benefits: [
+              "Mayor disponibilidad",
+              "Operación predecible",
+              "Menor impacto de incidentes",
+              "SLAs claros"
+            ],
+            process: [
+              "Onboarding y SLAs",
+              "Bases operativas",
+              "Operar y reportar",
+              "Optimizar proactivamente"
+            ]
+          },
+          eng: {
+            features: [
+              "Discovery de producto",
+              "Arquitecturas modernas",
+              "Calidad de software",
+              "Seguridad y privacidad",
+              "Rendimiento y escalado",
+              "Mejoras de DevEx"
+            ],
+            benefits: [
+              "Tiempo al mercado menor",
+              "Mayor calidad",
+              "Menor coste de mantenimiento",
+              "Bases escalables"
+            ],
+            process: [
+              "Descubrir y alinear",
+              "Diseñar y planificar",
+              "Construir y probar",
+              "Lanzar y evolucionar"
+            ]
+          }
+        }
       },
       services_bottom: "Ofrecemos soluciones cloud de extremo a extremo que optimizan costes, mejoran el rendimiento y garantizan la fiabilidad. Pagas solo por el valor que entregamos, con informes transparentes y resultados medibles en todos nuestros servicios.",
       why: {
