@@ -91,11 +91,11 @@ export const WorkCulture: React.FC = () => {
   return (
     <section className="py-10 sm:py-12 md:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">
+        <div className="text-center mb-4 sm:mb-6 md:mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight">
             {t('careers.culture.heading', 'Our Work Culture')}
           </h2>
-          <p className="mt-2 text-slate-600 max-w-3xl mx-auto">
+          <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-3xl mx-auto">
             {t('careers.culture.subheading', 'At DevCloud Partners, we believe that technology doesn\'t exist without the people who make it possible. Our work culture is the heartbeat of everything we do.')}
           </p>
         </div>

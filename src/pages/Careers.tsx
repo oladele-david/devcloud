@@ -76,18 +76,21 @@ const Careers: React.FC = () => {
       <section ref={heroRef} className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-slate-50 to-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 mb-4 sm:mb-6">
               {t('careers.hero.title', 'Join Our Team')}
             </h1>
-            <p className="text-xl sm:text-2xl text-slate-600 mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-6 sm:mb-8">
               {t('careers.hero.subtitle', 'Build the future of cloud technology with us')}
             </p>
-            <p className="text-lg text-slate-500 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-500 max-w-3xl mx-auto">
               {t('careers.hero.description', 'We\'re looking for passionate individuals who want to make a real impact in the cloud industry. Join a team that values innovation, transparency, and genuine collaboration.')}
             </p>
           </div>
         </div>
       </section>
+
+      {/* Separator */}
+      <SectionSeparator />
 
       {/* Work Culture Section */}
       <div ref={cultureRef}>

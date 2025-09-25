@@ -12,14 +12,16 @@ import AboutMethodology from "./pages/AboutMethodology";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import ScrollToTop from "./components/ScrollToTop";
+import { CookieConsent } from "./components/cookies";
+import { useCookieConsent } from "./hooks/useCookieConsent";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+const AppContent = () => {
+  const { hasConsent, acceptCookies, rejectCookies } = useCookieConsent();
+
+  return (
+    <>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
@@ -33,6 +35,24 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      
+      {/* Cookie Consent Banner */}
+      {hasConsent === null && (
+        <CookieConsent
+          onAccept={acceptCookies}
+          onReject={rejectCookies}
+        />
+      )}
+    </>
+  );
+};
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <AppContent />
     </TooltipProvider>
   </QueryClientProvider>
 );

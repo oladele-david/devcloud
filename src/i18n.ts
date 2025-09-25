@@ -549,6 +549,42 @@ const resources = {
         },
         copyright: "© 2025 DevCloud Partners. All rights reserved.",
         poweredBy: "Powered By: QUEVEDO TECH GROUP S.L."
+      },
+      cookies: {
+        banner: {
+          title: "We use cookies",
+          description: "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+          accept: "Accept All",
+          reject: "Reject All",
+          preferences: "Preferences"
+        },
+        preferences: {
+          title: "Cookie Preferences",
+          description: "We use cookies to enhance your experience. You can customize your preferences below.",
+          necessary: {
+            title: "Necessary Cookies",
+            description: "Essential for the website to function properly. These cannot be disabled."
+          },
+          functional: {
+            title: "Functional Cookies",
+            description: "Enable enhanced functionality and personalization, such as remembering your preferences."
+          },
+          analytics: {
+            title: "Analytics Cookies",
+            description: "Help us understand how visitors interact with our website by collecting and reporting information anonymously."
+          },
+          marketing: {
+            title: "Marketing Cookies",
+            description: "Used to track visitors across websites to display relevant and engaging advertisements."
+          },
+          required: "Required",
+          info: {
+            title: "Your Privacy Matters",
+            description: "You can change your cookie preferences at any time by clicking the \"Preferences\" button in our cookie banner. Your choices will be saved and respected."
+          },
+          cancel: "Cancel",
+          save: "Save Preferences"
+        }
       }
     }
   },
@@ -1098,6 +1134,42 @@ const resources = {
         },
         copyright: "© 2025 DevCloud Partners. Todos los derechos reservados.",
         poweredBy: "Desarrollado por: QUEVEDO TECH GROUP S.L."
+      },
+      cookies: {
+        banner: {
+          title: "Usamos cookies",
+          description: "Utilizamos cookies para mejorar su experiencia de navegación, servir contenido personalizado y analizar nuestro tráfico. Al hacer clic en \"Aceptar todo\", usted consiente nuestro uso de cookies.",
+          accept: "Aceptar todo",
+          reject: "Rechazar todo",
+          preferences: "Preferencias"
+        },
+        preferences: {
+          title: "Preferencias de cookies",
+          description: "Utilizamos cookies para mejorar su experiencia. Puede personalizar sus preferencias a continuación.",
+          necessary: {
+            title: "Cookies necesarias",
+            description: "Esenciales para que el sitio web funcione correctamente. No se pueden deshabilitar."
+          },
+          functional: {
+            title: "Cookies funcionales",
+            description: "Permiten funcionalidad mejorada y personalización, como recordar sus preferencias."
+          },
+          analytics: {
+            title: "Cookies de análisis",
+            description: "Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando y reportando información de forma anónima."
+          },
+          marketing: {
+            title: "Cookies de marketing",
+            description: "Se utilizan para rastrear visitantes en sitios web para mostrar anuncios relevantes y atractivos."
+          },
+          required: "Requerido",
+          info: {
+            title: "Su privacidad importa",
+            description: "Puede cambiar sus preferencias de cookies en cualquier momento haciendo clic en el botón \"Preferencias\" en nuestro banner de cookies. Sus elecciones se guardarán y respetarán."
+          },
+          cancel: "Cancelar",
+          save: "Guardar preferencias"
+        }
       }
     }
   }
