@@ -2,9 +2,11 @@ import { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { Location01Icon, Mail01Icon } from "@hugeicons/core-free-icons"
+import { useTranslation } from "react-i18next"
 
 const Footer = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (sectionRef.current) {
@@ -29,49 +31,49 @@ const Footer = () => {
                 </a>
               </div>
               <p className="text-gray-400 text-sm">
-                From the Canary Islands to the world
+                {t('footer.tagline')}
               </p>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-gray-400 text-sm">
                   <HugeiconsIcon icon={Location01Icon} size={16} />
-                  <span>Canary Islands, Spain</span>
+                  <span>{t('footer.location')}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400 text-sm">
                   <HugeiconsIcon icon={Mail01Icon} size={16} />
-                  <span>holla@devcloudpartners.com</span>
+                  <span>{t('footer.email')}</span>
                 </div>
               </div>
             </div>
 
             {/* Services */}
             <div className="space-y-3">
-              <h3 className="text-base md:text-lg font-semibold">Services</h3>
+              <h3 className="text-base md:text-lg font-semibold">{t('footer.services.title')}</h3>
               <ul className="space-y-1.5 md:space-y-2 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Cloud Cost Optimization</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">DevOps & Infrastructure</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Cloud Architecture</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Managed Services</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.services.optimization')}</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.services.devops')}</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.services.architecture')}</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.services.managed')}</a></li>
               </ul>
             </div>
 
             {/* Company */}
             <div className="space-y-3">
-              <h3 className="text-base md:text-lg font-semibold">Company</h3>
+              <h3 className="text-base md:text-lg font-semibold">{t('footer.company.title')}</h3>
               <ul className="space-y-1.5 md:space-y-2 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors duration-200">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">How We Work</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Portfolio</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Careers</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.company.about')}</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.company.methodology')}</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.company.portfolio')}</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.company.careers')}</a></li>
               </ul>
             </div>
 
             {/* Legal */}
             <div className="space-y-3 sm:col-span-2 lg:col-span-1">
-              <h3 className="text-base md:text-lg font-semibold">Legal</h3>
+              <h3 className="text-base md:text-lg font-semibold">{t('footer.legal.title')}</h3>
               <ul className="space-y-1.5 md:space-y-2 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Cookie Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.legal.privacy')}</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.legal.cookies')}</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">{t('footer.legal.terms')}</a></li>
               </ul>
             </div>
           </div>
@@ -83,10 +85,10 @@ const Footer = () => {
         {/* Copyright */}
         <div className="py-6 md:py-8 text-center">
           <p className="text-gray-400 text-xs md:text-sm mb-1.5 md:mb-2">
-            © 2025 DevCloud Partners. All rights reserved.
+            {t('footer.copyright')}
           </p>
           <p className="text-gray-500 text-[11px] md:text-xs">
-            Powered By: QUEVEDO TECH GROUP S.L.
+            {t('footer.poweredBy')}
           </p>
         </div>
       </div>

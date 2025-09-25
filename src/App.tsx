@@ -9,6 +9,9 @@ import "./i18n";
 import Services from "./pages/Services";
 import AboutStory from "./pages/AboutStory";
 import AboutMethodology from "./pages/AboutMethodology";
+import Contact from "./pages/Contact";
+import Careers from "./pages/Careers";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -18,11 +21,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about/story" element={<AboutStory />} />
           <Route path="/about/methodology" element={<AboutMethodology />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

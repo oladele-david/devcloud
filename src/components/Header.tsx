@@ -3,6 +3,7 @@ import { MenuIcon, ArrowDown01Icon } from "@hugeicons/core-free-icons"
 import { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
 import MobileMenu from "./MobileMenu"
 
 const Header = () => {
@@ -35,22 +36,22 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerRef} className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex-shrink-0 flex items-center" aria-label="Go to home">
+          <Link to="/" className="flex-shrink-0 flex items-center" aria-label="Go to home">
             <img
               src="/logo.svg"
               alt="DevCloud Partners Logo"
               className="h-8 w-auto mr-3"
             />
-          </a>
+          </Link>
 
           {/* Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            <a href="/" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
+            <Link to="/" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
               Home
-            </a>
-            <a href="/services" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
+            </Link>
+            <Link to="/services" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
               {t('nav.services')}
-            </a>
+            </Link>
             {/* About Us dropdown (hover with safe hover area) */}
             <div className="relative group">
               <button className="inline-flex items-center gap-1.5 text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
@@ -60,8 +61,8 @@ const Header = () => {
               {/* Use top-full and padding-top to avoid hover gap */}
               <div className="pointer-events-none absolute left-0 top-full pt-3 w-56 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
                 <div className="rounded-xl border border-gray-100 bg-white shadow-xl p-2">
-                  <a href="/about/story" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.ourStory')}</a>
-                  <a href="/about/methodology" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.methodology')}</a>
+                  <Link to="/about/story" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.ourStory')}</Link>
+                  <Link to="/about/methodology" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.methodology')}</Link>
                 </div>
               </div>
             </div>
@@ -69,17 +70,20 @@ const Header = () => {
               {t('nav.portfolio')}
             </a>
             {/* Careers direct link (replaces Resources dropdown) */}
-            <a href="/careers" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
+            <Link to="/careers" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
               {t('nav.careers')}
-            </a>
+            </Link>
           </nav>
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* CTA Button */}
-            <button className="hidden sm:inline-flex bg-brand-accent hover:bg-brand-accent-700 text-white px-5 py-2 rounded-full font-medium transition-colors duration-200">
+            <Link
+              to="/contact"
+              className="hidden sm:inline-flex bg-brand-accent hover:bg-brand-accent-700 text-white px-5 py-2 rounded-full font-medium transition-colors duration-200"
+            >
               {t('cta.contact')}
-            </button>
+            </Link>
             {/* Language toggle */}
             <div className="flex items-center">
               <button

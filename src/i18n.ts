@@ -367,6 +367,44 @@ const resources = {
         deliverables: "Deliverables",
         focus: "Key Focus Areas"
       },
+      contact: {
+        hero: {
+          title: "Let's build something amazing together",
+          subtitle: "Ready to transform your cloud infrastructure?",
+          description: "Get in touch with our team of cloud experts and start your optimization journey today."
+        },
+        form: {
+          title: "Get in Touch",
+          subtitle: "Tell us about your project and we'll get back to you within 24 hours",
+          firstName: "First Name",
+          firstNamePlaceholder: "Enter your first name",
+          lastName: "Last Name", 
+          lastNamePlaceholder: "Enter your last name",
+          email: "Email Address",
+          emailPlaceholder: "your.email@company.com",
+          company: "Company",
+          companyPlaceholder: "Your company name",
+          subject: "Subject",
+          subjectPlaceholder: "What can we help you with?",
+          message: "Message",
+          messagePlaceholder: "Tell us about your project, goals, and any specific requirements...",
+          submit: "Send Message"
+        },
+        info: {
+          email: {
+            title: "Email Us",
+            value: "holla@devcloudpartners.com"
+          },
+          phone: {
+            title: "Call Us", 
+            value: "+34 123 456 789"
+          },
+          location: {
+            title: "Visit Us",
+            value: "Las Palmas, Canary Islands"
+          }
+        }
+      },
       why: {
         heading: "The DevCloud Partners Difference",
         ready: "Ready to experience the difference? Let's discuss how we can help optimize your cloud infrastructure and transform your business with transparent, results-driven cloud solutions.",
@@ -419,18 +457,13 @@ const resources = {
         primary: "Start Your Cloud Journey",
         secondary: "Schedule a Consultation"
       },
-      footer: {
-        services: "Services",
-        company: "Company",
-        legal: "Legal",
-        from: "From the Canary Islands to the world"
-      },
       nav: {
         services: "Services",
         about: "About Us",
         ourStory: "Our Story",
         methodology: "Methodology",
         portfolio: "Portfolio",
+        contact: "Contact",
         resources: "Resources",
         blog: "Blog",
         careers: "Careers"
@@ -438,9 +471,84 @@ const resources = {
       cta: {
         contact: "Contact"
       },
+      careers: {
+        culture: {
+          heading: "Our Work Culture",
+          subheading: "At DevCloud Partners, we believe that technology doesn't exist without the people who make it possible. Our work culture is the heartbeat of everything we do."
+        },
+        remote: {
+          title: "Remote-First Environment",
+          desc: "Work from anywhere with flexible schedules. True work-life balance without physical borders."
+        },
+        learning: {
+          title: "Continuous Learning",
+          desc: "Invest in training, certifications, and professional growth. Master the latest in Cloud, DevOps, and FinOps."
+        },
+        inclusive: {
+          title: "Inclusive & Collaborative",
+          desc: "Diverse ideas and experiences. Every voice matters in building solutions together."
+        },
+        local: {
+          title: "Local Talent, Global Reach",
+          desc: "Proud of our Canary Islands roots while connecting with international clients worldwide."
+        },
+        transparency: {
+          title: "Transparency & Recognition",
+          desc: "Open communication, honest feedback, and celebration of achievements. See the real impact of your work."
+        },
+        innovation: {
+          title: "Innovation & Impact",
+          desc: "Freedom to propose ideas, experiment, and leave your mark on transformative cloud solutions."
+        },
+        hero: {
+          title: "Join Our Team",
+          subtitle: "Build the future of cloud technology with us",
+          description: "We're looking for passionate individuals who want to make a real impact in the cloud industry. Join a team that values innovation, transparency, and genuine collaboration."
+        },
+        positions: {
+          empty: {
+            title: "No Open Positions Right Now",
+            description: "We're not actively hiring at the moment, but we're always interested in connecting with talented individuals who share our passion for cloud technology and innovation.",
+            cta: {
+              title: "Stay Connected",
+              description: "Send us your resume and let us know what role you're interested in. We'll keep your information on file and reach out when we have matching opportunities.",
+              email: "Send Your Resume",
+              contact: "Get in Touch"
+            },
+            footer: "Follow us on social media to stay updated on new opportunities and company news."
+          }
+        }
+      },
       lang: {
         en: "EN",
         es: "ES"
+      },
+      footer: {
+        tagline: "From the Canary Islands to the world",
+        location: "Canary Islands, Spain",
+        email: "holla@devcloudpartners.com",
+        services: {
+          title: "Services",
+          optimization: "Cloud Cost Optimization",
+          devops: "DevOps & Infrastructure",
+          architecture: "Cloud Architecture",
+          managed: "Managed Services"
+        },
+        company: {
+          title: "Company",
+          about: "About Us",
+          methodology: "How We Work",
+          portfolio: "Portfolio",
+          careers: "Careers"
+        },
+        legal: {
+          title: "Legal",
+          privacy: "Privacy Policy",
+          cookies: "Cookie Policy",
+          terms: "Terms of Service"
+        },
+        copyright: "© 2025 DevCloud Partners. All rights reserved.",
+        poweredBy: "Powered By: QUEVEDO TECH GROUP S.L."
       }
     }
   },
@@ -617,6 +725,44 @@ const resources = {
         activities: "Actividades Clave",
         deliverables: "Entregables",
         focus: "Áreas de Enfoque"
+      },
+      contact: {
+        hero: {
+          title: "Construyamos algo increíble juntos",
+          subtitle: "¿Listo para transformar tu infraestructura cloud?",
+          description: "Ponte en contacto con nuestro equipo de expertos en cloud y comienza tu viaje de optimización hoy."
+        },
+        form: {
+          title: "Ponte en Contacto",
+          subtitle: "Cuéntanos sobre tu proyecto y te responderemos en 24 horas",
+          firstName: "Nombre",
+          firstNamePlaceholder: "Ingresa tu nombre",
+          lastName: "Apellido",
+          lastNamePlaceholder: "Ingresa tu apellido", 
+          email: "Correo Electrónico",
+          emailPlaceholder: "tu.email@empresa.com",
+          company: "Empresa",
+          companyPlaceholder: "Nombre de tu empresa",
+          subject: "Asunto",
+          subjectPlaceholder: "¿En qué podemos ayudarte?",
+          message: "Mensaje",
+          messagePlaceholder: "Cuéntanos sobre tu proyecto, objetivos y cualquier requisito específico...",
+          submit: "Enviar Mensaje"
+        },
+        info: {
+          email: {
+            title: "Escríbenos",
+            value: "holla@devcloudpartners.com"
+          },
+          phone: {
+            title: "Llama",
+            value: "+34 123 456 789"
+          },
+          location: {
+            title: "Visítanos",
+            value: "Las Palmas, Islas Canarias"
+          }
+        }
       },
       hero: {
         badge: "Nacidos en Canarias, al servicio del mundo",
@@ -860,18 +1006,13 @@ const resources = {
         primary: "Comienza tu viaje en la nube",
         secondary: "Agenda una consulta"
       },
-      footer: {
-        services: "Servicios",
-        company: "Compañía",
-        legal: "Legal",
-        from: "De Canarias al mundo"
-      },
       nav: {
         services: "Servicios",
         about: "Nosotros",
         ourStory: "Nuestra Historia",
         methodology: "Metodología",
         portfolio: "Portafolio",
+        contact: "Contacto",
         resources: "Recursos",
         blog: "Blog",
         careers: "Carreras"
@@ -879,9 +1020,84 @@ const resources = {
       cta: {
         contact: "Contacto"
       },
+      careers: {
+        culture: {
+          heading: "Nuestra Cultura de Trabajo",
+          subheading: "En DevCloud Partners, creemos que la tecnología no existe sin las personas que la hacen posible. Nuestra cultura de trabajo es el corazón de todo lo que hacemos."
+        },
+        remote: {
+          title: "Entorno Remoto-First",
+          desc: "Trabaja desde cualquier lugar con horarios flexibles. Verdadero equilibrio entre trabajo y vida personal sin fronteras físicas."
+        },
+        learning: {
+          title: "Aprendizaje Continuo",
+          desc: "Invierte en formación, certificaciones y crecimiento profesional. Domina lo último en Cloud, DevOps y FinOps."
+        },
+        inclusive: {
+          title: "Inclusivo y Colaborativo",
+          desc: "Ideas y experiencias diversas. Cada voz importa en la construcción de soluciones juntos."
+        },
+        local: {
+          title: "Talento Local, Alcance Global",
+          desc: "Orgullosos de nuestras raíces canarias mientras nos conectamos con clientes internacionales en todo el mundo."
+        },
+        transparency: {
+          title: "Transparencia y Reconocimiento",
+          desc: "Comunicación abierta, feedback honesto y celebración de logros. Ve el impacto real de tu trabajo."
+        },
+        innovation: {
+          title: "Innovación e Impacto",
+          desc: "Libertad para proponer ideas, experimentar y dejar tu huella en soluciones cloud transformadoras."
+        },
+        hero: {
+          title: "Únete a Nuestro Equipo",
+          subtitle: "Construye el futuro de la tecnología cloud con nosotros",
+          description: "Buscamos personas apasionadas que quieran generar un impacto real en la industria cloud. Únete a un equipo que valora la innovación, la transparencia y la colaboración genuina."
+        },
+        positions: {
+          empty: {
+            title: "No Hay Posiciones Abiertas en Este Momento",
+            description: "No estamos contratando activamente en este momento, pero siempre estamos interesados en conectar con personas talentosas que compartan nuestra pasión por la tecnología cloud y la innovación.",
+            cta: {
+              title: "Mantente Conectado",
+              description: "Envíanos tu currículum y dinos qué rol te interesa. Mantendremos tu información en archivo y te contactaremos cuando tengamos oportunidades que coincidan.",
+              email: "Enviar Tu Currículum",
+              contact: "Ponte en Contacto"
+            },
+            footer: "Síguenos en redes sociales para mantenerte actualizado sobre nuevas oportunidades y noticias de la empresa."
+          }
+        }
+      },
       lang: {
         en: "EN",
         es: "ES"
+      },
+      footer: {
+        tagline: "Desde las Islas Canarias al mundo",
+        location: "Islas Canarias, España",
+        email: "holla@devcloudpartners.com",
+        services: {
+          title: "Servicios",
+          optimization: "Optimización de Costos en la Nube",
+          devops: "DevOps e Infraestructura",
+          architecture: "Arquitectura en la Nube",
+          managed: "Servicios Gestionados"
+        },
+        company: {
+          title: "Empresa",
+          about: "Acerca de Nosotros",
+          methodology: "Cómo Trabajamos",
+          portfolio: "Portafolio",
+          careers: "Carreras"
+        },
+        legal: {
+          title: "Legal",
+          privacy: "Política de Privacidad",
+          cookies: "Política de Cookies",
+          terms: "Términos de Servicio"
+        },
+        copyright: "© 2025 DevCloud Partners. Todos los derechos reservados.",
+        poweredBy: "Desarrollado por: QUEVEDO TECH GROUP S.L."
       }
     }
   }

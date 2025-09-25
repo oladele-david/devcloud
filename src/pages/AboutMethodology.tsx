@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useTranslation } from 'react-i18next';
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import SectionSeparator from "@/components/methodology/SectionSeparator";
 import FlowCarousel from "@/components/methodology/FlowCarousel";
+import { gsap } from 'gsap';
 
 const AboutMethodology: React.FC = () => {
   const { t } = useTranslation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const tracingBeamRef = useRef<HTMLDivElement>(null);
+  const flowRef = useRef<HTMLDivElement>(null);
   const phases = [
     {
       id: 'phase-1',
@@ -99,21 +104,39 @@ const AboutMethodology: React.FC = () => {
     }
   ];
 
+  useEffect(() => {
+    const tl = gsap.timeline();
+    
+    // Set initial states
+    gsap.set([titleRef.current, tracingBeamRef.current, flowRef.current], {
+      opacity: 0,
+      y: 30
+    });
+
+    // Animate elements with stagger
+    tl.to(containerRef.current, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" })
+      .to(titleRef.current, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.4")
+      .to(tracingBeamRef.current, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.6")
+      .to(flowRef.current, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.4");
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900">
       <Header />
       <main className="flex-1 pt-24 pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 sm:mb-12 md:mb-14 text-center">
+        <div ref={containerRef} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div ref={titleRef} className="mb-10 sm:mb-12 md:mb-14 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">{t('mvp.title', 'Our 4-Phase Methodology')}</h1>
             <p className="mt-3 text-slate-600 max-w-2xl mx-auto">{t('mvp.subtitle', 'Systematic approach to cloud optimization')}</p>
           </div>
 
-          <TracingBeam className="mb-12" phases={phases} />
+          <div ref={tracingBeamRef}>
+            <TracingBeam className="mb-12" phases={phases} />
+          </div>
 
           <SectionSeparator className="my-10 sm:my-12 md:my-14" />
 
-          <div className="mt-8">
+          <div ref={flowRef} className="mt-8">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center">{t('mvp.flow.title', 'Our Process Flow')}</h2>
             <p className="mt-2 text-slate-600 max-w-3xl mx-auto text-center">{t('mvp.flow.subtitle', 'From assessment to ongoing optimization')}</p>
             <div className="mt-6">

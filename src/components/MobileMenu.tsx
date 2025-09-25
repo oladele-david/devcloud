@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 type MobileMenuProps = {
   open: boolean;
@@ -43,13 +44,13 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
           </button>
         </div>
         <nav className="p-5 space-y-2">
-          <a href="/" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50">
+          <Link to="/" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50" onClick={onClose}>
             Home
-          </a>
+          </Link>
           {/* Direct Services link (keep only this, no dropdown) */}
-          <a href="/services" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50">
+          <Link to="/services" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50" onClick={onClose}>
             {t("nav.services")}
-          </a>
+          </Link>
 
           {/* Portfolio link */}
           <a href="#" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50">
@@ -72,25 +73,29 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
               className={`${aboutOpen ? "block" : "hidden"}`}
             >
               <div className="mt-1 ml-3 border-l border-gray-100">
-                <a href="/about/story" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">
+                <Link to="/about/story" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg" onClick={onClose}>
                   {t("nav.ourStory")}
-                </a>
-                <a href="/about/methodology" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">
+                </Link>
+                <Link to="/about/methodology" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg" onClick={onClose}>
                   {t("nav.methodology")}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* Careers direct link */}
-          <a href="/careers" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50">
+          <Link to="/careers" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50" onClick={onClose}>
             {t("nav.careers")}
-          </a>
+          </Link>
         </nav>
         <div className="px-5 pt-2 pb-6 border-t border-gray-100">
-          <button className="w-full bg-brand-accent hover:bg-brand-accent-700 text-white px-5 py-3 rounded-full font-medium transition-colors duration-200">
+          <Link 
+            to="/contact"
+            className="block w-full bg-brand-accent hover:bg-brand-accent-700 text-white px-5 py-3 rounded-full font-medium transition-colors duration-200 text-center"
+            onClick={onClose}
+          >
             {t("cta.contact")}
-          </button>
+          </Link>
         </div>
       </div>
     </>

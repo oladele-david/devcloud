@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export const MissionVision: React.FC = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ export const MissionVision: React.FC = () => {
               </p>
             </div>
             <div className="mt-4">
-              <a href="/about/methodology" className="inline-flex items-center px-4 py-2 rounded-full bg-brand-accent text-white hover:opacity-90">{t('mv.lead.cta', 'See Our Methodology')}</a>
+              <Link to="/about/methodology" className="inline-flex items-center px-4 py-2 rounded-full bg-brand-accent text-white hover:opacity-90">{t('mv.lead.cta', 'See Our Methodology')}</Link>
             </div>
           </div>
 
