@@ -10,7 +10,6 @@ type MobileMenuProps = {
 const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
   const { t } = useTranslation();
   const [aboutOpen, setAboutOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,6 +43,9 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
           </button>
         </div>
         <nav className="p-5 space-y-2">
+          <a href="/" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50">
+            Home
+          </a>
           {/* Direct Services link (keep only this, no dropdown) */}
           <a href="/services" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50">
             {t("nav.services")}
@@ -67,44 +69,23 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
             </button>
             <div
               id="mobile-about-submenu"
-              className={`overflow-hidden transition-all duration-300 ${aboutOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
+              className={`${aboutOpen ? "block" : "hidden"}`}
             >
               <div className="mt-1 ml-3 border-l border-gray-100">
-                <a href="#about" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">
+                <a href="/about/story" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">
                   {t("nav.ourStory")}
                 </a>
-                <a href="#methodology" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">
+                <a href="/about/methodology" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">
                   {t("nav.methodology")}
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Resources (Blog, Careers) for mobile - collapsible */}
-          <div className="ml-0">
-            <button
-              className="w-full flex items-center justify-between px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50"
-              onClick={() => setResourcesOpen((v) => !v)}
-              aria-expanded={resourcesOpen}
-              aria-controls="mobile-resources-submenu"
-            >
-              <span>{t("nav.resources")}</span>
-              <span className={`transition-transform duration-200 ${resourcesOpen ? "rotate-90" : ""}`}>›</span>
-            </button>
-            <div
-              id="mobile-resources-submenu"
-              className={`overflow-hidden transition-all duration-300 ${resourcesOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
-            >
-              <div className="ml-3 border-l border-gray-100">
-                <a href="#blog" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">
-                  {t("nav.blog")}
-                </a>
-                <a href="#careers" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg">
-                  {t("nav.careers")}
-                </a>
-              </div>
-            </div>
-          </div>
+          {/* Careers direct link */}
+          <a href="/careers" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50">
+            {t("nav.careers")}
+          </a>
         </nav>
         <div className="px-5 pt-2 pb-6 border-t border-gray-100">
           <button className="w-full bg-brand-accent hover:bg-brand-accent-700 text-white px-5 py-3 rounded-full font-medium transition-colors duration-200">

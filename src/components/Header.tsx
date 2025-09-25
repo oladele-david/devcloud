@@ -45,6 +45,9 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
+            <a href="/" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
+              Home
+            </a>
             <a href="/services" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
               {t('nav.services')}
             </a>
@@ -57,27 +60,18 @@ const Header = () => {
               {/* Use top-full and padding-top to avoid hover gap */}
               <div className="pointer-events-none absolute left-0 top-full pt-3 w-56 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
                 <div className="rounded-xl border border-gray-100 bg-white shadow-xl p-2">
-                  <a href="#about" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.ourStory')}</a>
-                  <a href="#methodology" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.methodology')}</a>
+                  <a href="/about/story" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.ourStory')}</a>
+                  <a href="/about/methodology" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.methodology')}</a>
                 </div>
               </div>
             </div>
             <a href="#" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
               {t('nav.portfolio')}
             </a>
-            {/* Resources dropdown (Blog, Careers) */}
-            <div className="relative group">
-              <button className="inline-flex items-center gap-1.5 text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
-                {t('nav.resources')}
-                <HugeiconsIcon icon={ArrowDown01Icon} size={16} className="text-gray-400 group-hover:text-brand-primary transition-transform duration-200 group-hover:rotate-180" />
-              </button>
-              <div className="pointer-events-none absolute left-0 top-full pt-3 w-56 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
-                <div className="rounded-xl border border-gray-100 bg-white shadow-xl p-2">
-                  <a href="#blog" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.blog')}</a>
-                  <a href="#careers" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.careers')}</a>
-                </div>
-              </div>
-            </div>
+            {/* Careers direct link (replaces Resources dropdown) */}
+            <a href="/careers" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
+              {t('nav.careers')}
+            </a>
           </nav>
 
           {/* Right side actions */}
@@ -93,7 +87,8 @@ const Header = () => {
                 onClick={() => {
                   const next = i18n.language.startsWith('es') ? 'en' : 'es'
                   i18n.changeLanguage(next)
-                  if ((window as any).switchLang) { (window as any).switchLang(next) }
+                  const w = window as unknown as { switchLang?: (lang: string) => void }
+                  w.switchLang?.(next)
                 }}
                 aria-label="Toggle language"
               >

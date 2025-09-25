@@ -195,6 +195,178 @@ const resources = {
         }
       },
       services_bottom: "We provide end-to-end cloud solutions that optimize costs, enhance performance, and ensure reliability. Our success-based model means you only pay for the value we deliver, with transparent reporting and measurable results across all our services.",
+      about: {
+        story: {
+          philosophy: {
+            heading: "Our Philosophy",
+            subheading: "Technology as a tool for growth",
+            human_title: "Human-Centered Approach",
+            human_desc: "We work side by side with our clients, embedding ourselves in their teams, listening to their needs and designing tailor-made solutions.",
+            transparent_title: "Transparent Partnership",
+            transparent_desc: "No risks or hidden costs: only clear, measurable and shared results. Our commitment is twofold: to our clients and to our team.",
+            innovation_title: "Innovation & Impact",
+            innovation_desc: "In every project we aim for more than optimizing servers or invoices: we strive to build trust, drive innovation and create a lasting positive impact.",
+            footer: "Our commitment is twofold: to our clients, helping them free up resources to innovate, and to our team, fostering local talent and building a technology hub from the Canary Islands to the world."
+          },
+          title: "Our Story",
+          subtitle: "How DevCloud Partners came to be",
+          sections: [
+            {
+              eyebrow: "Founded in 2025",
+              title: "How DevCloud Partners came to be",
+              description: "DevCloud Partners was born in 2025 with a simple but powerful conviction: the cloud should be a driver of growth, not a financial burden.",
+              imageSrc: "/team/team1.jpg",
+              reverse: false
+            },
+            {
+              eyebrow: "Identifying the Problem",
+              title: "Cloud investments without expected efficiency",
+              description: "After years working in DevOps, FinOps and technology consulting, we saw firsthand how many companies invested heavily in the cloud without achieving the efficiency they expected. Rising bills, oversized infrastructures and a lack of transparency had become the norm.",
+              imageSrc: "/team/team2.jpg",
+              reverse: true
+            },
+            {
+              eyebrow: "Building the Solution",
+              title: "Transparent, results-driven, and human",
+              description: "That's why we decided to build something different: a transparent, results-driven and deeply human service, born in the Canary Islands with a global vision. We want to show that from the islands we can deliver world-class cloud solutions, creating real value for businesses and opportunities for people.",
+              imageSrc: "/team/team3.jpg",
+              reverse: false
+            }
+          ]
+        }
+      },
+      values: {
+        heading: "Our Values",
+        subheading: "The principles that guide everything we do",
+        transparency: { title: "Radical Transparency", desc: "Clear processes, verifiable metrics, and open communication." },
+        excellence: { title: "Technical Excellence", desc: "Best practices in Cloud, DevOps, and FinOps." },
+        innovation: { title: "Continuous Innovation", desc: "Always seeking better performance, lower cost, and more value." },
+        global: { title: "Local Impact, Global Reach", desc: "Investing in Canary Islands talent and exporting services worldwide." },
+        collaboration: { title: "Genuine Collaboration", desc: "We integrate as partners, sharing both successes and risks." },
+        sustainability: { title: "Sustainability & Efficiency", desc: "Optimize resources to reduce waste and impact." }
+      },
+      mv: {
+        lead: {
+          title: "How We Deliver",
+          body: "Outcomes first: assess, design, implement, operate. We align on goals, build the right platform, and keep improving — balancing speed, reliability and cost.",
+          cta: "See Our Methodology"
+        },
+        vision: {
+          title: "Vision",
+          body: "Lead in cloud efficiency by delivering innovative, sustainable and cost‑effective solutions that set a new standard for transparency and reliability."
+        },
+        mission: {
+          title: "Mission",
+          body: "Leverage our expertise, resources and technology to design, operate and optimize cloud platforms that exceed expectations on cost, performance and uptime — enabling customers to focus on innovation."
+        }
+      },
+      team: {
+        eyebrow: "Team",
+        title: "Our team",
+        description: "Meet the people driving our mission and values.",
+        members: [
+          { name: "David González", role: "CEO", image: "/team/David1.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Juan García", role: "Advisor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Emmanuel Oluyemi", role: "DevOps Engineer", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Joel Villar", role: "Cloud & DevOps Architect", image: "/team/Joel4.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Sebastián Cabrera", role: "Head Marketing & Sales", image: "/team/Sebastian5.png", linkedin: "https://www.linkedin.com/" },
+        ],
+        hiring: "Our team is growing! We're building a diverse group of cloud experts, DevOps engineers, and FinOps specialists who share our passion for transparency and technical excellence."
+      },
+      mvp: {
+        title: "Our 4-Phase Methodology",
+        subtitle: "Systematic approach to cloud optimization",
+        phase1: {
+          title: "Phase 1: Assessment & Discovery",
+          duration: "1–2 weeks",
+          summary: "We begin with a comprehensive evaluation of your current cloud infrastructure, spending patterns, and business objectives. This phase establishes the baseline and identifies optimization opportunities.",
+          a1: "Infrastructure audit and documentation",
+          a2: "Cost analysis and spending patterns review",
+          a3: "Performance and security assessment",
+          a4: "Stakeholder interviews and requirements gathering",
+          a5: "Risk assessment and compliance review",
+          a6: "Opportunity identification and prioritization",
+          d1: "Current state assessment report",
+          d2: "Cost breakdown and analysis",
+          d3: "Optimization opportunities matrix",
+          d4: "Risk assessment document",
+          d5: "Recommendations summary",
+          f1: "Security Review",
+          f2: "Stakeholder Alignment",
+          f3: "Cost Analysis"
+        },
+        phase2: {
+          title: "Phase 2: Strategy & Planning",
+          duration: "1–2 weeks",
+          summary: "Based on our assessment findings, we develop a customized strategy and detailed implementation roadmap with clear objectives, success metrics, and a phased execution plan.",
+          a1: "Strategic roadmap development",
+          a2: "Implementation plan creation",
+          a3: "Success metrics definition",
+          a4: "Timeline and milestone planning",
+          a5: "Resource allocation planning",
+          a6: "Change management strategy",
+          d1: "Strategic roadmap document",
+          d2: "Detailed implementation plan",
+          d3: "Success metrics framework",
+          d4: "Project timeline and milestones",
+          d5: "Resource requirements",
+          f1: "Goal Setting",
+          f2: "Timeline Planning",
+          f3: "Team Alignment"
+        },
+        phase3: {
+          title: "Phase 3: Implementation & Execution",
+          duration: "4–12 weeks",
+          summary: "We execute the plan in carefully planned phases, implementing changes while maintaining system stability and business continuity, with transparent communication throughout.",
+          a1: "Phased implementation execution",
+          a2: "Infrastructure optimization",
+          a3: "Automation implementation",
+          a4: "Monitoring and alerting setup",
+          a5: "Testing and validation",
+          a6: "Documentation and knowledge transfer",
+          d1: "Optimized infrastructure",
+          d2: "Automated processes and workflows",
+          d3: "Monitoring and alerting systems",
+          d4: "Implementation documentation",
+          d5: "Knowledge transfer sessions",
+          f1: "Automation",
+          f2: "Risk Mitigation",
+          f3: "Performance"
+        },
+        phase4: {
+          title: "Phase 4: Monitoring & Optimization",
+          duration: "Ongoing",
+          summary: "Continuous monitoring and optimization ensure sustained results. We provide regular reporting, proactive recommendations, and support to maximize your cloud investment.",
+          a1: "Continuous performance monitoring",
+          a2: "Regular optimization reviews",
+          a3: "Proactive issue identification",
+          a4: "Performance reporting and analysis",
+          a5: "Ongoing recommendations",
+          a6: "Support and maintenance",
+          d1: "Performance monitoring dashboards",
+          d2: "Regular optimization reports",
+          d3: "Proactive recommendations",
+          d4: "Ongoing support and maintenance",
+          d5: "Continuous improvement plans",
+          f1: "Performance Tracking",
+          f2: "Continuous Optimization",
+          f3: "Ongoing Support"
+        },
+        flow: {
+          title: "Our Process Flow",
+          subtitle: "From assessment to ongoing optimization",
+          step1: { t: "Initial Consultation", s: "Free assessment call" },
+          step2: { t: "Detailed Assessment", s: "Comprehensive infrastructure review" },
+          step3: { t: "Strategy Development", s: "Custom optimization plan" },
+          step4: { t: "Implementation", s: "Phased execution with monitoring" },
+          step5: { t: "Optimization", s: "Continuous improvement" }
+        }
+      },
+      mvp_labels: {
+        activities: "Key Activities",
+        deliverables: "Deliverables",
+        focus: "Key Focus Areas"
+      },
       why: {
         heading: "The DevCloud Partners Difference",
         ready: "Ready to experience the difference? Let's discuss how we can help optimize your cloud infrastructure and transform your business with transparent, results-driven cloud solutions.",
@@ -274,6 +446,178 @@ const resources = {
   },
   es: {
     common: {
+      about: {
+        story: {
+          philosophy: {
+            heading: "Nuestra Filosofía",
+            subheading: "La tecnología como herramienta de crecimiento",
+            human_title: "Enfoque centrado en las personas",
+            human_desc: "Trabajamos codo a codo con nuestros clientes, integrándonos en sus equipos, escuchando sus necesidades y diseñando soluciones a medida.",
+            transparent_title: "Alianza transparente",
+            transparent_desc: "Sin riesgos ni costes ocultos: solo resultados claros, medibles y compartidos. Nuestro compromiso es doble: con nuestros clientes y con nuestro equipo.",
+            innovation_title: "Innovación e Impacto",
+            innovation_desc: "En cada proyecto buscamos más que optimizar servidores o facturas: construimos confianza, impulsamos la innovación y creamos un impacto positivo duradero.",
+            footer: "Nuestro compromiso es doble: con nuestros clientes, ayudándoles a liberar recursos para innovar, y con nuestro equipo, impulsando el talento local y construyendo un hub tecnológico desde Canarias para el mundo."
+          },
+          title: "Nuestra Historia",
+          subtitle: "Cómo nació DevCloud Partners",
+          sections: [
+            {
+              eyebrow: "Fundado en 2025",
+              title: "Cómo nació DevCloud Partners",
+              description: "DevCloud Partners nació en 2025 con una convicción simple pero poderosa: la nube debe impulsar el crecimiento, no ser una carga financiera.",
+              imageSrc: "/team/team1.jpg",
+              reverse: false
+            },
+            {
+              eyebrow: "Identificando el Problema",
+              title: "Inversiones en la nube sin la eficiencia esperada",
+              description: "Tras años en DevOps, FinOps y consultoría tecnológica, vimos cómo muchas empresas invertían fuertemente en la nube sin lograr la eficiencia esperada. Facturas crecientes, infraestructuras sobredimensionadas y falta de transparencia eran la norma.",
+              imageSrc: "/team/team2.jpg",
+              reverse: true
+            },
+            {
+              eyebrow: "Construyendo la Solución",
+              title: "Transparente, orientado a resultados y humano",
+              description: "Por eso decidimos construir algo diferente: un servicio transparente, orientado a resultados y profundamente humano, nacido en Canarias con visión global. Queremos demostrar que desde las islas podemos ofrecer soluciones cloud de clase mundial, creando valor real para las empresas y oportunidades para las personas.",
+              imageSrc: "/team/team3.jpg",
+              reverse: false
+            }
+          ]
+        }
+      },
+      values: {
+        heading: "Nuestros Valores",
+        subheading: "Los principios que guían todo lo que hacemos",
+        transparency: { title: "Transparencia Radical", desc: "Procesos claros, métricas verificables y comunicación abierta." },
+        excellence: { title: "Excelencia Técnica", desc: "Buenas prácticas en Cloud, DevOps y FinOps." },
+        innovation: { title: "Innovación Continua", desc: "Siempre buscando mejor rendimiento, menor coste y más valor." },
+        global: { title: "Impacto Local, Alcance Global", desc: "Impulsamos talento canario y exportamos servicios al mundo." },
+        collaboration: { title: "Colaboración Genuina", desc: "Nos integramos como socios, compartiendo éxitos y riesgos." },
+        sustainability: { title: "Sostenibilidad y Eficiencia", desc: "Optimizar recursos para reducir desperdicio e impacto." }
+      },
+      mv: {
+        lead: {
+          title: "Cómo Entregamos",
+          body: "Resultados primero: evaluar, diseñar, implementar y operar. Alineamos objetivos, construimos la plataforma adecuada y mejoramos continuamente — equilibrando velocidad, fiabilidad y coste.",
+          cta: "Ver Nuestra Metodología"
+        },
+        vision: {
+          title: "Visión",
+          body: "Liderar en eficiencia cloud entregando soluciones innovadoras, sostenibles y rentables que establezcan un nuevo estándar de transparencia y fiabilidad."
+        },
+        mission: {
+          title: "Misión",
+          body: "Aprovechar nuestra experiencia, recursos y tecnología para diseñar, operar y optimizar plataformas cloud que superen expectativas en coste, rendimiento y disponibilidad — permitiendo a los clientes centrarse en la innovación."
+        }
+      },
+      team: {
+        eyebrow: "Equipo",
+        title: "Nuestro equipo",
+        description: "Conoce a las personas que impulsan nuestra misión y valores.",
+        members: [
+          { name: "David González", role: "Director Ejecutivo", image: "/team/David1.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Juan García", role: "Asesor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Emmanuel Oluyemi", role: "Ingeniero DevOps", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Joel Villar", role: "Arquitecto Cloud & DevOps", image: "/team/Joel4.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Sebastián Cabrera", role: "Jefe de Marketing y Ventas", image: "/team/Sebastian5.png", linkedin: "https://www.linkedin.com/" },
+        ],
+        hiring: "¡Nuestro equipo está creciendo! Estamos formando un grupo diverso de expertos en la nube, ingenieros DevOps y especialistas en FinOps que comparten nuestra pasión por la transparencia y la excelencia técnica."
+      },
+      mvp: {
+        title: "Nuestra Metodología en 4 Fases",
+        subtitle: "Enfoque sistemático para la optimización cloud",
+        phase1: {
+          title: "Fase 1: Evaluación y Descubrimiento",
+          duration: "1–2 semanas",
+          summary: "Iniciamos con una evaluación integral de tu infraestructura cloud, patrones de gasto y objetivos de negocio. Esta fase establece la línea base e identifica oportunidades de optimización.",
+          a1: "Auditoría e inventario de infraestructura",
+          a2: "Análisis de costes y patrones de gasto",
+          a3: "Evaluación de rendimiento y seguridad",
+          a4: "Entrevistas y levantamiento de requisitos",
+          a5: "Evaluación de riesgos y cumplimiento",
+          a6: "Identificación y priorización de oportunidades",
+          d1: "Informe de evaluación del estado actual",
+          d2: "Desglose y análisis de costes",
+          d3: "Matriz de oportunidades de optimización",
+          d4: "Documento de evaluación de riesgos",
+          d5: "Resumen de recomendaciones",
+          f1: "Revisión de Seguridad",
+          f2: "Alineación con Stakeholders",
+          f3: "Análisis de Costes"
+        },
+        phase2: {
+          title: "Fase 2: Estrategia y Planificación",
+          duration: "1–2 semanas",
+          summary: "A partir de los hallazgos, definimos una estrategia y hoja de ruta de implementación con objetivos claros, métricas de éxito y un plan por fases.",
+          a1: "Desarrollo de la hoja de ruta",
+          a2: "Creación del plan de implementación",
+          a3: "Definición de métricas de éxito",
+          a4: "Planificación de plazos y hitos",
+          a5: "Planificación de recursos",
+          a6: "Estrategia de gestión del cambio",
+          d1: "Documento de hoja de ruta",
+          d2: "Plan de implementación detallado",
+          d3: "Marco de métricas de éxito",
+          d4: "Cronograma y hitos del proyecto",
+          d5: "Requerimientos de recursos",
+          f1: "Definición de Objetivos",
+          f2: "Planificación de Tiempos",
+          f3: "Alineación del Equipo"
+        },
+        phase3: {
+          title: "Fase 3: Implementación y Ejecución",
+          duration: "4–12 semanas",
+          summary: "Ejecutamos el plan por fases, manteniendo la estabilidad del sistema y la continuidad del negocio, con comunicación transparente en todo momento.",
+          a1: "Ejecución por fases",
+          a2: "Optimización de infraestructura",
+          a3: "Implementación de automatización",
+          a4: "Configuración de monitoreo y alertas",
+          a5: "Pruebas y validación",
+          a6: "Documentación y transferencia de conocimiento",
+          d1: "Infraestructura optimizada",
+          d2: "Procesos y flujos automatizados",
+          d3: "Sistemas de monitoreo y alertas",
+          d4: "Documentación de implementación",
+          d5: "Sesiones de transferencia de conocimiento",
+          f1: "Automatización",
+          f2: "Mitigación de Riesgos",
+          f3: "Rendimiento"
+        },
+        phase4: {
+          title: "Fase 4: Monitoreo y Optimización",
+          duration: "Continuo",
+          summary: "El monitoreo y la optimización continua garantizan resultados sostenidos. Entregamos informes, recomendaciones proactivas y soporte para maximizar tu inversión en la nube.",
+          a1: "Monitoreo continuo del rendimiento",
+          a2: "Revisiones periódicas de optimización",
+          a3: "Identificación proactiva de incidencias",
+          a4: "Reportes y análisis de rendimiento",
+          a5: "Recomendaciones continuas",
+          a6: "Soporte y mantenimiento",
+          d1: "Tableros de monitoreo",
+          d2: "Reportes regulares de optimización",
+          d3: "Recomendaciones proactivas",
+          d4: "Soporte y mantenimiento continuo",
+          d5: "Planes de mejora continua",
+          f1: "Seguimiento de Rendimiento",
+          f2: "Optimización Continua",
+          f3: "Soporte Permanente"
+        },
+        flow: {
+          title: "Nuestro Flujo de Proceso",
+          subtitle: "De la evaluación a la optimización continua",
+          step1: { t: "Consulta Inicial", s: "Llamada de evaluación gratuita" },
+          step2: { t: "Evaluación Detallada", s: "Revisión integral de la infraestructura" },
+          step3: { t: "Desarrollo de Estrategia", s: "Plan de optimización a medida" },
+          step4: { t: "Implementación", s: "Ejecución por fases con monitoreo" },
+          step5: { t: "Optimización", s: "Mejora continua" }
+        }
+      },
+      mvp_labels: {
+        activities: "Actividades Clave",
+        deliverables: "Entregables",
+        focus: "Áreas de Enfoque"
+      },
       hero: {
         badge: "Nacidos en Canarias, al servicio del mundo",
         title_line1: "La nube debe impulsar el",
