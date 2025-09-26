@@ -120,12 +120,12 @@ export const StickyScrollReveal = () => {
 												))}
 											</ul>
 										</div>
-										{/* Benefits */}
+										{/* Technologies */}
 										<div>
-											<h4 className="text-sm font-semibold text-brand.dark mb-2">{t("services.benefits.title")}</h4>
+											<h4 className="text-sm font-semibold text-brand.dark mb-2">{t("services.technologies.title")}</h4>
 											<div className="flex flex-wrap gap-2">
-												{benefits.map((b, idx) => (
-													<span key={idx} className="inline-flex items-center rounded-full bg-brand-accent/10 text-brand-accent px-3 py-1 text-xs font-medium">{b}</span>
+												{benefits.map((tech, idx) => (
+													<span key={idx} className="inline-flex items-center rounded-full bg-brand-accent/10 text-brand-accent px-3 py-1 text-xs font-medium">{tech}</span>
 												))}
 											</div>
 										</div>

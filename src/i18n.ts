@@ -20,6 +20,7 @@ const resources = {
         subtitle: "We partner with the world's leading technology companies"
       },
       services: {
+        eyebrow: "Our Services",
         heading: "Comprehensive Cloud Solutions",
         finops_title: "Cloud Cost Optimization",
         finops_sub: "FinOps Excellence",
@@ -60,6 +61,54 @@ const resources = {
             { title: "Team Focus", desc: "Your team ships product while we run the platform." }
           ]
         },
+        technologies: {
+          title: "Technologies & Tools"
+        },
+        portfolio: {
+          hero: {
+            title: "Our Portfolio",
+            subtitle: "Explore our successful cloud transformations and innovative solutions.",
+            description: "From cost optimization to scalable architectures, discover how we've helped businesses transform their cloud infrastructure and achieve measurable results."
+          },
+          finops: {
+            title: "Cloud Cost Optimization",
+            description: "Reduce cloud spending by 30-50% with our FinOps expertise"
+          },
+          devops: {
+            title: "DevOps & Infrastructure", 
+            description: "Automated CI/CD pipelines and infrastructure management"
+          },
+          architecture: {
+            title: "Cloud Architecture",
+            description: "Scalable, secure cloud architectures and migrations"
+          },
+          managed: {
+            title: "Managed Services",
+            description: "24/7 monitoring and support with guaranteed SLAs"
+          },
+          engineering: {
+            title: "Software Engineering",
+            description: "Modern applications built with cutting-edge technologies"
+          },
+          stats: {
+            title: "Our Impact",
+            subtitle: "Numbers that speak to our success and client satisfaction",
+            costReduction: "30-50%",
+            costReductionLabel: "Average Cost Reduction",
+            projects: "50+",
+            projectsLabel: "Projects Delivered",
+            uptime: "99.9%",
+            uptimeLabel: "SLA Uptime",
+            clients: "25+",
+            clientsLabel: "Happy Clients"
+          },
+          cta: {
+            title: "Ready to Start Your Cloud Journey?",
+            description: "Let's discuss how we can help transform your cloud infrastructure and deliver measurable results.",
+            contact: "Get Started",
+            services: "View Services"
+          }
+        },
         process: {
           title: "How we work",
           steps: [
@@ -92,10 +141,14 @@ const resources = {
               "Transparent reporting"
             ],
             benefits: [
-              "Average 30–50% cost reduction",
-              "No upfront investment",
-              "Improved visibility & control",
-              "Optimized resource allocation"
+              "AWS",
+              "Azure", 
+              "GCP",
+              "Terraform",
+              "CloudFormation",
+              "Cost Explorer",
+              "CloudWatch",
+              "Azure Cost Management"
             ],
             process: [
               "Assess cloud spend",
@@ -114,10 +167,15 @@ const resources = {
               "Observability"
             ],
             benefits: [
-              "Faster, safer releases",
-              "Reduced toil",
-              "Improved reliability",
-              "Developer productivity"
+              "Jenkins",
+              "GitLab CI",
+              "GitHub Actions",
+              "Docker",
+              "Kubernetes",
+              "Terraform",
+              "Ansible",
+              "Prometheus",
+              "Grafana"
             ],
             process: [
               "Assess delivery & ops",
@@ -136,10 +194,15 @@ const resources = {
               "Migration plans"
             ],
             benefits: [
-              "Right-sized architecture",
-              "Improved performance",
-              "Security by default",
-              "Faster migrations"
+              "AWS Well-Architected",
+              "Azure Architecture Center",
+              "Google Cloud Architecture",
+              "Terraform",
+              "CloudFormation",
+              "ARM Templates",
+              "Docker",
+              "Kubernetes",
+              "Istio"
             ],
             process: [
               "Assess current state",
@@ -158,10 +221,15 @@ const resources = {
               "Continuous improvement"
             ],
             benefits: [
-              "Higher uptime",
-              "Predictable operations",
-              "Reduced incident impact",
-              "Clear SLAs"
+              "PagerDuty",
+              "Datadog",
+              "New Relic",
+              "Splunk",
+              "Prometheus",
+              "Grafana",
+              "ELK Stack",
+              "AWS CloudWatch",
+              "Azure Monitor"
             ],
             process: [
               "Onboarding & SLAs",
@@ -180,10 +248,17 @@ const resources = {
               "DevEx improvements"
             ],
             benefits: [
-              "Faster time-to-market",
-              "Higher quality",
-              "Lower maintenance cost",
-              "Scalable foundations"
+              "React",
+              "Node.js",
+              "Python",
+              "TypeScript",
+              "PostgreSQL",
+              "MongoDB",
+              "Redis",
+              "Docker",
+              "Kubernetes",
+              "AWS Lambda",
+              "Azure Functions"
             ],
             process: [
               "Discover & align",
@@ -815,6 +890,7 @@ const resources = {
         subtitle: "Colaboramos con los líderes tecnológicos del mundo"
       },
       services: {
+        eyebrow: "Nuestros Servicios",
         heading: "Soluciones Cloud Integrales",
         finops_title: "Optimización de Costes Cloud",
         finops_sub: "Excelencia FinOps",
@@ -855,6 +931,54 @@ const resources = {
             { title: "Enfoque del Equipo", desc: "Tu equipo crea producto mientras nosotros operamos la plataforma." }
           ]
         },
+        technologies: {
+          title: "Tecnologías y Herramientas"
+        },
+        portfolio: {
+          hero: {
+            title: "Nuestro Portafolio",
+            subtitle: "Explora nuestras exitosas transformaciones cloud y soluciones innovadoras.",
+            description: "Desde optimización de costes hasta arquitecturas escalables, descubre cómo hemos ayudado a las empresas a transformar su infraestructura cloud y lograr resultados medibles."
+          },
+          finops: {
+            title: "Optimización de Costes Cloud",
+            description: "Reduce el gasto en la nube entre 30-50% con nuestra experiencia FinOps"
+          },
+          devops: {
+            title: "DevOps e Infraestructura",
+            description: "Pipelines CI/CD automatizados y gestión de infraestructura"
+          },
+          architecture: {
+            title: "Arquitectura Cloud",
+            description: "Arquitecturas cloud escalables y seguras con migraciones"
+          },
+          managed: {
+            title: "Servicios Gestionados",
+            description: "Monitoreo 24/7 y soporte con SLAs garantizados"
+          },
+          engineering: {
+            title: "Ingeniería de Software",
+            description: "Aplicaciones modernas construidas con tecnologías de vanguardia"
+          },
+          stats: {
+            title: "Nuestro Impacto",
+            subtitle: "Números que hablan de nuestro éxito y satisfacción del cliente",
+            costReduction: "30-50%",
+            costReductionLabel: "Reducción Promedio de Costes",
+            projects: "50+",
+            projectsLabel: "Proyectos Entregados",
+            uptime: "99.9%",
+            uptimeLabel: "Tiempo de Actividad SLA",
+            clients: "25+",
+            clientsLabel: "Clientes Satisfechos"
+          },
+          cta: {
+            title: "¿Listo para Comenzar tu Viaje Cloud?",
+            description: "Hablemos sobre cómo podemos ayudar a transformar tu infraestructura cloud y entregar resultados medibles.",
+            contact: "Comenzar",
+            services: "Ver Servicios"
+          }
+        },
         process: {
           title: "Cómo trabajamos",
           steps: [
@@ -887,10 +1011,14 @@ const resources = {
               "Informes transparentes"
             ],
             benefits: [
-              "Reducción del 30–50%",
-              "Sin inversión inicial",
-              "Mayor visibilidad y control",
-              "Asignación óptima de recursos"
+              "AWS",
+              "Azure", 
+              "GCP",
+              "Terraform",
+              "CloudFormation",
+              "Cost Explorer",
+              "CloudWatch",
+              "Azure Cost Management"
             ],
             process: [
               "Evaluar gasto cloud",
@@ -909,10 +1037,15 @@ const resources = {
               "Observabilidad"
             ],
             benefits: [
-              "Lanzamientos más rápidos",
-              "Menos trabajo repetitivo",
-              "Más fiabilidad",
-              "Productividad de desarrollo"
+              "Jenkins",
+              "GitLab CI",
+              "GitHub Actions",
+              "Docker",
+              "Kubernetes",
+              "Terraform",
+              "Ansible",
+              "Prometheus",
+              "Grafana"
             ],
             process: [
               "Evaluar delivery y ops",
@@ -931,10 +1064,15 @@ const resources = {
               "Planes de migración"
             ],
             benefits: [
-              "Arquitectura dimensionada",
-              "Mejor rendimiento",
-              "Seguridad por defecto",
-              "Migraciones más rápidas"
+              "AWS Well-Architected",
+              "Azure Architecture Center",
+              "Google Cloud Architecture",
+              "Terraform",
+              "CloudFormation",
+              "ARM Templates",
+              "Docker",
+              "Kubernetes",
+              "Istio"
             ],
             process: [
               "Evaluar estado actual",
@@ -953,10 +1091,15 @@ const resources = {
               "Mejora continua"
             ],
             benefits: [
-              "Mayor disponibilidad",
-              "Operación predecible",
-              "Menor impacto de incidentes",
-              "SLAs claros"
+              "PagerDuty",
+              "Datadog",
+              "New Relic",
+              "Splunk",
+              "Prometheus",
+              "Grafana",
+              "ELK Stack",
+              "AWS CloudWatch",
+              "Azure Monitor"
             ],
             process: [
               "Onboarding y SLAs",
@@ -975,10 +1118,17 @@ const resources = {
               "Mejoras de DevEx"
             ],
             benefits: [
-              "Tiempo al mercado menor",
-              "Mayor calidad",
-              "Menor coste de mantenimiento",
-              "Bases escalables"
+              "React",
+              "Node.js",
+              "Python",
+              "TypeScript",
+              "PostgreSQL",
+              "MongoDB",
+              "Redis",
+              "Docker",
+              "Kubernetes",
+              "AWS Lambda",
+              "Azure Functions"
             ],
             process: [
               "Descubrir y alinear",

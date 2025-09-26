@@ -11,6 +11,7 @@ import AboutStory from "./pages/AboutStory";
 import AboutMethodology from "./pages/AboutMethodology";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
+import Portfolio from "./pages/Portfolio";
 import ScrollToTop from "./components/ScrollToTop";
 import { CookieConsent } from "./components/cookies";
 import { useCookieConsent } from "./hooks/useCookieConsent";
@@ -28,9 +29,10 @@ const AppContent = () => {
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about/story" element={<AboutStory />} />
-          <Route path="/about/methodology" element={<AboutMethodology />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/careers" element={<Careers />} />
+                <Route path="/about/methodology" element={<AboutMethodology />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/portfolio" element={<Portfolio />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

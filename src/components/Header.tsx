@@ -66,9 +66,9 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <a href="#" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
+            <Link to="/portfolio" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
               {t('nav.portfolio')}
-            </a>
+            </Link>
             {/* Careers direct link (replaces Resources dropdown) */}
             <Link to="/careers" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
               {t('nav.careers')}

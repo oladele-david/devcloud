@@ -46,7 +46,7 @@ const ServicesSection = () => {
       title: t('services.eng_title'),
       subtitle: t('services.eng_sub'),
       description: t('services.eng_desc'),
-      image: "/services/technical.png",
+      image: "/services/engineering.png",
       badge: "Engineering"
     }
   ]
@@ -95,7 +95,7 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-8 md:mb-12">
           <div>
-            <p className="text-brand-primary text-xs md:text-sm font-medium mb-1.5 md:mb-2">{t('footer.services')}</p>
+            <p className="text-brand-primary text-xs md:text-sm font-medium mb-1.5 md:mb-2">{t('services.eyebrow')}</p>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 font-display">
               {t('services.heading')}
             </h2>

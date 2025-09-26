@@ -53,9 +53,9 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
           </Link>
 
           {/* Portfolio link */}
-          <a href="#" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50">
+          <Link to="/portfolio" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50" onClick={onClose}>
             {t("nav.portfolio")}
-          </a>
+          </Link>
 
           {/* About submenu for mobile (collapsible) */}
           <div>
