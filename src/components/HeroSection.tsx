@@ -3,9 +3,11 @@ import { ArrowRight01Icon, CloudIcon, ServerStackIcon } from "@hugeicons/core-fr
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { useTranslation } from "react-i18next"
+import { useNavigate } from "react-router-dom"
 
 const HeroSection = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const containerRef = useRef<HTMLDivElement>(null)
   const badgeRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
@@ -71,12 +73,18 @@ const HeroSection = () => {
             
             {/* CTA Buttons */}
             <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center">
-              <button className="bg-brand-primary hover:bg-brand-primary-700 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold transition-colors duration-200 flex items-center justify-center group">
+              <button 
+                onClick={() => navigate('/contact')}
+                className="bg-brand-primary hover:bg-brand-primary-700 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold transition-colors duration-200 flex items-center justify-center group"
+              >
                 <HugeiconsIcon icon={ServerStackIcon} size={16} className="mr-2" />
                 {t('hero.cta_primary')}
                 <HugeiconsIcon icon={ArrowRight01Icon} size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
-              <button className="border-2 border-white text-white hover:bg-white/10 px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold transition-colors duration-200 flex items-center justify-center">
+              <button 
+                onClick={() => navigate('/services')}
+                className="border-2 border-white text-white hover:bg-white/10 px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold transition-colors duration-200 flex items-center justify-center"
+              >
                 <HugeiconsIcon icon={CloudIcon} size={16} className="mr-2" />
                 {t('hero.cta_secondary')}
               </button>
