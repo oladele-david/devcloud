@@ -41,7 +41,7 @@ const EmptyPositions: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:careers@devcloudpartners.com"
+                href="mailto:holla@devcloudpartners.com"
                 className="inline-flex items-center justify-center px-6 py-3 bg-brand-accent text-white font-medium rounded-full hover:bg-brand-accent/90 transition-colors"
               >
                 <HugeiconsIcon icon={Mail01Icon} size={20} className="mr-2" />

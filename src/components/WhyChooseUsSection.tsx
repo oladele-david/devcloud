@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
 
 const WhyChooseUsSection = () => {
   const { t } = useTranslation()
@@ -116,9 +117,12 @@ const WhyChooseUsSection = () => {
           <p className="text-gray-600 text-base md:text-lg mb-6 max-w-3xl mx-auto">
             {t('why.ready')}
           </p>
-          <button className="bg-brand-accent hover:bg-brand-accent-700 text-white px-6 py-3 rounded-full text-base md:text-sm font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <Link
+            to="/contact"
+            className="bg-brand-accent hover:bg-brand-accent-700 text-white px-6 py-3 rounded-full text-base md:text-sm font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl inline-block"
+          >
             {t('why.start')}
-          </button>
+          </Link>
         </div>
       </div>
     </section>

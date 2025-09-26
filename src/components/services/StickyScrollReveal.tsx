@@ -27,7 +27,7 @@ export const StickyScrollReveal = () => {
 	const panelsRef = useRef<(HTMLDivElement | null)[]>([]);
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					const idxAttr = entry.target.getAttribute("data-index");
@@ -39,7 +39,7 @@ export const StickyScrollReveal = () => {
 				});
 			},
 			{ root: null, rootMargin: "-40% 0px -40% 0px", threshold: 0.01 }
-		);
+    );
 
 		panelsRef.current.forEach((el) => {
 			if (el) observer.observe(el);
@@ -62,8 +62,8 @@ export const StickyScrollReveal = () => {
 		return id; // finops/devops
 	};
 
-	return (
-		<section ref={sectionRef} className="relative">
+  return (
+    <section ref={sectionRef} className="relative" id="services">
 			<div className="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
 				{/* Sticky left column */}
 				<div className="lg:col-span-5 lg:sticky lg:top-24 self-start">
@@ -78,9 +78,9 @@ export const StickyScrollReveal = () => {
 							{t("services.sticky.subtitle")}
 						</p>
 						<div className="hidden lg:flex gap-2 pt-1">
-							{items.map((_, i) => (
+                {items.map((item, i) => (
 								<button
-									key={i}
+                    key={item.id}
 									aria-label={`Go to section ${i + 1}`}
 									className={`h-1.5 w-6 rounded-full transition-colors ${i === active ? "bg-brand-accent" : "bg-brand-accent/30"}`}
 									onClick={() => {
@@ -94,12 +94,12 @@ export const StickyScrollReveal = () => {
 
 				{/* Right scroll column */}
 				<div className="lg:col-span-7 space-y-0">
-					{items.map((item, i) => {
+            {items.map((item, i) => {
 						const detailKey = toDetailKey(item.id);
 						const features = t(`services.detail.${detailKey}.features`, { returnObjects: true }) as string[];
 						const benefits = t(`services.detail.${detailKey}.benefits`, { returnObjects: true }) as string[];
 						return (
-							<div key={item.id} className="py-8 border-t first:border-t-0 border-gray-100">
+                <div key={item.id} id={item.id} className="py-8 border-t first:border-t-0 border-gray-100">
 								<div
 									ref={(el) => (panelsRef.current[i] = el)}
 									data-index={i}

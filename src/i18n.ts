@@ -718,6 +718,14 @@ const resources = {
           ]
         }
       }
+      ,
+      notfound: {
+        title: "Route Not Found",
+        lead: "Looks like this cloud drifted off our map. Let's navigate you back to safe skies.",
+        cta_home: "Back to Home",
+        cta_services: "Explore Services",
+        hint: "Tip: Check the address or try our navigation links above."
+      }
     }
   },
   es: {
@@ -1434,6 +1442,14 @@ const resources = {
             }
           ]
         }
+      }
+      ,
+      notfound: {
+        title: "Ruta no encontrada",
+        lead: "Parece que esta nube se desvió de nuestro mapa. Volvamos a cielos seguros.",
+        cta_home: "Volver al inicio",
+        cta_services: "Explorar servicios",
+        hint: "Consejo: Revisa la dirección o usa los enlaces de navegación."
       }
     }
   }

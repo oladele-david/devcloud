@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
 
 const CTASection = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -27,12 +28,12 @@ const CTASection = () => {
             {t('cta_section.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-2.5 md:gap-4 justify-center relative z-10">
-            <button className="bg-white text-brand-accent px-5 md:px-8 py-2.5 md:py-4 rounded-full text-sm md:text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
+            <Link to="/contact" className="bg-white text-brand-accent px-5 md:px-8 py-2.5 md:py-4 rounded-full text-sm md:text-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
               {t('cta_section.primary')}
-            </button>
-            <button className="border-2 border-white text-white px-5 md:px-8 py-2.5 md:py-4 rounded-full text-sm md:text-lg font-semibold transition-all duration-200 hover:bg-white hover:text-brand-accent">
+            </Link>
+            <Link to="/contact" className="border-2 border-white text-white px-5 md:px-8 py-2.5 md:py-4 rounded-full text-sm md:text-lg font-semibold transition-all duration-200 hover:bg-white hover:text-brand-accent">
               {t('cta_section.secondary')}
-            </button>
+            </Link>
           </div>
         </div>
       </div>

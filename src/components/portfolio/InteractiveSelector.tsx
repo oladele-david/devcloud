@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { 
@@ -19,26 +19,27 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
   const [animatedOptions, setAnimatedOptions] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   
   const options = useMemo(() => [
     {
       title: t('portfolio.selector.options.0.title', 'E-commerce Platform Optimization'),
       description: t('portfolio.selector.options.0.description', 'Reduced cloud costs by 45% while improving performance and scalability'),
-      image: '/bg.jpeg',
+      image: '/portfolio/cost.png',
       icon: CloudIcon,
       category: t('portfolio.selector.options.0.category', 'FinOps')
     },
     {
       title: t('portfolio.selector.options.1.title', 'SaaS Startup Infrastructure Migration'),
       description: t('portfolio.selector.options.1.description', 'Seamless migration to AWS with zero downtime and improved reliability'),
-      image: '/bg.jpeg',
+      image: '/portfolio/migration.png',
       icon: NodeMoveUpIcon,
       category: t('portfolio.selector.options.1.category', 'DevOps')
     },
     {
       title: t('portfolio.selector.options.2.title', 'Financial Services Compliance & Security'),
       description: t('portfolio.selector.options.2.description', 'Built secure, compliant cloud architecture meeting regulatory requirements'),
-      image: '/bg.jpeg',
+      image: '/portfolio/architecture.png',
       icon: Building01Icon,
       category: t('portfolio.selector.options.2.category', 'Architecture')
     }
@@ -77,6 +78,19 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
     return () => window.removeEventListener('resize', update);
   }, []);
 
+  // Track active slide on mobile via scroll position
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || !isMobile) return;
+    const onScroll = () => {
+      const width = el.clientWidth || 1;
+      const idx = Math.round(el.scrollLeft / width);
+      if (idx !== activeIndex) setActiveIndex(Math.max(0, Math.min(options.length - 1, idx)));
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll as EventListener);
+  }, [isMobile, activeIndex, options.length]);
+
   return (
     <div className={compact
       ? "relative flex flex-col items-center bg-white font-sans text-slate-900 pt-16 pb-12"
@@ -95,7 +109,8 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
 
       {/* Options Container */}
       <div
-        className="options flex w-full max-w-[900px] sm:min-w-[600px] mx-0 items-stretch relative rounded-2xl"
+        ref={containerRef}
+        className={`${isMobile ? 'mobile-scroll' : ''} options flex w-full max-w-[900px] sm:min-w-[600px] mx-0 items-stretch relative rounded-2xl`}
         style={{
           height: isMobile ? 320 : 400,
           overflowX: isMobile ? 'auto' : 'hidden',
@@ -122,7 +137,7 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
               transform: animatedOptions.includes(index) ? 'translateX(0)' : 'translateX(-60px)',
               minWidth: '60px',
               minHeight: '100px',
-              margin: isMobile ? '0 6px 0 0' : 0,
+              margin: isMobile ? 0 : 0,
               borderRadius: isMobile ? '8px' : (index === 0 ? '8px 0 0 8px' : index === options.length - 1 ? '0 8px 8px 0' : '0'),
               borderWidth: '2px',
               borderStyle: 'solid',
@@ -132,10 +147,8 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
               boxShadow: activeIndex === index 
                 ? '0 20px 60px rgba(210, 105, 30, 0.30)' 
                 : '0 10px 30px rgba(0,0,0,0.30)',
-              flex: isMobile
-                ? (activeIndex === index ? '0 0 90%' : '0 0 70%')
-                : (activeIndex === index ? '7 1 0%' : '1 1 0%'),
-              scrollSnapAlign: isMobile ? 'center' : undefined,
+              flex: isMobile ? '0 0 100%' : (activeIndex === index ? '7 1 0%' : '1 1 0%'),
+              scrollSnapAlign: isMobile ? 'start' : undefined,
               zIndex: activeIndex === index ? 10 : 1,
               display: 'flex',
               flexDirection: 'column',
@@ -144,14 +157,14 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
               overflow: 'hidden',
               willChange: 'flex-grow, box-shadow, background-size, background-position'
             }}
-            onClick={() => handleOptionClick(index)}
+            onClick={() => { if (!isMobile) handleOptionClick(index); }}
           >
             {/* Shadow effect */}
             <div 
               className="shadow absolute left-0 right-0 pointer-events-none transition-all duration-700 ease-in-out"
               style={{
                 bottom: activeIndex === index ? '0' : '-40px',
-                height: isMobile ? '80px' : '120px',
+                height: isMobile ? '110px' : '120px',
                 boxShadow: activeIndex === index 
                   ? 'inset 0 -120px 120px -120px #000, inset 0 -120px 120px -80px #000' 
                   : 'inset 0 -120px 0px -120px #000, inset 0 -120px 0px -80px #000'
@@ -159,11 +172,11 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
             ></div>
             
             {/* Label with icon and info */}
-            <div className="label absolute left-0 right-0 bottom-3 md:bottom-5 flex items-center justify-start h-12 z-2 pointer-events-none px-3 md:px-4 gap-2 md:gap-3 w-full">
+            <div className="label absolute left-0 right-0 bottom-3 md:bottom-5 flex items-start md:items-center justify-start h-auto md:h-12 py-2 md:py-0 z-2 pointer-events-none px-3 md:px-4 gap-2 md:gap-3 w-full">
               <div className="icon min-w-[36px] max-w-[36px] md:min-w-[44px] md:max-w-[44px] h-[36px] md:h-[44px] flex items-center justify-center rounded-full bg-[rgba(210,105,30,0.85)] backdrop-blur-[10px] shadow-[0_1px_4px_rgba(0,0,0,0.18)] border-2 border-[#d2691e] flex-shrink-0 flex-grow-0 transition-all duration-200">
                 <HugeiconsIcon icon={option.icon} size={isMobile ? 18 : 24} className="text-white" />
               </div>
-              <div className="info text-white whitespace-pre relative">
+              <div className="info text-white relative max-w-[85%]">
                 <div 
                   className="main font-bold text-sm md:text-lg transition-all duration-700 ease-in-out"
                   style={{
@@ -187,6 +200,32 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
           </div>
         ))}
       </div>
+
+      {/* Mobile pagination dots */}
+      {isMobile && (
+        <div className="mt-3 flex items-center justify-center gap-2">
+          {options.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Go to slide ${i + 1}`}
+              onClick={() => {
+                const el = containerRef.current;
+                if (!el) return;
+                const width = el.clientWidth;
+                el.scrollTo({ left: i * width, behavior: 'smooth' });
+              }}
+              className={`h-1.5 rounded-full transition-all ${i === activeIndex ? 'bg-brand-accent w-8' : 'bg-brand-accent/40 w-4'}`}
+            />
+          ))}
+        </div>
+      )}
+      
+      {/* Scoped scrollbar hide for mobile container */}
+      <style>{`
+        .mobile-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        .mobile-scroll::-webkit-scrollbar { display: none; }
+      `}</style>
+
       
       {/* Custom animations */}
       <style>{`
