@@ -12,46 +12,46 @@ type IndustryCard = {
 const industries: IndustryCard[] = [
   {
     key: 'ecommerce',
-    title: 'E-commerce & Retail',
+    title: 'portfolio.industries.items.ecommerce.title',
     description:
-      'High-conversion storefronts and scalable platforms, optimized for traffic peaks, secure payments, and fast global delivery.',
+      'portfolio.industries.items.ecommerce.description',
     image: '/portfolio/ecommerce.png',
     span: 'md:col-span-2',
   },
   {
     key: 'saas',
-    title: 'SaaS & Technology',
+    title: 'portfolio.industries.items.saas.title',
     description:
-      'Modern CI/CD, multi-tenant architectures, and usage-based cost control so your teams ship faster with confidence.',
+      'portfolio.industries.items.saas.description',
     image: '/portfolio/saas.png',
   },
   {
     key: 'financial',
-    title: 'Financial Services',
+    title: 'portfolio.industries.items.financial.title',
     description:
-      'Compliance-first cloud with robust security baselines, auditability, and resilient services for always-on operations.',
+      'portfolio.industries.items.financial.description',
     image: '/portfolio/financial.png',
   },
   {
     key: 'media',
-    title: 'Media & Entertainment',
+    title: 'portfolio.industries.items.media.title',
     description:
-      'Streaming-ready delivery, CDN optimization, and pipelines tuned for rich media at global scale.',
+      'portfolio.industries.items.media.description',
     image: '/portfolio/media.png',
     span: 'md:row-span-2',
   },
   {
     key: 'manufacturing',
-    title: 'Manufacturing',
+    title: 'portfolio.industries.items.manufacturing.title',
     description:
-      'Reliable platforms for supply chain visibility, analytics, and IoT workloads that scale with production needs.',
+      'portfolio.industries.items.manufacturing.description',
     image: '/portfolio/manufacturing.png',
   },
   {
     key: 'healthcare',
-    title: 'Healthcare & Life Sciences',
+    title: 'portfolio.industries.items.healthcare.title',
     description:
-      'Privacy-by-design systems, secure data pipelines, and dependable uptime for patient-centric experiences.',
+      'portfolio.industries.items.healthcare.description',
     image: '/portfolio/healthcare.png',
   },
 ];
@@ -86,10 +86,33 @@ const IndustriesBento: React.FC = () => {
                 <div className="relative z-10 h-full flex flex-col justify-between p-5 sm:p-6">
                   <div className="space-y-2">
                     <h3 className="text-xl sm:text-2xl font-bold text-brand-dark font-display">
-                      {card.title}
+                      {t(card.title, {
+                        defaultValue: (
+                          card.key === 'ecommerce' ? 'E-commerce & Retail' :
+                          card.key === 'saas' ? 'SaaS & Technology' :
+                          card.key === 'financial' ? 'Financial Services' :
+                          card.key === 'media' ? 'Media & Entertainment' :
+                          card.key === 'manufacturing' ? 'Manufacturing' :
+                          'Healthcare & Life Sciences'
+                        )
+                      })}
                     </h3>
                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-md">
-                      {card.description}
+                      {t(card.description, {
+                        defaultValue: (
+                          card.key === 'ecommerce'
+                            ? 'High-conversion storefronts and scalable platforms, optimized for traffic peaks, secure payments, and fast global delivery.'
+                            : card.key === 'saas'
+                            ? 'Modern CI/CD, multi-tenant architectures, and usage-based cost control so your teams ship faster with confidence.'
+                            : card.key === 'financial'
+                            ? 'Compliance-first cloud with robust security baselines, auditability, and resilient services for always-on operations.'
+                            : card.key === 'media'
+                            ? 'Streaming-ready delivery, CDN optimization, and pipelines tuned for rich media at global scale.'
+                            : card.key === 'manufacturing'
+                            ? 'Reliable platforms for supply chain visibility, analytics, and IoT workloads that scale with production needs.'
+                            : 'Privacy-by-design systems, secure data pipelines, and dependable uptime for patient-centric experiences.'
+                        )
+                      })}
                     </p>
                     <div className="w-8 sm:w-10 h-1 bg-brand-accent rounded-full mt-2 transition-all duration-300 group-hover:w-16" />
                   </div>

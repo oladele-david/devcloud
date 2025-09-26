@@ -17,6 +17,8 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const [animatedOptions, setAnimatedOptions] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   
   const options = useMemo(() => [
     {
@@ -63,6 +65,18 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
     };
   }, [options]);
 
+  // Responsive breakpoints
+  useEffect(() => {
+    const update = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 640);
+      setIsTablet(width >= 640 && width < 1024);
+    };
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
   return (
     <div className={compact
       ? "relative flex flex-col items-center bg-white font-sans text-slate-900 pt-16 pb-12"
@@ -77,10 +91,21 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
         </p>
       </div>
 
-      <div className="h-12"></div>
+      <div className="h-8 md:h-12"></div>
 
       {/* Options Container */}
-      <div className="options flex w-full max-w-[900px] min-w-[600px] h-[400px] mx-0 items-stretch overflow-hidden relative rounded-2xl">
+      <div
+        className="options flex w-full max-w-[900px] sm:min-w-[600px] mx-0 items-stretch relative rounded-2xl"
+        style={{
+          height: isMobile ? 320 : 400,
+          overflowX: isMobile ? 'auto' : 'hidden',
+          overflowY: 'hidden',
+          scrollSnapType: isMobile ? 'x mandatory' : undefined,
+          WebkitOverflowScrolling: isMobile ? 'touch' : undefined,
+          gap: isMobile ? 12 : 0,
+          padding: isMobile ? '0 8px' : 0,
+        }}
+      >
         {options.map((option, index) => (
           <div
             key={index}
@@ -97,8 +122,8 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
               transform: animatedOptions.includes(index) ? 'translateX(0)' : 'translateX(-60px)',
               minWidth: '60px',
               minHeight: '100px',
-              margin: 0,
-              borderRadius: index === 0 ? '8px 0 0 8px' : index === options.length - 1 ? '0 8px 8px 0' : '0',
+              margin: isMobile ? '0 6px 0 0' : 0,
+              borderRadius: isMobile ? '8px' : (index === 0 ? '8px 0 0 8px' : index === options.length - 1 ? '0 8px 8px 0' : '0'),
               borderWidth: '2px',
               borderStyle: 'solid',
               borderColor: activeIndex === index ? '#d2691e' : '#374151',
@@ -107,7 +132,10 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
               boxShadow: activeIndex === index 
                 ? '0 20px 60px rgba(210, 105, 30, 0.30)' 
                 : '0 10px 30px rgba(0,0,0,0.30)',
-              flex: activeIndex === index ? '7 1 0%' : '1 1 0%',
+              flex: isMobile
+                ? (activeIndex === index ? '0 0 90%' : '0 0 70%')
+                : (activeIndex === index ? '7 1 0%' : '1 1 0%'),
+              scrollSnapAlign: isMobile ? 'center' : undefined,
               zIndex: activeIndex === index ? 10 : 1,
               display: 'flex',
               flexDirection: 'column',
@@ -123,7 +151,7 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
               className="shadow absolute left-0 right-0 pointer-events-none transition-all duration-700 ease-in-out"
               style={{
                 bottom: activeIndex === index ? '0' : '-40px',
-                height: '120px',
+                height: isMobile ? '80px' : '120px',
                 boxShadow: activeIndex === index 
                   ? 'inset 0 -120px 120px -120px #000, inset 0 -120px 120px -80px #000' 
                   : 'inset 0 -120px 0px -120px #000, inset 0 -120px 0px -80px #000'
@@ -131,13 +159,13 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
             ></div>
             
             {/* Label with icon and info */}
-            <div className="label absolute left-0 right-0 bottom-5 flex items-center justify-start h-12 z-2 pointer-events-none px-4 gap-3 w-full">
-              <div className="icon min-w-[44px] max-w-[44px] h-[44px] flex items-center justify-center rounded-full bg-[rgba(210,105,30,0.85)] backdrop-blur-[10px] shadow-[0_1px_4px_rgba(0,0,0,0.18)] border-2 border-[#d2691e] flex-shrink-0 flex-grow-0 transition-all duration-200">
-                <HugeiconsIcon icon={option.icon} size={24} className="text-white" />
+            <div className="label absolute left-0 right-0 bottom-3 md:bottom-5 flex items-center justify-start h-12 z-2 pointer-events-none px-3 md:px-4 gap-2 md:gap-3 w-full">
+              <div className="icon min-w-[36px] max-w-[36px] md:min-w-[44px] md:max-w-[44px] h-[36px] md:h-[44px] flex items-center justify-center rounded-full bg-[rgba(210,105,30,0.85)] backdrop-blur-[10px] shadow-[0_1px_4px_rgba(0,0,0,0.18)] border-2 border-[#d2691e] flex-shrink-0 flex-grow-0 transition-all duration-200">
+                <HugeiconsIcon icon={option.icon} size={isMobile ? 18 : 24} className="text-white" />
               </div>
               <div className="info text-white whitespace-pre relative">
                 <div 
-                  className="main font-bold text-lg transition-all duration-700 ease-in-out"
+                  className="main font-bold text-sm md:text-lg transition-all duration-700 ease-in-out"
                   style={{
                     opacity: activeIndex === index ? 1 : 0,
                     transform: activeIndex === index ? 'translateX(0)' : 'translateX(25px)'
@@ -146,7 +174,7 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
                   {option.title}
                 </div>
                 <div 
-                  className="sub text-base text-slate-300 transition-all duration-700 ease-in-out"
+                  className="sub text-xs md:text-base text-slate-300 transition-all duration-700 ease-in-out"
                   style={{
                     opacity: activeIndex === index ? 1 : 0,
                     transform: activeIndex === index ? 'translateX(0)' : 'translateX(25px)'
@@ -184,4 +212,22 @@ const InteractiveSelector = ({ compact = false }: InteractiveSelectorProps) => {
           }
         }
         
-    
+        .animate-fadeInTop {
+          opacity: 0;
+          transform: translateY(-20px);
+          animation: fadeInFromTop 0.8s ease-in-out forwards;
+        }
+        
+        .delay-300 {
+          animation-delay: 0.3s;
+        }
+        
+        .delay-600 {
+          animation-delay: 0.6s;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default InteractiveSelector;

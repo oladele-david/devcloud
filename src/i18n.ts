@@ -661,6 +661,63 @@ const resources = {
           save: "Save Preferences"
         }
       }
+      ,
+      // Additional portfolio keys used by new components
+      portfolio: {
+        hero: {
+          title: "Our Portfolio",
+          subtitle: "Explore our successful cloud transformations and innovative solutions."
+        },
+        industries: {
+          title: "Industries We Serve",
+          subtitle: "We partner across sectors to deliver reliable platforms that balance speed, reliability, and cost.",
+          items: {
+            ecommerce: {
+              title: "E-commerce & Retail",
+              description: "High-conversion storefronts and scalable platforms, optimized for traffic peaks, secure payments, and fast global delivery."
+            },
+            saas: {
+              title: "SaaS & Technology",
+              description: "Modern CI/CD, multi-tenant architectures, and usage-based cost control so your teams ship faster with confidence."
+            },
+            financial: {
+              title: "Financial Services",
+              description: "Compliance-first cloud with robust security baselines, auditability, and resilient services for always-on operations."
+            },
+            media: {
+              title: "Media & Entertainment",
+              description: "Streaming-ready delivery, CDN optimization, and pipelines tuned for rich media at global scale."
+            },
+            manufacturing: {
+              title: "Manufacturing",
+              description: "Reliable platforms for supply chain visibility, analytics, and IoT workloads that scale with production needs."
+            },
+            healthcare: {
+              title: "Healthcare & Life Sciences",
+              description: "Privacy-by-design systems, secure data pipelines, and dependable uptime for patient-centric experiences."
+            }
+          }
+        },
+        selector: {
+          options: [
+            {
+              title: "E-commerce Platform Optimization",
+              description: "Reduced cloud costs by 45% while improving performance and scalability",
+              category: "FinOps"
+            },
+            {
+              title: "SaaS Startup Infrastructure Migration",
+              description: "Seamless migration to AWS with zero downtime and improved reliability",
+              category: "DevOps"
+            },
+            {
+              title: "Financial Services Compliance & Security",
+              description: "Built secure, compliant cloud architecture meeting regulatory requirements",
+              category: "Architecture"
+            }
+          ]
+        }
+      }
     }
   },
   es: {
@@ -1319,6 +1376,63 @@ const resources = {
           },
           cancel: "Cancelar",
           save: "Guardar preferencias"
+        }
+      }
+      ,
+      // Claves adicionales de portafolio usadas por los nuevos componentes
+      portfolio: {
+        hero: {
+          title: "Nuestro Portafolio",
+          subtitle: "Explora nuestras exitosas transformaciones cloud y soluciones innovadoras."
+        },
+        industries: {
+          title: "Industrias que Atendemos",
+          subtitle: "Colaboramos en múltiples sectores para entregar plataformas confiables que equilibran velocidad, fiabilidad y coste.",
+          items: {
+            ecommerce: {
+              title: "E-commerce y Retail",
+              description: "Tiendas de alta conversión y plataformas escalables, optimizadas para picos de tráfico, pagos seguros y entrega global rápida."
+            },
+            saas: {
+              title: "SaaS y Tecnología",
+              description: "CI/CD moderno, arquitecturas multi‑tenant y control de costes por uso para que tus equipos entreguen más rápido con confianza."
+            },
+            financial: {
+              title: "Servicios Financieros",
+              description: "Cloud con cumplimiento y seguridad robusta, auditabilidad y servicios resilientes para operaciones siempre disponibles."
+            },
+            media: {
+              title: "Medios y Entretenimiento",
+              description: "Entrega lista para streaming, optimización de CDN y pipelines ajustados para contenido rico a escala global."
+            },
+            manufacturing: {
+              title: "Manufactura",
+              description: "Plataformas fiables para visibilidad de la cadena de suministro, analítica e IoT que escalan con la producción."
+            },
+            healthcare: {
+              title: "Salud y Ciencias de la Vida",
+              description: "Sistemas con privacidad por diseño, tuberías de datos seguras y disponibilidad confiable para experiencias centradas en el paciente."
+            }
+          }
+        },
+        selector: {
+          options: [
+            {
+              title: "Optimización de Plataforma de E‑commerce",
+              description: "Reducción del 45% en costes cloud mejorando rendimiento y escalabilidad",
+              category: "FinOps"
+            },
+            {
+              title: "Migración de Infraestructura para Startup SaaS",
+              description: "Migración a AWS sin downtime y con mayor fiabilidad",
+              category: "DevOps"
+            },
+            {
+              title: "Cumplimiento y Seguridad en Servicios Financieros",
+              description: "Arquitectura cloud segura y conforme a normativas",
+              category: "Arquitectura"
+            }
+          ]
         }
       }
     }

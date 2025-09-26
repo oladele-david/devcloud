@@ -13,11 +13,11 @@ export const StickyScrollReveal = () => {
 	const { t } = useTranslation();
 	const items: StickyItem[] = useMemo(
 		() => [
-			{ id: "finops", titleKey: "services.finops_title", descKey: "services.finops_desc", image: "/bg.jpeg" },
-			{ id: "devops", titleKey: "services.devops_title", descKey: "services.devops_desc", image: "/bg.jpeg" },
-			{ id: "architecture", titleKey: "services.arch_title", descKey: "services.arch_desc", image: "/bg.jpeg" },
-			{ id: "managed", titleKey: "services.mng_title", descKey: "services.mng_desc", image: "/bg.jpeg" },
-			{ id: "software", titleKey: "services.eng_title", descKey: "services.eng_desc", image: "/bg.jpeg" },
+			{ id: "finops", titleKey: "services.finops_title", descKey: "services.finops_desc", image: "/services/cloud.png" },
+			{ id: "devops", titleKey: "services.devops_title", descKey: "services.devops_desc", image: "/services/devops.png" },
+			{ id: "architecture", titleKey: "services.arch_title", descKey: "services.arch_desc", image: "/services/architecture.png" },
+			{ id: "managed", titleKey: "services.mng_title", descKey: "services.mng_desc", image: "/services/managed.png" },
+			{ id: "software", titleKey: "services.eng_title", descKey: "services.eng_desc", image: "/services/engineering.png" },
 		],
 		[t]
 	);
