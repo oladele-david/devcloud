@@ -30,14 +30,9 @@ const PartnerSection = () => {
   }, [])
 
   const partners = [
-    { name: "Altia", logo: "/partners/altia.png", hasImage: true },
-    { name: "Capgemini", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTksfIUMWXLzN3-CNkPntGjwumTALEJUTTJ9g&s", hasImage: true },
+    { name: "Cloudima", logo: "/partners/cloudima.png", hasImage: true },
     { name: "Microsoft Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1280px-Microsoft_Azure_Logo.svg.png", hasImage: true },
-    { name: "O Geko Cloud", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG40aEUSn1lau3zEzNMfC8J1bxONulIjzFjQ&s", hasImage: true },
-    { name: "BABEL", logo: "/partners/babel.png", hasImage: true },
     { name: "AWS", logo: "/partners/aws.png", hasImage: true },
-    { name: "Claranet Cloud Platform", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgArpWfzsRsP9RbGGJsuwHMgSGiDA81w6haw&s", hasImage: true },
-    { name: "Stackscale Grupo Aire", logo: "/partners/stackscale.png", hasImage: true },
     { name: "SARENET", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoDMEdhQwIesvJjzWNziHKQaDaS8Ha4nK6sw&s", hasImage: true }
   ]
 
