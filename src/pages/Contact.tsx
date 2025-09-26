@@ -250,6 +250,7 @@ export default function Contact() {
                       <option value="finops">Cloud Cost Optimization (FinOps)</option>
                       <option value="devops">DevOps & Cloud Infrastructure</option>
                       <option value="architecture">Cloud Architecture & Migration</option>
+                      <option value="software-engineering">Software Engineering</option>
                       <option value="managed">Managed Cloud Services</option>
                       <option value="all">All Services</option>
                     </select>
