@@ -1,12 +1,10 @@
 {
   "build": { 
     "env": { 
-      "NODE_VERSION": "20",
-      "NPM_CONFIG_OPTIONAL": "false",
-      "NPM_CONFIG_INCLUDE": "dev"
+      "NODE_VERSION": "18"
     } 
   },
-  "installCommand": "npm ci --include=optional",
+  "installCommand": "rm -rf node_modules package-lock.json && npm install",
   "rewrites": [
     {
       "source": "/(.*)",
