@@ -1,8 +1,7 @@
 {
   "build": { 
     "env": { 
-      "NODE_VERSION": "22",
-      "ROLLUP_SKIP_NODEJS_NATIVE": "1"
+      "NODE_VERSION": "20"
     } 
   },
   "installCommand": "npm install --legacy-peer-deps",
