@@ -19,4 +19,16 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      // Force rollup to use the JavaScript version instead of native
+      external: [],
+      output: {
+        manualChunks: undefined,
+      }
+    },
+    // Additional build options that can help with the native module issue
+    target: 'es2015',
+    minify: 'esbuild'
+  },
 }));

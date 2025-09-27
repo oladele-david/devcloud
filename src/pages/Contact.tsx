@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Mail01Icon, Call02Icon, Location01Icon, SentIcon } from '@hugeicons/core-free-icons';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 export default function Contact() {
@@ -14,6 +14,27 @@ export default function Contact() {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    location: '',
+    budget: '',
+    timeline: '',
+    service: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -84,7 +105,10 @@ export default function Contact() {
                       </label>
                       <Input
                         id="firstName"
+                        name="firstName"
                         type="text"
+                        value={formData.firstName}
+                        onChange={handleChange}
                         placeholder={t('contact.form.firstNamePlaceholder')}
                         className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
                         required
@@ -96,7 +120,10 @@ export default function Contact() {
                       </label>
                       <Input
                         id="lastName"
+                        name="lastName"
                         type="text"
+                        value={formData.lastName}
+                        onChange={handleChange}
                         placeholder={t('contact.form.lastNamePlaceholder')}
                         className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
                         required
@@ -104,29 +131,129 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
-                      {t('contact.form.email')} *
-                    </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder={t('contact.form.emailPlaceholder')}
-                      className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
-                      required
-                    />
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div>
+                      <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
+                        {t('contact.form.email')} *
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder={t('contact.form.emailPlaceholder')}
+                        className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="company" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
+                        {t('contact.form.company')}
+                      </label>
+                      <Input
+                        id="company"
+                        name="company"
+                        type="text"
+                        value={formData.company}
+                        onChange={handleChange}
+                        placeholder={t('contact.form.companyPlaceholder')}
+                        className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div>
+                      <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
+                        {t('contact.form.phone')}
+                      </label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder={t('contact.form.phonePlaceholder')}
+                        className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="location" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
+                        {t('contact.form.location')}
+                      </label>
+                      <Input
+                        id="location"
+                        name="location"
+                        type="text"
+                        value={formData.location}
+                        onChange={handleChange}
+                        placeholder={t('contact.form.locationPlaceholder')}
+                        className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div>
+                      <label htmlFor="budget" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
+                        {t('contact.form.budget')}
+                      </label>
+                      <select
+                        id="budget"
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleChange}
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        <option value="">{t('contact.form.budgetPlaceholder')}</option>
+                        <option value="under-5k">Under €5,000</option>
+                        <option value="5k-15k">€5,000 - €15,000</option>
+                        <option value="15k-50k">€15,000 - €50,000</option>
+                        <option value="50k-100k">€50,000 - €100,000</option>
+                        <option value="over-100k">Over €100,000</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="timeline" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
+                        {t('contact.form.timeline')}
+                      </label>
+                      <select
+                        id="timeline"
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={handleChange}
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        <option value="">{t('contact.form.timelinePlaceholder')}</option>
+                        <option value="asap">ASAP</option>
+                        <option value="1-month">Within 1 month</option>
+                        <option value="3-months">Within 3 months</option>
+                        <option value="6-months">Within 6 months</option>
+                        <option value="planning">Just planning</option>
+                      </select>
+                    </div>
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
-                      {t('contact.form.company')}
+                    <label htmlFor="service" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
+                      {t('contact.form.service')}
                     </label>
-                    <Input
-                      id="company"
-                      type="text"
-                      placeholder={t('contact.form.companyPlaceholder')}
-                      className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
-                    />
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      <option value="">{t('contact.form.servicePlaceholder')}</option>
+                      <option value="finops">Cloud Cost Optimization (FinOps)</option>
+                      <option value="devops">DevOps & Cloud Infrastructure</option>
+                      <option value="architecture">Cloud Architecture & Migration</option>
+                      <option value="software-engineering">Software Engineering</option>
+                      <option value="managed">Managed Cloud Services</option>
+                      <option value="all">All Services</option>
+                    </select>
                   </div>
 
                   <div>
@@ -135,9 +262,13 @@ export default function Contact() {
                     </label>
                     <Textarea
                       id="message"
-                      placeholder={t('contact.form.messagePlaceholder')}
-                      className="min-h-[80px] sm:min-h-[100px] resize-none text-sm placeholder:text-xs sm:placeholder:text-sm"
+                      name="message"
                       required
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder={t('contact.form.messagePlaceholder')}
+                      rows={10}
+                      className="min-h-[120px] sm:min-h-[140px] resize-none text-sm placeholder:text-xs sm:placeholder:text-sm"
                     />
                   </div>
 

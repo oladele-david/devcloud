@@ -340,10 +340,10 @@ const resources = {
         title: "Our team",
         description: "Meet the people driving our mission and values.",
         members: [
-          { name: "David González", role: "CEO", image: "/team/David1.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Juan García", role: "Advisor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Emmanuel Oluyemi", role: "DevOps Engineer", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Joel Villar", role: "Cloud & DevOps Architect", image: "/team/Joel4.png", linkedin: "https://www.linkedin.com/" },
+          { name: "David González", role: "CEO", image: "/team/David1.png", linkedin: "https://www.linkedin.com/in/sond3r" },
+          { name: "Juan García", role: "Advisor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/in/juangarciamorgado/" },
+          { name: "Emmanuel Oluyemi", role: "DevOps Engineer", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/in/emmanuel-oluyemi-43588a217/" },
+          { name: "Joel Villar", role: "Cloud & DevOps Architect", image: "/team/Joel4.png", linkedin: "https://www.linkedin.com/in/jvillartang/" },
           { name: "Sebastián Cabrera", role: "Head Marketing & Sales", image: "/team/Sebastian5.png", linkedin: "https://www.linkedin.com/" },
         ],
         hiring: "Our team is growing! We're building a diverse group of cloud experts, DevOps engineers, and FinOps specialists who share our passion for transparency and technical excellence."
@@ -459,20 +459,30 @@ const resources = {
           emailPlaceholder: "your.email@company.com",
           company: "Company",
           companyPlaceholder: "Your company name",
+          phone: "Phone Number",
+          phonePlaceholder: "+34 123 456 789",
+          location: "Location",
+          locationPlaceholder: "Your location/country",
+          budget: "Budget Available",
+          budgetPlaceholder: "Select budget range",
+          timeline: "Project Timeline",
+          timelinePlaceholder: "Select timeline",
+          service: "Service of Interest",
+          servicePlaceholder: "Select a service",
           subject: "Subject",
           subjectPlaceholder: "What can we help you with?",
-          message: "Message",
-          messagePlaceholder: "Tell us about your project, goals, and any specific requirements...",
-          submit: "Send Message"
+          message: "Tell us about your cloud challenges",
+          messagePlaceholder: "Describe your current cloud setup, challenges, and what you'd like to achieve...",
+          submit: "Send Briefing"
         },
         info: {
           email: {
             title: "Email Us",
-            value: "holla@devcloudpartners.com"
+            value: "hola@devcloudpartners.com"
           },
           phone: {
             title: "Call Us", 
-            value: "+34 123 456 789"
+            value: "+34 603479347"
           },
           location: {
             title: "Visit Us",
@@ -601,7 +611,7 @@ const resources = {
       footer: {
         tagline: "From the Canary Islands to the world",
         location: "Canary Islands, Spain",
-        email: "holla@devcloudpartners.com",
+        email: "hola@devcloudpartners.com",
         services: {
           title: "Services",
           optimization: "Cloud Cost Optimization",
@@ -800,11 +810,11 @@ const resources = {
         title: "Nuestro equipo",
         description: "Conoce a las personas que impulsan nuestra misión y valores.",
         members: [
-          { name: "David González", role: "Director Ejecutivo", image: "/team/David1.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Juan García", role: "Asesor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Emmanuel Oluyemi", role: "Ingeniero DevOps", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Joel Villar", role: "Arquitecto Cloud & DevOps", image: "/team/Joel4.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Sebastián Cabrera", role: "Jefe de Marketing y Ventas", image: "/team/Sebastian5.png", linkedin: "https://www.linkedin.com/" },
+          { name: "David González", role: "Director Ejecutivo", image: "/team/David1.png", linkedin: "https://www.linkedin.com/in/davidgonzalez/" },
+          { name: "Juan García", role: "Asesor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/in/juangarciamorgado/" },
+          { name: "Emmanuel Oluyemi", role: "Ingeniero DevOps", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/in/emmanuel-oluyemi-43588a217/" },
+          { name: "Joel Villar", role: "Arquitecto Cloud & DevOps", image: "/team/Joel4.png", linkedin: "https://www.linkedin.com/in/joelvillar/" },
+          { name: "Sebastián Cabrera", role: "Jefe de Marketing y Ventas", image: "/team/Sebastian5.png", linkedin: "https://www.linkedin.com/in/sebastiancabrera/" },
         ],
         hiring: "¡Nuestro equipo está creciendo! Estamos formando un grupo diverso de expertos en la nube, ingenieros DevOps y especialistas en FinOps que comparten nuestra pasión por la transparencia y la excelencia técnica."
       },
@@ -919,20 +929,30 @@ const resources = {
           emailPlaceholder: "tu.email@empresa.com",
           company: "Empresa",
           companyPlaceholder: "Nombre de tu empresa",
+          phone: "Número de Teléfono",
+          phonePlaceholder: "+34 123 456 789",
+          location: "Ubicación",
+          locationPlaceholder: "Tu ubicación/país",
+          budget: "Presupuesto Disponible",
+          budgetPlaceholder: "Selecciona rango de presupuesto",
+          timeline: "Cronograma del Proyecto",
+          timelinePlaceholder: "Selecciona cronograma",
+          service: "Servicio de Interés",
+          servicePlaceholder: "Selecciona un servicio",
           subject: "Asunto",
           subjectPlaceholder: "¿En qué podemos ayudarte?",
-          message: "Mensaje",
-          messagePlaceholder: "Cuéntanos sobre tu proyecto, objetivos y cualquier requisito específico...",
-          submit: "Enviar Mensaje"
+          message: "Cuéntanos sobre tus desafíos en la nube",
+          messagePlaceholder: "Describe tu configuración actual en la nube, desafíos y lo que te gustaría lograr...",
+          submit: "Enviar Briefing"
         },
         info: {
           email: {
             title: "Escríbenos",
-            value: "holla@devcloudpartners.com"
+            value: "hola@devcloudpartners.com"
           },
           phone: {
             title: "Llama",
-            value: "+34 123 456 789"
+            value: "+34 603479347"
           },
           location: {
             title: "Visítanos",
@@ -1326,7 +1346,7 @@ const resources = {
       footer: {
         tagline: "Desde las Islas Canarias al mundo",
         location: "Islas Canarias, España",
-        email: "holla@devcloudpartners.com",
+        email: "hola@devcloudpartners.com",
         services: {
           title: "Servicios",
           optimization: "Optimización de Costos en la Nube",
