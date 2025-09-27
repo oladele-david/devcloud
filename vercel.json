@@ -1,10 +1,10 @@
 {
   "build": { 
     "env": { 
-      "NODE_VERSION": "18"
+      "NODE_VERSION": "22"
     } 
   },
-  "installCommand": "rm -rf node_modules package-lock.json && npm install",
+  "installCommand": "npm install --legacy-peer-deps",
   "rewrites": [
     {
       "source": "/(.*)",
