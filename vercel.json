@@ -1,6 +1,10 @@
 {
-  "build": { "env": { "NODE_VERSION": "20", "ROLLUP_SKIP_NODEJS_NATIVE": "1", "ROLLUP_USE_NODEJS": "1", "NPM_CONFIG_OPTIONAL": "false" } },
-  "installCommand": "npm install --no-audit --prefer-online",
+  "build": { 
+    "env": { 
+      "NODE_VERSION": "20"
+    } 
+  },
+  "installCommand": "npm install --legacy-peer-deps",
   "rewrites": [
     {
       "source": "/(.*)",
