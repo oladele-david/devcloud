@@ -11,6 +11,7 @@ type MobileMenuProps = {
 const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
   const { t } = useTranslation();
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -83,10 +84,31 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
             </div>
           </div>
 
-          {/* Careers direct link */}
-          <Link to="/careers" className="block px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50" onClick={onClose}>
-            {t("nav.careers")}
-          </Link>
+          {/* Resources submenu for mobile (collapsible) */}
+          <div>
+            <button
+              className="w-full flex items-center justify-between px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50"
+              onClick={() => setResourcesOpen((v) => !v)}
+              aria-expanded={resourcesOpen}
+              aria-controls="mobile-resources-submenu"
+            >
+              <span>{t("nav.resources")}</span>
+              <span className={`transition-transform duration-200 ${resourcesOpen ? "rotate-90" : ""}`}>›</span>
+            </button>
+            <div
+              id="mobile-resources-submenu"
+              className={`${resourcesOpen ? "block" : "hidden"}`}
+            >
+              <div className="mt-1 ml-3 border-l border-gray-100">
+                <Link to="/blog" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg" onClick={onClose}>
+                  {t("nav.blog")}
+                </Link>
+                <Link to="/careers" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg" onClick={onClose}>
+                  {t("nav.careers")}
+                </Link>
+              </div>
+            </div>
+          </div>
         </nav>
         <div className="px-5 pt-2 pb-6 border-t border-gray-100">
           <Link 
