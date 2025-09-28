@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
 
 export type StickyItem = {
-	id: "finops" | "devops" | "architecture" | "managed" | "software";
+	id: "finops" | "devops" | "architecture" | "managed" | "software" | "training";
 	titleKey: string;
 	descKey: string;
 	image?: string;
@@ -18,6 +18,7 @@ export const StickyScrollReveal = () => {
 			{ id: "architecture", titleKey: "services.arch_title", descKey: "services.arch_desc", image: "/services/architecture.png" },
 			{ id: "managed", titleKey: "services.mng_title", descKey: "services.mng_desc", image: "/services/managed.png" },
 			{ id: "software", titleKey: "services.eng_title", descKey: "services.eng_desc", image: "/services/engineering.png" },
+			{ id: "training", titleKey: "services.training_title", descKey: "services.training_desc", image: "/services/training.jpg" },
 		],
 		[t]
 	);
@@ -59,6 +60,7 @@ export const StickyScrollReveal = () => {
 		if (id === "architecture") return "arch";
 		if (id === "managed") return "mng";
 		if (id === "software") return "eng";
+		if (id === "training") return "training";
 		return id; // finops/devops
 	};
 

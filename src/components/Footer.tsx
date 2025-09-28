@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { Location01Icon, Mail01Icon } from "@hugeicons/core-free-icons"
+import { Location01Icon, Mail01Icon, LinkedinIcon } from "@hugeicons/core-free-icons"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 
@@ -42,8 +42,16 @@ const Footer = () => {
                 <div className="flex items-center space-x-2 text-gray-400 text-sm">
                   <HugeiconsIcon icon={Mail01Icon} size={16} />
                   <span>
-                    <a href="mailto:hola@devcloudpartners.com" className="hover:text-white transition-colors duration-200">
+                    <a href="mailto:holla@devcloudpartners.com" className="hover:text-white transition-colors duration-200">
                       {t('footer.email')}
+                    </a>
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                  <HugeiconsIcon icon={LinkedinIcon} size={16} />
+                  <span>
+                    <a href="https://www.linkedin.com/company/devcloud-partner/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-200">
+                      LinkedIn
                     </a>
                   </span>
                 </div>
@@ -72,6 +80,16 @@ const Footer = () => {
                 <li>
                   <Link to="/services#managed" className="hover:text-white transition-colors duration-200">
                     {t('footer.services.managed')}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services#software" className="hover:text-white transition-colors duration-200">
+                    {t('footer.services.engineering')}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services#training" className="hover:text-white transition-colors duration-200">
+                    {t('footer.services.training')}
                   </Link>
                 </li>
               </ul>

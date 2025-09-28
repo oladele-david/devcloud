@@ -37,6 +37,9 @@ const resources = {
         eng_title: "Software Engineering",
         eng_sub: "Product Development",
         eng_desc: "Design, build, and scale reliable software products with modern engineering practices",
+        training_title: "Training",
+        training_sub: "Team Development",
+        training_desc: "We upskill your teams in cloud, DevOps, and modern software development through hands-on programs tailored to your tech stack and business goals. Applied learning, measurable results.",
         sticky: {
           badge: "Our Services",
           title: "Cloud, DevOps, and FinOps that drive outcomes",
@@ -266,6 +269,34 @@ const resources = {
               "Build & test",
               "Launch & evolve"
             ]
+          },
+          training: {
+            features: [
+              "Hands-on workshops",
+              "Custom curriculum design",
+              "Real-world projects",
+              "Certification preparation",
+              "Team upskilling programs",
+              "Ongoing mentorship"
+            ],
+            benefits: [
+              "AWS",
+              "Azure",
+              "GCP",
+              "Docker",
+              "Kubernetes",
+              "Terraform",
+              "CI/CD",
+              "DevOps",
+              "FinOps",
+              "Cloud Security"
+            ],
+            process: [
+              "Assess team skills",
+              "Design custom program",
+              "Deliver training",
+              "Measure & improve"
+            ]
           }
         }
       },
@@ -340,11 +371,9 @@ const resources = {
         title: "Our team",
         description: "Meet the people driving our mission and values.",
         members: [
-          { name: "David González", role: "CEO", image: "/team/David1.png", linkedin: "https://www.linkedin.com/in/sond3r" },
-          { name: "Juan García", role: "Advisor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/in/juangarciamorgado/" },
-          { name: "Emmanuel Oluyemi", role: "DevOps Engineer", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/in/emmanuel-oluyemi-43588a217/" },
-          { name: "Joel Villar", role: "Cloud & DevOps Architect", image: "/team/Joel4.png", linkedin: "https://www.linkedin.com/in/jvillartang/" },
-          { name: "Sebastián Cabrera", role: "Head Marketing & Sales", image: "/team/Sebastian5.png", linkedin: "https://www.linkedin.com/" },
+          { name: "David González", role: "CEO", image: "/team/David1.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Juan García", role: "Advisor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/" },
         ],
         hiring: "Our team is growing! We're building a diverse group of cloud experts, DevOps engineers, and FinOps specialists who share our passion for transparency and technical excellence."
       },
@@ -460,29 +489,29 @@ const resources = {
           company: "Company",
           companyPlaceholder: "Your company name",
           phone: "Phone Number",
-          phonePlaceholder: "+34 123 456 789",
+          phonePlaceholder: "Enter your phone number",
           location: "Location",
-          locationPlaceholder: "Your location/country",
-          budget: "Budget Available",
-          budgetPlaceholder: "Select budget range",
-          timeline: "Project Timeline",
-          timelinePlaceholder: "Select timeline",
-          service: "Service of Interest",
+          locationPlaceholder: "Enter your location",
+          budget: "Budget",
+          budgetPlaceholder: "Select your budget range",
+          timeline: "Timeline",
+          timelinePlaceholder: "Select your timeline",
+          service: "Service Interest",
           servicePlaceholder: "Select a service",
           subject: "Subject",
           subjectPlaceholder: "What can we help you with?",
-          message: "Tell us about your cloud challenges",
-          messagePlaceholder: "Describe your current cloud setup, challenges, and what you'd like to achieve...",
-          submit: "Send Briefing"
+          message: "Message",
+          messagePlaceholder: "Tell us about your project, goals, and any specific requirements...",
+          submit: "Send Message"
         },
         info: {
           email: {
             title: "Email Us",
-            value: "hola@devcloudpartners.com"
+            value: "holla@devcloudpartners.com"
           },
           phone: {
             title: "Call Us", 
-            value: "+34 603479347"
+            value: "+34 123 456 789"
           },
           location: {
             title: "Visit Us",
@@ -591,16 +620,97 @@ const resources = {
           description: "We're looking for passionate individuals who want to make a real impact in the cloud industry. Join a team that values innovation, transparency, and genuine collaboration."
         },
         positions: {
-          empty: {
-            title: "No Open Positions Right Now",
-            description: "We're not actively hiring at the moment, but we're always interested in connecting with talented individuals who share our passion for cloud technology and innovation.",
-            cta: {
-              title: "Stay Connected",
-              description: "Send us your resume and let us know what role you're interested in. We'll keep your information on file and reach out when we have matching opportunities.",
-              email: "Send Your Resume",
-              contact: "Get in Touch"
-            },
-            footer: "Follow us on social media to stay updated on new opportunities and company news."
+          title: "Open Positions",
+          subtitle: "Join our growing team and help shape the future of cloud technology. We're looking for passionate individuals who share our commitment to excellence and innovation.",
+          apply: "Apply Now",
+          requirements: "Requirements",
+          benefits: "What We Offer",
+          cta: {
+            title: "Don't See Your Perfect Role?",
+            description: "We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.",
+            send_resume: "Send Your Resume",
+            contact: "Get in Touch"
+          },
+          social: "Follow us for updates on new opportunities and company news.",
+          cloud_engineering: {
+            title: "Cloud Engineering & DevOps",
+            department: "Engineering",
+            location: "Remote",
+            type: "Full-time",
+            description: "Join our engineering team to design, build, and optimize cloud infrastructure solutions. Work with cutting-edge technologies and help clients achieve their cloud transformation goals.",
+            requirements: [
+              "3+ years experience with AWS, Azure, or GCP",
+              "Strong knowledge of Kubernetes, Docker, and containerization",
+              "Experience with Infrastructure as Code (Terraform, CloudFormation)",
+              "CI/CD pipeline design and implementation",
+              "Strong problem-solving and communication skills"
+            ],
+            benefits: [
+              "Competitive salary and equity",
+              "Flexible remote work",
+              "Professional development budget",
+              "Latest tech equipment"
+            ]
+          },
+          marketing_sales: {
+            title: "Marketing & Sales",
+            department: "Marketing",
+            location: "Remote",
+            type: "Full-time",
+            description: "Drive growth and brand awareness for DevCloud Partners. Develop marketing strategies, manage campaigns, and build relationships with potential clients in the cloud technology space.",
+            requirements: [
+              "2+ years B2B marketing experience",
+              "Experience with digital marketing tools and platforms",
+              "Strong writing and communication skills",
+              "Understanding of cloud technology market",
+              "Analytical mindset and data-driven approach"
+            ],
+            benefits: [
+              "Performance-based bonuses",
+              "Remote-first culture",
+              "Marketing tools and software access",
+              "Conference and event attendance"
+            ]
+          },
+          finops: {
+            title: "FinOps & Cost Optimization",
+            department: "Operations",
+            location: "Remote",
+            type: "Full-time",
+            description: "Help clients optimize their cloud spending and implement FinOps best practices. Analyze cloud costs, identify savings opportunities, and develop cost management strategies.",
+            requirements: [
+              "2+ years experience in cloud cost management",
+              "Knowledge of AWS Cost Explorer, Azure Cost Management",
+              "Experience with cost allocation and tagging strategies",
+              "Strong analytical and Excel skills",
+              "Understanding of cloud pricing models"
+            ],
+            benefits: [
+              "Success-based compensation",
+              "Work from anywhere",
+              "FinOps certification support",
+              "Direct impact on client savings"
+            ]
+          },
+          fullstack: {
+            title: "Fullstack Developer",
+            department: "Engineering",
+            location: "Remote",
+            type: "Full-time",
+            description: "Build modern web applications and internal tools. Work with React, Node.js, and cloud services to create scalable solutions that support our clients and internal operations.",
+            requirements: [
+              "3+ years full-stack development experience",
+              "Proficiency in React, TypeScript, and Node.js",
+              "Experience with databases (PostgreSQL, MongoDB)",
+              "Knowledge of cloud services (AWS, Azure)",
+              "Strong problem-solving and collaboration skills"
+            ],
+            benefits: [
+              "Competitive salary and benefits",
+              "Flexible work schedule",
+              "Learning and development opportunities",
+              "Modern tech stack and tools"
+            ]
           }
         }
       },
@@ -611,13 +721,15 @@ const resources = {
       footer: {
         tagline: "From the Canary Islands to the world",
         location: "Canary Islands, Spain",
-        email: "hola@devcloudpartners.com",
+        email: "holla@devcloudpartners.com",
         services: {
           title: "Services",
           optimization: "Cloud Cost Optimization",
           devops: "DevOps & Infrastructure",
           architecture: "Cloud Architecture",
-          managed: "Managed Services"
+          managed: "Managed Services",
+          engineering: "Software Engineering",
+          training: "Training"
         },
         company: {
           title: "Company",
@@ -810,11 +922,9 @@ const resources = {
         title: "Nuestro equipo",
         description: "Conoce a las personas que impulsan nuestra misión y valores.",
         members: [
-          { name: "David González", role: "Director Ejecutivo", image: "/team/David1.png", linkedin: "https://www.linkedin.com/in/davidgonzalez/" },
-          { name: "Juan García", role: "Asesor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/in/juangarciamorgado/" },
-          { name: "Emmanuel Oluyemi", role: "Ingeniero DevOps", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/in/emmanuel-oluyemi-43588a217/" },
-          { name: "Joel Villar", role: "Arquitecto Cloud & DevOps", image: "/team/Joel4.png", linkedin: "https://www.linkedin.com/in/joelvillar/" },
-          { name: "Sebastián Cabrera", role: "Jefe de Marketing y Ventas", image: "/team/Sebastian5.png", linkedin: "https://www.linkedin.com/in/sebastiancabrera/" },
+          { name: "David González", role: "Director Ejecutivo", image: "/team/David1.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Juan García", role: "Asesor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/" },
+          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/" },
         ],
         hiring: "¡Nuestro equipo está creciendo! Estamos formando un grupo diverso de expertos en la nube, ingenieros DevOps y especialistas en FinOps que comparten nuestra pasión por la transparencia y la excelencia técnica."
       },
@@ -930,29 +1040,29 @@ const resources = {
           company: "Empresa",
           companyPlaceholder: "Nombre de tu empresa",
           phone: "Número de Teléfono",
-          phonePlaceholder: "+34 123 456 789",
+          phonePlaceholder: "Ingresa tu número de teléfono",
           location: "Ubicación",
-          locationPlaceholder: "Tu ubicación/país",
-          budget: "Presupuesto Disponible",
-          budgetPlaceholder: "Selecciona rango de presupuesto",
-          timeline: "Cronograma del Proyecto",
-          timelinePlaceholder: "Selecciona cronograma",
-          service: "Servicio de Interés",
+          locationPlaceholder: "Ingresa tu ubicación",
+          budget: "Presupuesto",
+          budgetPlaceholder: "Selecciona tu rango de presupuesto",
+          timeline: "Cronograma",
+          timelinePlaceholder: "Selecciona tu cronograma",
+          service: "Interés en Servicio",
           servicePlaceholder: "Selecciona un servicio",
           subject: "Asunto",
           subjectPlaceholder: "¿En qué podemos ayudarte?",
-          message: "Cuéntanos sobre tus desafíos en la nube",
-          messagePlaceholder: "Describe tu configuración actual en la nube, desafíos y lo que te gustaría lograr...",
-          submit: "Enviar Briefing"
+          message: "Mensaje",
+          messagePlaceholder: "Cuéntanos sobre tu proyecto, objetivos y cualquier requisito específico...",
+          submit: "Enviar Mensaje"
         },
         info: {
           email: {
             title: "Escríbenos",
-            value: "hola@devcloudpartners.com"
+            value: "holla@devcloudpartners.com"
           },
           phone: {
             title: "Llama",
-            value: "+34 603479347"
+            value: "+34 123 456 789"
           },
           location: {
             title: "Visítanos",
@@ -992,6 +1102,9 @@ const resources = {
         eng_title: "Ingeniería de Software",
         eng_sub: "Desarrollo de Producto",
         eng_desc: "Diseñamos y escalamos productos fiables con prácticas modernas",
+        training_title: "Formación",
+        training_sub: "Desarrollo de Equipos",
+        training_desc: "Capacitamos a tus equipos en cloud, DevOps y desarrollo de software moderno con programas prácticos, adaptados a vuestro stack y objetivos de negocio. Aprendizaje aplicado, resultados medibles.",
         sticky: {
           badge: "Nuestros Servicios",
           title: "Cloud, DevOps y FinOps que impulsan resultados",
@@ -1221,6 +1334,34 @@ const resources = {
               "Construir y probar",
               "Lanzar y evolucionar"
             ]
+          },
+          training: {
+            features: [
+              "Talleres prácticos",
+              "Diseño de currículum personalizado",
+              "Proyectos del mundo real",
+              "Preparación para certificaciones",
+              "Programas de mejora de equipos",
+              "Mentoría continua"
+            ],
+            benefits: [
+              "AWS",
+              "Azure",
+              "GCP",
+              "Docker",
+              "Kubernetes",
+              "Terraform",
+              "CI/CD",
+              "DevOps",
+              "FinOps",
+              "Seguridad Cloud"
+            ],
+            process: [
+              "Evaluar habilidades del equipo",
+              "Diseñar programa personalizado",
+              "Entregar formación",
+              "Medir y mejorar"
+            ]
           }
         }
       },
@@ -1326,16 +1467,97 @@ const resources = {
           description: "Buscamos personas apasionadas que quieran generar un impacto real en la industria cloud. Únete a un equipo que valora la innovación, la transparencia y la colaboración genuina."
         },
         positions: {
-          empty: {
-            title: "No Hay Posiciones Abiertas en Este Momento",
-            description: "No estamos contratando activamente en este momento, pero siempre estamos interesados en conectar con personas talentosas que compartan nuestra pasión por la tecnología cloud y la innovación.",
-            cta: {
-              title: "Mantente Conectado",
-              description: "Envíanos tu currículum y dinos qué rol te interesa. Mantendremos tu información en archivo y te contactaremos cuando tengamos oportunidades que coincidan.",
-              email: "Enviar Tu Currículum",
-              contact: "Ponte en Contacto"
-            },
-            footer: "Síguenos en redes sociales para mantenerte actualizado sobre nuevas oportunidades y noticias de la empresa."
+          title: "Posiciones Abiertas",
+          subtitle: "Únete a nuestro equipo en crecimiento y ayuda a dar forma al futuro de la tecnología cloud. Buscamos personas apasionadas que compartan nuestro compromiso con la excelencia y la innovación.",
+          apply: "Aplicar Ahora",
+          requirements: "Requisitos",
+          benefits: "Lo que Ofrecemos",
+          cta: {
+            title: "¿No Ves tu Rol Perfecto?",
+            description: "Siempre estamos buscando personas talentosas. Envíanos tu currículum y dinos cómo te gustaría contribuir a nuestra misión.",
+            send_resume: "Enviar Tu Currículum",
+            contact: "Ponte en Contacto"
+          },
+          social: "Síguenos para actualizaciones sobre nuevas oportunidades y noticias de la empresa.",
+          cloud_engineering: {
+            title: "Ingeniería Cloud y DevOps",
+            department: "Ingeniería",
+            location: "Remoto",
+            type: "Tiempo completo",
+            description: "Únete a nuestro equipo de ingeniería para diseñar, construir y optimizar soluciones de infraestructura cloud. Trabaja con tecnologías de vanguardia y ayuda a los clientes a lograr sus objetivos de transformación cloud.",
+            requirements: [
+              "3+ años de experiencia con AWS, Azure o GCP",
+              "Conocimiento sólido de Kubernetes, Docker y containerización",
+              "Experiencia con Infraestructura como Código (Terraform, CloudFormation)",
+              "Diseño e implementación de pipelines CI/CD",
+              "Fuertes habilidades de resolución de problemas y comunicación"
+            ],
+            benefits: [
+              "Salario competitivo y participación accionaria",
+              "Trabajo remoto flexible",
+              "Presupuesto para desarrollo profesional",
+              "Equipamiento tecnológico de última generación"
+            ]
+          },
+          marketing_sales: {
+            title: "Marketing y Ventas",
+            department: "Marketing",
+            location: "Remoto",
+            type: "Tiempo completo",
+            description: "Impulsa el crecimiento y la conciencia de marca para DevCloud Partners. Desarrolla estrategias de marketing, gestiona campañas y construye relaciones con clientes potenciales en el espacio de tecnología cloud.",
+            requirements: [
+              "2+ años de experiencia en marketing B2B",
+              "Experiencia con herramientas y plataformas de marketing digital",
+              "Fuertes habilidades de escritura y comunicación",
+              "Comprensión del mercado de tecnología cloud",
+              "Mentalidad analítica y enfoque basado en datos"
+            ],
+            benefits: [
+              "Bonos basados en rendimiento",
+              "Cultura remota-first",
+              "Acceso a herramientas y software de marketing",
+              "Asistencia a conferencias y eventos"
+            ]
+          },
+          finops: {
+            title: "FinOps y Optimización de Costos",
+            department: "Operaciones",
+            location: "Remoto",
+            type: "Tiempo completo",
+            description: "Ayuda a los clientes a optimizar su gasto en la nube e implementar mejores prácticas de FinOps. Analiza costos cloud, identifica oportunidades de ahorro y desarrolla estrategias de gestión de costos.",
+            requirements: [
+              "2+ años de experiencia en gestión de costos cloud",
+              "Conocimiento de AWS Cost Explorer, Azure Cost Management",
+              "Experiencia con estrategias de asignación de costos y etiquetado",
+              "Fuertes habilidades analíticas y de Excel",
+              "Comprensión de modelos de precios cloud"
+            ],
+            benefits: [
+              "Compensación basada en éxito",
+              "Trabaja desde cualquier lugar",
+              "Soporte para certificación FinOps",
+              "Impacto directo en ahorros de clientes"
+            ]
+          },
+          fullstack: {
+            title: "Desarrollador Fullstack",
+            department: "Ingeniería",
+            location: "Remoto",
+            type: "Tiempo completo",
+            description: "Construye aplicaciones web modernas y herramientas internas. Trabaja con React, Node.js y servicios cloud para crear soluciones escalables que apoyen a nuestros clientes y operaciones internas.",
+            requirements: [
+              "3+ años de experiencia en desarrollo full-stack",
+              "Competencia en React, TypeScript y Node.js",
+              "Experiencia con bases de datos (PostgreSQL, MongoDB)",
+              "Conocimiento de servicios cloud (AWS, Azure)",
+              "Fuertes habilidades de resolución de problemas y colaboración"
+            ],
+            benefits: [
+              "Salario competitivo y beneficios",
+              "Horario de trabajo flexible",
+              "Oportunidades de aprendizaje y desarrollo",
+              "Stack tecnológico moderno y herramientas"
+            ]
           }
         }
       },
@@ -1346,13 +1568,15 @@ const resources = {
       footer: {
         tagline: "Desde las Islas Canarias al mundo",
         location: "Islas Canarias, España",
-        email: "hola@devcloudpartners.com",
+        email: "holla@devcloudpartners.com",
         services: {
           title: "Servicios",
           optimization: "Optimización de Costos en la Nube",
           devops: "DevOps e Infraestructura",
           architecture: "Arquitectura en la Nube",
-          managed: "Servicios Gestionados"
+          managed: "Servicios Gestionados",
+          engineering: "Ingeniería de Software",
+          training: "Formación"
         },
         company: {
           title: "Empresa",

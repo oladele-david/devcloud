@@ -12,21 +12,7 @@ type Member = {
 
 export const Team: React.FC = () => {
   const { t } = useTranslation();
-  const membersFromI18n = (t('team.members', { returnObjects: true }) as Member[]) || [];
-  // Ensure we have 5 members using public/team images as fallbacks
-  const fallback: Member[] = [
-    { name: 'David González', role: 'CEO', image: '/team/David1.png', linkedin: 'https://www.linkedin.com/' },
-    { name: 'Juan García', role: 'Advisor', image: '/team/Juan2.png', linkedin: 'https://www.linkedin.com/' },
-    { name: 'Emmanuel Oluyemi', role: 'DevOps Engineer', image: '/team/Emmanuel3.png', linkedin: 'https://www.linkedin.com/' },
-    { name: 'Joel Villar', role: 'Cloud & DevOps Architect', image: '/team/Joel4.png', linkedin: 'https://www.linkedin.com/' },
-    { name: 'Sebastián Cabrera', role: 'Head Marketing & Sales', image: '/team/Sebastian5.png', linkedin: 'https://www.linkedin.com/' },
-  ];
-  // Prefer provided members, fill remaining with fallbacks 1..5 to avoid broken images
-  const combined = [...membersFromI18n];
-  for (let i = 0; combined.length < 5 && i < fallback.length; i++) {
-    combined.push(fallback[i]);
-  }
-  const members: Member[] = combined.slice(0, 5);
+  const members: Member[] = (t('team.members', { returnObjects: true }) as Member[]) || [];
 
   const viewportRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -66,8 +52,8 @@ export const Team: React.FC = () => {
         </div>
 
         <div className="relative">
-          {/* Arrows */}
-          <div className="hidden sm:flex absolute -top-14 right-0 gap-3 z-10">
+          {/* Arrows - Hidden on desktop since we only have 3 members */}
+          <div className="hidden sm:hidden absolute -top-14 right-0 gap-3 z-10">
             <button onClick={() => scrollToIndex(active - 1)} className="w-10 h-10 rounded-full bg-gray-100 hover:bg-brand-accent flex items-center justify-center transition-colors group">
               <HugeiconsIcon icon={ArrowLeft01Icon} size={18} className="text-gray-600 group-hover:text-white" />
               <span className="sr-only">Prev</span>

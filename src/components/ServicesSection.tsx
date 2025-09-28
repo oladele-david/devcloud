@@ -48,6 +48,13 @@ const ServicesSection = () => {
       description: t('services.eng_desc'),
       image: "/services/engineering.png",
       badge: "Engineering"
+    },
+    {
+      title: t('services.training_title'),
+      subtitle: t('services.training_sub'),
+      description: t('services.training_desc'),
+      image: "/services/training.jpg",
+      badge: "Training"
     }
   ]
 

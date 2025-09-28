@@ -4,7 +4,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { WorkCulture, SectionSeparator, EmptyPositions } from '@/components/careers';
+import { WorkCulture, SectionSeparator } from '@/components/careers';
+import JobOpenings from '@/components/careers/JobOpenings';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -102,7 +103,7 @@ const Careers: React.FC = () => {
 
       {/* Open Positions Section */}
       <div ref={positionsRef}>
-        <EmptyPositions />
+        <JobOpenings />
       </div>
 
       <Footer />

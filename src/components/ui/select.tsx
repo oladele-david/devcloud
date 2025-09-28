@@ -1,7 +1,7 @@
 import * as React from "react"
 import * as SelectPrimitive from "@radix-ui/react-select"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { CheckmarkSquare01Icon, ChevronDownIcon, ChevronUpIcon } from "@hugeicons/core-free-icons"
+import { CheckmarkSquare01Icon, ArrowDown01Icon, ArrowUp01Icon } from "@hugeicons/core-free-icons"
 
 import { cn } from "@/lib/utils"
 
@@ -25,7 +25,7 @@ const SelectTrigger = React.forwardRef<
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <HugeiconsIcon icon={ChevronDownIcon} size={16} />
+      <HugeiconsIcon icon={ArrowDown01Icon} size={16} />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -43,7 +43,7 @@ const SelectScrollUpButton = React.forwardRef<
     )}
     {...props}
   >
-    <HugeiconsIcon icon={ChevronUpIcon} size={16} />
+    <HugeiconsIcon icon={ArrowUp01Icon} size={16} />
   </SelectPrimitive.ScrollUpButton>
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
@@ -60,7 +60,7 @@ const SelectScrollDownButton = React.forwardRef<
     )}
     {...props}
   >
-    <HugeiconsIcon icon={ChevronDownIcon} size={16} />
+    <HugeiconsIcon icon={ArrowDown01Icon} size={16} />
   </SelectPrimitive.ScrollDownButton>
 ))
 SelectScrollDownButton.displayName =

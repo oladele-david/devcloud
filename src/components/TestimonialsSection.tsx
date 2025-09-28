@@ -1,8 +1,33 @@
 import { useTranslation } from "react-i18next"
 import { cn } from "@/lib/utils"
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
 
 const TestimonialsSection = () => {
   const { t } = useTranslation()
+  const marqueeRef = useRef<HTMLDivElement>(null)
+  
+  useEffect(() => {
+    if (marqueeRef.current) {
+      const marquee = marqueeRef.current
+      const marqueeContent = marquee.querySelector('.marquee-content') as HTMLElement
+      
+      if (marqueeContent) {
+        // Duplicate content for seamless loop
+        marqueeContent.innerHTML += marqueeContent.innerHTML
+        
+        // GSAP animation for smooth infinite scroll
+        const isMobile = window.matchMedia('(max-width: 640px)').matches
+        const duration = isMobile ? 15 : 25
+        gsap.to(marqueeContent, {
+          x: '-50%',
+          duration,
+          ease: 'none',
+          repeat: -1
+        })
+      }
+    }
+  }, [])
   
   const testimonials = [
     {
@@ -55,9 +80,6 @@ const TestimonialsSection = () => {
     }
   ]
 
-  // Duplicate testimonials for infinite loop effect
-  const duplicatedTestimonials = [...testimonials, ...testimonials]
-
   return (
     <section className={cn("bg-white py-12 sm:py-24 md:py-32")}> 
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 text-center sm:gap-16">
@@ -72,11 +94,12 @@ const TestimonialsSection = () => {
 
         <div className="relative w-full overflow-hidden">
           <div className="group flex flex-col gap-6">
-            <div
-              className="flex shrink-0 items-stretch gap-4 animate-marquee group-hover:[animation-play-state:paused]"
-              style={{ animationDuration: '10s' }}
+            <div 
+              ref={marqueeRef}
+              className="overflow-hidden relative"
             >
-              {duplicatedTestimonials.map((testimonial, i) => (
+              <div className="marquee-content flex shrink-0 items-stretch gap-4">
+                {testimonials.map((testimonial, i) => (
                 <div
                   key={`testimonial-${i}`}
                   className="flex-shrink-0 w-[280px] sm:w-[320px]"
@@ -105,7 +128,8 @@ const TestimonialsSection = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 

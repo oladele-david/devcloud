@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Mail01Icon, Call02Icon, Location01Icon, SentIcon } from '@hugeicons/core-free-icons';
 import { useEffect, useRef, useState } from 'react';
@@ -61,7 +62,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-8 items-stretch" style={{ '--contact-height': '650px' } as React.CSSProperties}>
             
             {/* Left Section - Image */}
-            <div ref={imageRef} className="relative flex-1">
+            <div ref={imageRef} className="relative flex-1 hidden lg:block">
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <img 
                   src="/contact.png" 
@@ -149,7 +150,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <label htmlFor="company" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
-                        {t('contact.form.company')}
+                        {t('contact.form.company')} *
                       </label>
                       <Input
                         id="company"
@@ -159,6 +160,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder={t('contact.form.companyPlaceholder')}
                         className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
+                        required
                       />
                     </div>
                   </div>
@@ -166,7 +168,7 @@ export default function Contact() {
                   <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
-                        {t('contact.form.phone')}
+                        {t('contact.form.phone')} *
                       </label>
                       <Input
                         id="phone"
@@ -176,11 +178,12 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder={t('contact.form.phonePlaceholder')}
                         className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
+                        required
                       />
                     </div>
                     <div>
                       <label htmlFor="location" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
-                        {t('contact.form.location')}
+                        {t('contact.form.location')} *
                       </label>
                       <Input
                         id="location"
@@ -190,6 +193,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder={t('contact.form.locationPlaceholder')}
                         className="h-10 text-sm placeholder:text-xs sm:placeholder:text-sm"
+                        required
                       />
                     </div>
                   </div>
@@ -197,63 +201,70 @@ export default function Contact() {
                   <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <label htmlFor="budget" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
-                        {t('contact.form.budget')}
+                        {t('contact.form.budget')} *
                       </label>
-                      <select
-                        id="budget"
-                        name="budget"
+                      <Select
                         value={formData.budget}
-                        onChange={handleChange}
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+                        required
                       >
-                        <option value="">{t('contact.form.budgetPlaceholder')}</option>
-                        <option value="under-5k">Under €5,000</option>
-                        <option value="5k-15k">€5,000 - €15,000</option>
-                        <option value="15k-50k">€15,000 - €50,000</option>
-                        <option value="50k-100k">€50,000 - €100,000</option>
-                        <option value="over-100k">Over €100,000</option>
-                      </select>
+                        <SelectTrigger className="h-10 text-sm">
+                          <SelectValue placeholder={t('contact.form.budgetPlaceholder')} />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="under-5k">Under €5,000</SelectItem>
+                          <SelectItem value="5k-15k">€5,000 - €15,000</SelectItem>
+                          <SelectItem value="15k-50k">€15,000 - €50,000</SelectItem>
+                          <SelectItem value="50k-100k">€50,000 - €100,000</SelectItem>
+                          <SelectItem value="over-100k">Over €100,000</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                     <div>
                       <label htmlFor="timeline" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
-                        {t('contact.form.timeline')}
+                        {t('contact.form.timeline')} *
                       </label>
-                      <select
-                        id="timeline"
-                        name="timeline"
+                      <Select
                         value={formData.timeline}
-                        onChange={handleChange}
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        onValueChange={(value) => setFormData(prev => ({ ...prev, timeline: value }))}
+                        required
                       >
-                        <option value="">{t('contact.form.timelinePlaceholder')}</option>
-                        <option value="asap">ASAP</option>
-                        <option value="1-month">Within 1 month</option>
-                        <option value="3-months">Within 3 months</option>
-                        <option value="6-months">Within 6 months</option>
-                        <option value="planning">Just planning</option>
-                      </select>
+                        <SelectTrigger className="h-10 text-sm">
+                          <SelectValue placeholder={t('contact.form.timelinePlaceholder')} />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="asap">ASAP</SelectItem>
+                          <SelectItem value="1-month">Within 1 month</SelectItem>
+                          <SelectItem value="3-months">Within 3 months</SelectItem>
+                          <SelectItem value="6-months">Within 6 months</SelectItem>
+                          <SelectItem value="planning">Just planning</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="service" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
-                      {t('contact.form.service')}
+                      {t('contact.form.service')} *
                     </label>
-                    <select
-                      id="service"
-                      name="service"
+                    <Select
                       value={formData.service}
-                      onChange={handleChange}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      onValueChange={(value) => setFormData(prev => ({ ...prev, service: value }))}
+                      required
                     >
-                      <option value="">{t('contact.form.servicePlaceholder')}</option>
-                      <option value="finops">Cloud Cost Optimization (FinOps)</option>
-                      <option value="devops">DevOps & Cloud Infrastructure</option>
-                      <option value="architecture">Cloud Architecture & Migration</option>
-                      <option value="software-engineering">Software Engineering</option>
-                      <option value="managed">Managed Cloud Services</option>
-                      <option value="all">All Services</option>
-                    </select>
+                      <SelectTrigger className="h-10 text-sm">
+                        <SelectValue placeholder={t('contact.form.servicePlaceholder')} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="finops">Cloud Cost Optimization (FinOps)</SelectItem>
+                        <SelectItem value="devops">DevOps & Cloud Infrastructure</SelectItem>
+                        <SelectItem value="architecture">Cloud Architecture & Migration</SelectItem>
+                        <SelectItem value="software-engineering">Software Engineering</SelectItem>
+                        <SelectItem value="managed">Managed Cloud Services</SelectItem>
+                        <SelectItem value="training">Training</SelectItem>
+                        <SelectItem value="all">All Services</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <div>
@@ -282,7 +293,7 @@ export default function Contact() {
                 </form>
 
                 {/* Contact Info */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-100">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-100">
                   <div className="text-center">
                     <div className="flex items-center sm:flex-col sm:items-center">
                       <div className="w-6 h-6 sm:w-8 sm:h-8 mr-3 sm:mr-0 sm:mb-2 bg-brand-accent/10 rounded-full flex items-center justify-center">
@@ -294,22 +305,6 @@ export default function Contact() {
                         </h3>
                         <p className="text-xs text-slate-600 break-all sm:text-center">
                           {t('contact.info.email.value')}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="flex items-center sm:flex-col sm:items-center">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 mr-3 sm:mr-0 sm:mb-2 bg-brand-accent/10 rounded-full flex items-center justify-center">
-                        <HugeiconsIcon icon={Call02Icon} size={14} className="text-brand-accent sm:size-4" />
-                      </div>
-                      <div className="text-left sm:text-center">
-                        <h3 className="font-medium text-slate-900 text-xs mb-1">
-                          {t('contact.info.phone.title')}
-                        </h3>
-                        <p className="text-xs text-slate-600 sm:text-center">
-                          {t('contact.info.phone.value')}
                         </p>
                       </div>
                     </div>

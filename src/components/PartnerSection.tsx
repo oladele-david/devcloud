@@ -33,7 +33,10 @@ const PartnerSection = () => {
     { name: "Cloudima", logo: "/partners/cloudima.png", hasImage: true },
     { name: "Microsoft Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/1280px-Microsoft_Azure_Logo.svg.png", hasImage: true },
     { name: "AWS", logo: "/partners/aws.png", hasImage: true },
-    { name: "SARENET", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoDMEdhQwIesvJjzWNziHKQaDaS8Ha4nK6sw&s", hasImage: true }
+    { name: "Google Cloud", logo: "/partners/google.png", hasImage: true },
+    { name: "StackScale", logo: "/partners/stackscale.png", hasImage: true },
+    { name: "Babel", logo: "/partners/babel.png", hasImage: true },
+    { name: "Altia", logo: "/partners/altia.png", hasImage: true }
   ]
 
   return (
