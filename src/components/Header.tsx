@@ -69,10 +69,20 @@ const Header = () => {
             <Link to="/portfolio" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
               {t('nav.portfolio')}
             </Link>
-            {/* Careers direct link (replaces Resources dropdown) */}
-            <Link to="/careers" className="text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
-              {t('nav.careers')}
-            </Link>
+            {/* Resources dropdown */}
+            <div className="relative group">
+              <button className="inline-flex items-center gap-1.5 text-gray-700 hover:text-brand-primary transition-colors duration-200 font-medium">
+                {t('nav.resources')}
+                <HugeiconsIcon icon={ArrowDown01Icon} size={16} className="text-gray-400 group-hover:text-brand-primary transition-transform duration-200 group-hover:rotate-180" />
+              </button>
+              {/* Use top-full and padding-top to avoid hover gap */}
+              <div className="pointer-events-none absolute left-0 top-full pt-3 w-56 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
+                <div className="rounded-xl border border-gray-100 bg-white shadow-xl p-2">
+                  <Link to="/blog" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.blog')}</Link>
+                  <Link to="/careers" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.careers')}</Link>
+                </div>
+              </div>
+            </div>
           </nav>
 
           {/* Right side actions */}

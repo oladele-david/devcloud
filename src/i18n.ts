@@ -371,9 +371,9 @@ const resources = {
         title: "Our team",
         description: "Meet the people driving our mission and values.",
         members: [
-          { name: "David González", role: "CEO", image: "/team/David1.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Juan García", role: "Advisor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/" },
+          { name: "David González", role: "CEO", image: "/team/David1.jpeg", linkedin: "https://www.linkedin.com/" },
+          { name: "Juan García", role: "Advisor", image: "/team/Juan2.jpeg", linkedin: "https://www.linkedin.com/" },
+          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.jpeg", linkedin: "https://www.linkedin.com/" },
         ],
         hiring: "Our team is growing! We're building a diverse group of cloud experts, DevOps engineers, and FinOps specialists who share our passion for transparency and technical excellence."
       },
@@ -577,10 +577,35 @@ const resources = {
         ourStory: "Our Story",
         methodology: "Methodology",
         portfolio: "Portfolio",
-        contact: "Contact",
         resources: "Resources",
         blog: "Blog",
-        careers: "Careers"
+        careers: "Careers",
+        contact: "Contact"
+      },
+      blog: {
+        hero: {
+          title: "Latest News",
+          description: "Stay updated with the latest trends, tips, and insights in cloud optimization through our informative and inspiring blog articles."
+        },
+        search_placeholder: "Search articles...",
+        categories: {
+          all: "All",
+          cloud_optimization: "Cloud Optimization",
+          devops: "DevOps",
+          security: "Security",
+          finops: "FinOps",
+          architecture: "Architecture"
+        },
+        load_more: "Load More Articles",
+        newsletter: {
+          title: "Stay Updated",
+          description: "Subscribe to our newsletter and never miss the latest insights on cloud optimization, DevOps best practices, and FinOps strategies.",
+          email_placeholder: "Enter your email",
+          subscribe: "Subscribe",
+          subscribing: "Subscribing...",
+          success: "Subscribed!",
+          error: "Invalid email"
+        }
       },
       cta: {
         contact: "Contact"
@@ -922,9 +947,9 @@ const resources = {
         title: "Nuestro equipo",
         description: "Conoce a las personas que impulsan nuestra misión y valores.",
         members: [
-          { name: "David González", role: "Director Ejecutivo", image: "/team/David1.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Juan García", role: "Asesor", image: "/team/Juan2.png", linkedin: "https://www.linkedin.com/" },
-          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.png", linkedin: "https://www.linkedin.com/" },
+          { name: "David González", role: "Director Ejecutivo", image: "/team/David1.jpeg", linkedin: "https://www.linkedin.com/" },
+          { name: "Juan García", role: "Asesor", image: "/team/Juan2.jpeg", linkedin: "https://www.linkedin.com/" },
+          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.jpeg", linkedin: "https://www.linkedin.com/" },
         ],
         hiring: "¡Nuestro equipo está creciendo! Estamos formando un grupo diverso de expertos en la nube, ingenieros DevOps y especialistas en FinOps que comparten nuestra pasión por la transparencia y la excelencia técnica."
       },
@@ -1424,10 +1449,35 @@ const resources = {
         ourStory: "Nuestra Historia",
         methodology: "Metodología",
         portfolio: "Portafolio",
-        contact: "Contacto",
         resources: "Recursos",
         blog: "Blog",
-        careers: "Carreras"
+        careers: "Carreras",
+        contact: "Contacto"
+      },
+      blog: {
+        hero: {
+          title: "Últimas Noticias",
+          description: "Mantente actualizado con las últimas tendencias, consejos e ideas sobre optimización cloud a través de nuestros artículos informativos e inspiradores."
+        },
+        search_placeholder: "Buscar artículos...",
+        categories: {
+          all: "Todos",
+          cloud_optimization: "Optimización Cloud",
+          devops: "DevOps",
+          security: "Seguridad",
+          finops: "FinOps",
+          architecture: "Arquitectura"
+        },
+        load_more: "Cargar Más Artículos",
+        newsletter: {
+          title: "Mantente Actualizado",
+          description: "Suscríbete a nuestro boletín y no te pierdas las últimas ideas sobre optimización cloud, mejores prácticas de DevOps y estrategias de FinOps.",
+          email_placeholder: "Ingresa tu email",
+          subscribe: "Suscribirse",
+          subscribing: "Suscribiendo...",
+          success: "¡Suscrito!",
+          error: "Email inválido"
+        }
       },
       cta: {
         contact: "Contacto"
