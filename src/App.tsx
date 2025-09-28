@@ -12,6 +12,9 @@ import AboutMethodology from "./pages/AboutMethodology";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import Portfolio from "./pages/Portfolio";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import LegalNotice from "./pages/LegalNotice";
+import CookiePolicy from "./pages/CookiePolicy";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
 import { CookieConsent } from "./components/cookies";
@@ -30,10 +33,13 @@ const AppContent = () => {
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about/story" element={<AboutStory />} />
-                <Route path="/about/methodology" element={<AboutMethodology />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about/methodology" element={<AboutMethodology />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/legal-notice" element={<LegalNotice />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -625,12 +625,12 @@ const resources = {
           apply: "Apply Now",
           requirements: "Requirements",
           benefits: "What We Offer",
-          cta: {
+            cta: {
             title: "Don't See Your Perfect Role?",
             description: "We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.",
             send_resume: "Send Your Resume",
-            contact: "Get in Touch"
-          },
+              contact: "Get in Touch"
+            },
           social: "Follow us for updates on new opportunities and company news.",
           cloud_engineering: {
             title: "Cloud Engineering & DevOps",
@@ -742,7 +742,7 @@ const resources = {
           title: "Legal",
           privacy: "Privacy Policy",
           cookies: "Cookie Policy",
-          terms: "Terms of Service"
+          legal_notice: "Legal Notice"
         },
         copyright: "© 2025 DevCloud Partners. All rights reserved.",
         poweredBy: "Powered By: QUEVEDO TECH GROUP S.L."
@@ -1472,12 +1472,12 @@ const resources = {
           apply: "Aplicar Ahora",
           requirements: "Requisitos",
           benefits: "Lo que Ofrecemos",
-          cta: {
+            cta: {
             title: "¿No Ves tu Rol Perfecto?",
             description: "Siempre estamos buscando personas talentosas. Envíanos tu currículum y dinos cómo te gustaría contribuir a nuestra misión.",
             send_resume: "Enviar Tu Currículum",
-            contact: "Ponte en Contacto"
-          },
+              contact: "Ponte en Contacto"
+            },
           social: "Síguenos para actualizaciones sobre nuevas oportunidades y noticias de la empresa.",
           cloud_engineering: {
             title: "Ingeniería Cloud y DevOps",
@@ -1589,7 +1589,7 @@ const resources = {
           title: "Legal",
           privacy: "Política de Privacidad",
           cookies: "Política de Cookies",
-          terms: "Términos de Servicio"
+          legal_notice: "Aviso Legal"
         },
         copyright: "© 2025 DevCloud Partners. Todos los derechos reservados.",
         poweredBy: "Desarrollado por: QUEVEDO TECH GROUP S.L."
