@@ -100,9 +100,9 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
               className={`${resourcesOpen ? "block" : "hidden"}`}
             >
               <div className="mt-1 ml-3 border-l border-gray-100">
-                <Link to="/blog" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg" onClick={onClose}>
+                {/* <Link to="/blog" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg" onClick={onClose}>
                   {t("nav.blog")}
-                </Link>
+                </Link> */}
                 <Link to="/careers" className="block pl-4 pr-3 py-2 text-gray-700 hover:bg-gray-50 rounded-r-lg" onClick={onClose}>
                   {t("nav.careers")}
                 </Link>

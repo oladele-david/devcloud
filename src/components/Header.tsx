@@ -78,7 +78,7 @@ const Header = () => {
               {/* Use top-full and padding-top to avoid hover gap */}
               <div className="pointer-events-none absolute left-0 top-full pt-3 w-56 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
                 <div className="rounded-xl border border-gray-100 bg-white shadow-xl p-2">
-                  <Link to="/blog" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.blog')}</Link>
+                  {/* <Link to="/blog" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.blog')}</Link> */}
                   <Link to="/careers" className="block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50">{t('nav.careers')}</Link>
                 </div>
               </div>

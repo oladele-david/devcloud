@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import { link } from "fs";
 
 const resources = {
   en: {
@@ -371,9 +372,9 @@ const resources = {
         title: "Our team",
         description: "Meet the people driving our mission and values.",
         members: [
-          { name: "David González", role: "CEO", image: "/team/David1.jpeg", linkedin: "https://www.linkedin.com/" },
-          { name: "Juan García", role: "Advisor", image: "/team/Juan2.jpeg", linkedin: "https://www.linkedin.com/" },
-          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.jpeg", linkedin: "https://www.linkedin.com/" },
+          { name: "David González", role: "CEO", image: "/team/David1.jpeg", linkedin: "https://www.linkedin.com/in/sond3r" },
+          { name: "Juan García", role: "Advisor", image: "/team/Juan2.jpeg", linkedin: "https://www.linkedin.com/in/juangarciamorgado/" },
+          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.jpeg", linkedin: "https://www.linkedin.com/in/emmanuel-oluyemi-43588a217/" },
         ],
         hiring: "Our team is growing! We're building a diverse group of cloud experts, DevOps engineers, and FinOps specialists who share our passion for transparency and technical excellence."
       },
@@ -507,7 +508,7 @@ const resources = {
         info: {
           email: {
             title: "Email Us",
-            value: "holla@devcloudpartners.com"
+            value: "hola@devcloudpartners.com"
           },
           phone: {
             title: "Call Us", 
@@ -746,7 +747,7 @@ const resources = {
       footer: {
         tagline: "From the Canary Islands to the world",
         location: "Canary Islands, Spain",
-        email: "holla@devcloudpartners.com",
+        email: "hola@devcloudpartners.com",
         services: {
           title: "Services",
           optimization: "Cloud Cost Optimization",
@@ -772,10 +773,192 @@ const resources = {
         copyright: "© 2025 DevCloud Partners. All rights reserved.",
         poweredBy: "Powered By: QUEVEDO TECH GROUP S.L."
       },
+      privacy: {
+        title: "Privacy Policy",
+        lastUpdated: "Last Update: 1 October 2025",
+        effectiveDate: "Effective Date: 1 October 2025",
+        version: "Version 2.0",
+        subtitle: "Your privacy and data protection are important to us. This policy explains how we collect, use, and protect your personal information.",
+        
+        // Section 1: Data Controller
+        dataController: {
+          title: "Data Controller",
+          description: "In compliance with Regulation (EU) 2016/679, the General Data Protection Regulation (GDPR), and Organic Law 3/2018 on the Protection of Personal Data and guarantee of digital rights (LOPDGDD), users are informed that the website https://devcloudpartners.com/ (hereinafter, the \"Website\") is owned by Quevedo Tech Group, S.L. (\"QTG\"), with the following identification details:",
+          companyName: "Quevedo Tech Group, S.L.",
+          taxId: "B-22969661",
+          address: "Calle Guimar, 12 – 2nd Floor, 35110 Santa Lucía de Tirajana (Las Palmas), Spain",
+          email: "rgpd@devcloudpartners.com",
+          phone: "+34 603 479 347"
+        },
+        
+        // Section 2: Scope
+        scope: {
+          title: "Scope of the Policy",
+          text1: "This Privacy Policy governs the processing of personal data provided by users or that may be collected through the Website and the different channels associated with it, including contact forms, requests for information, newsletter subscriptions, content downloads, event participation, or any other interaction with QTG.",
+          text2: "Access to and use of the Website implies knowledge and acceptance of this Policy, as well as of the provisions set out in the <a href='/legal-notice' class='text-brand-accent hover:underline'>Legal Notice</a> and the <a href='/cookie-policy' class='text-brand-accent hover:underline'>Cookie Policy</a>.",
+          text3: "Any additional information beyond this website regarding the collection and processing of personal data is provided in each case clearly and accessibly, and is regulated in the relevant forms, contracts, data processing agreements, or specific terms that may apply."
+        },
+        
+        // Section 3: Principles
+        principles: {
+          title: "Principles Applicable to Personal Data Processing",
+          description: "QTG will process personal data in accordance with the principles set out in Article 5 GDPR and applicable national regulations:",
+          lawfulness: "Each processing operation relies on a valid legal basis, and you are informed about its purposes, recipients, and rights before data collection.",
+          purposeLimitation: "Data are collected for specified, explicit, and legitimate purposes and are not further processed in a manner incompatible with those purposes. If the purpose changes, data subjects will be informed and, where appropriate, new consent will be obtained.",
+          dataMinimization: "Data processed will be adequate, relevant, and limited to what is strictly necessary for each purpose.",
+          accuracy: "Reasonable measures will be taken to ensure data are accurate and up to date; mechanisms are provided for rectification or updating.",
+          storageLimitation: "Data will be kept only for the strictly necessary periods and, once the purposes or legal obligations are fulfilled, will be blocked, anonymized, and/or deleted.",
+          integrity: "QTG applies appropriate technical and organizational measures to ensure data security and prevent alteration, loss, or unauthorized processing or access.",
+          processorNote: "These principles likewise govern relationships with data processors, who are subject to equivalent obligations through the relevant data processing agreement."
+        },
+
+        // Section 4: Purposes and Legal Bases
+        purposes: {
+          title: "Purposes of Processing and Legal Bases",
+          description: "QTG processes personal data for the purposes indicated below, together with their legal bases (Article 6 GDPR). First, the data we may collect; then, what we use them for and the corresponding legal basis.",
+          dataWeCollect: "Data we collect",
+          dataItems: [
+            "Identification and contact: name, email, telephone.",
+            "Professional: company, position, area/sector (where applicable).",
+            "Interactions and project data: location/country, available budget, project timeline, service of interest, message content, and communication preferences.",
+            "Website use: cookies, IP address, and technical logs linked to the Website's operation. You can find more information in our Cookie Policy.",
+            "Job applications (HR): CV, cover letter, and professional links."
+          ],
+          dataNote: "Personal data are provided directly by the data subject; technical data (IP and minimal logs) are generated by the server when using the website in accordance with our Cookie Policy.",
+          noSpecialData: "QTG does not process special categories of data through the Website.",
+          userGuarantee: "The user guarantees that the data provided are truthful, accurate, and up to date, and undertakes to communicate any modification.",
+          thirdPartyData: "If the User provides personal data of third parties, they declare that they have authorization and undertake to inform those parties of this Privacy Policy before communicating their data to us.",
+          
+          processingPurposes: "Purposes of processing",
+          purposesList: [
+            {
+              title: "Handling enquiries and requests",
+              description: "We use identification, professional, and project data (incl. location, budget, timeline, and service of interest) to respond, assess your needs, and, where appropriate, coordinate a meeting or proposal. Legal basis: pre-contractual measures/contract (Art. 6.1(b) GDPR) and consent (Art. 6.1(a) GDPR) for contact. If a commercial relationship is established, the basis will be contract performance and legitimate interest."
+            },
+            {
+              title: "Newsletters and commercial communications",
+              description: "We use your contact details to send content and updates. Legal basis: consent (Art. 6.1(a) GDPR). If you are already a client, we may inform you about our own similar products or services under legitimate interest, with an opt-out in each message (Art. 6.1(f) GDPR and Art. 21.2 LSSI)."
+            },
+            {
+              title: "Resource downloads",
+              description: "We process your data to send the resource and conduct limited follow-up related to that download. Legal basis: consent (Art. 6.1(a))."
+            },
+            {
+              title: "Recruitment processes",
+              description: "We use your application data to assess your profile and contact you. Legal basis: pre-contractual measures (Art. 6.1(b)). To keep your CV for future openings, we will request consent (Art. 6.1(a))."
+            },
+            {
+              title: "Basic segmentation in CRM",
+              description: "We organize declared information (contact, company/position, service of interest, and signals derived from the relationship) to maintain up-to-date, non-intrusive communications. Legal basis: legitimate interest with the option to object at any time (Art. 6.1(f)). We do not use browsing data for segmentation unless there is cookie consent, in which case the Cookie Policy applies."
+            },
+            {
+              title: "Website security and technical operation",
+              description: "We process IP address and minimal logs to monitor availability, prevent abuse, and protect the platform. Legal basis: legitimate interest (Art. 6.1(f))."
+            },
+            {
+              title: "Compliance with legal obligations and defense against claims",
+              description: "We process what is necessary to comply with legal obligations (e.g., responding to judicial authorities) and defend our rights. Legal basis: legal obligation (Art. 6.1(c)) and legitimate interest (Art. 6.1(f))."
+            }
+          ],
+          legitimateInterestNote: "Where the legal basis is legitimate interest, QTG has carried out the corresponding balancing test to ensure that the rights and freedoms of individuals do not prevail, and you may object at any time. QTG does not carry out automated decision-making or profiling."
+        },
+
+        // Section 5: Data Disclosure
+        disclosure: {
+          title: "Disclosure of Data to Third Parties",
+          description: "QTG does not sell personal data. Data may be disclosed only where necessary to:",
+          items: [
+            "Service providers acting on behalf of QTG (as data processors): web hosting/CDN and site platform, maintenance and security, form management and corporate email, collaboration tools and file storage, and, where applicable, HR/screening services. QTG obtains standard contractual guarantees under the GDPR with all of them and requires appropriate security assurances.",
+            "Public administrations and authorities where there is a legal obligation or where it is necessary to establish, exercise, or defend legal claims.",
+            "Third parties providing cookies and similar technologies, only if the user accepts them, pursuant to the Cookie Policy (these third parties act as independent controllers for such processing)."
+          ],
+          additionalInfo: "Apart from the above, QTG will not disclose personal data to third parties. If to provide a specific service or activate a website feature such disclosure is necessary, users will be informed about the recipients and the purpose, requesting consent where appropriate or indicating that the disclosure is necessary for the execution of the service/feature requested."
+        },
+
+        // Section 6: International Transfers
+        transfers: {
+          title: "International Transfers",
+          description: "As a general rule, QTG does not carry out international data transfers. However, if to provide certain services it is necessary to use tools whose infrastructure is located outside the European Economic Area (for example, email or cloud storage providers), QTG will adopt the safeguards required by the GDPR, such as entering into Standard Contractual Clauses or verifying adequacy decisions by the European Commission."
+        },
+
+        // Section 7: Data Retention
+        retention: {
+          title: "Data Retention",
+          description: "We retain data only for the time necessary to fulfill the purpose for which they were collected. Once fulfilled, data are blocked and kept only to address legal responsibilities during the applicable limitation periods; afterwards, they are deleted or anonymized.",
+          periodsTitle: "Indicative periods by purpose:",
+          periods: [
+            "Enquiries, support, and proposals (4.2-I): while the request is being processed and, at most, 12 months from the last interaction.",
+            "Newsletters and commercial communications (4.2-II): as long as you remain subscribed or until you object. Records of consent/objection will be kept blocked for the time necessary to demonstrate compliance.",
+            "Resource downloads (4.2-III): until delivery is completed and limited follow-up for up to 12 months, unless you object. If the user is transferred to the communications list, the periods in the previous point apply.",
+            "Job applications – HR (4.2-IV): for the duration of the selection process; if not selected, 12 months from the close of the process or until consent is withdrawn.",
+            "Basic segmentation in CRM (4.2-V): while there is an active relationship or demonstrated interest; in the absence of activity, up to 12 months from the last interaction, or earlier if you object.",
+            "Security and technical operation (4.2-VI): IP address and minimal logs for up to 12 months. In case of security incidents, they will be kept blocked for the time necessary to investigate and comply with obligations.",
+            "Legal compliance and defense (4.2-VII): for the applicable limitation periods. As a guideline: 4 years for tax obligations, 6 years for corporate documentation, up to 5 years for personal actions, and up to 10 years in cases under AML/CFT regulations; the longer applicable period will be used.",
+            "Cookies and analytics: according to the duration indicated in the Cookie Policy; your preferences/consents are kept until you modify them and for the time necessary to evidence their management. In any case, we will keep Cookies for a period of 1 year from your last visit to the website. After that, QTG will request consent again."
+          ]
+        },
+
+        // Section 8: User Rights
+        userRights: {
+          title: "User Rights",
+          description: "As a data subject, you may exercise the following rights at any time:",
+          rights: [
+            "Right of access: to know which personal data are being processed and for what purpose.",
+            "Right to rectification: to request the correction of inaccurate or incomplete data.",
+            "Right to erasure: to request the deletion of your data when they are no longer necessary or when you withdraw consent.",
+            "Right to object: to object to the processing of your data for reasons related to your particular situation.",
+            "Right to restriction of processing: to request that processing be suspended in certain cases.",
+            "Right to data portability: to receive your data in a structured format and transmit them to another controller, where applicable."
+          ],
+          exerciseRights: "You may exercise these rights by sending a written request, together with a copy of your ID document, to:",
+          complaintInfo: "You may also file a complaint with the Spanish Data Protection Agency (www.aepd.es) if you believe your data protection rights have been infringed."
+        },
+
+        // Section 9: Security Measures
+        security: {
+          title: "Security Measures",
+          description: "QTG has implemented appropriate technical and organizational measures to ensure a level of security appropriate to the risk, aimed at preserving the confidentiality, integrity, availability, and resilience of information and personal data, as well as preventing unauthorized access, loss, alteration, or destruction.",
+          details: "By way of example and without limitation, QTG applies risk-appropriate technical and organizational controls in secure communications, identity and access management, information protection and encryption, continuity and backups, and activity logging and traceability.",
+          review: "QTG periodically reviews and updates its policies and controls to keep them aligned with identified risks and technological and regulatory developments, and requires its providers to apply equivalent measures through the relevant data processing agreements."
+        },
+
+        // Section 10: Minors
+        minors: {
+          title: "Minors",
+          description: "This website is not directed to minors. If QTG becomes aware that personal data have been collected from a minor without authorization, it will proceed to delete them immediately."
+        },
+
+        // Section 11: Policy Changes
+        changes: {
+          title: "Changes to This Privacy Policy",
+          description: "QTG may amend this Privacy Policy to adapt it to legal requirements, changes in processing, service improvements, or internal criteria. When relevant changes occur, we will communicate them through the Website and, where appropriate, via direct channels, indicating the effective date.",
+          effectiveDate: "The new version will apply from its publication. If the changes involve new purposes or legal bases requiring the User's consent, QTG will request it before applying such changes."
+        },
+        
+        // Contact and Exercise Rights
+        contactRights: {
+          title: "Exercise Your Rights",
+          description: "You may exercise your data protection rights by sending a written request, together with a copy of your ID document, to the following contact information:",
+          emailContact: "Email Contact",
+          postalAddress: "Postal Address",
+          contactGDPR: "Contact GDPR Team",
+          dataProtectionAgency: "Spanish Data Protection Agency",
+          complaintInfo: "You may also file a complaint with the Spanish Data Protection Agency (www.aepd.es) if you believe your data protection rights have been infringed."
+        },
+        
+        // Updates Section
+        updates: {
+          title: "Recent Updates",
+          update1: "October 1, 2025 - Comprehensive privacy policy update with GDPR compliance",
+          update2: "Added detailed data retention periods and legal bases",
+          update3: "Updated contact information and data controller details"
+        }
+      },
       cookies: {
         banner: {
           title: "We use cookies",
-          description: "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+          description: "This website uses first-party and third-party cookies to ensure it functions properly, analyze browsing activity, and—if you consent—personalize content and show advertising based on your browsing habits. You can learn more and access our ",
+          link: "Cookie Policy",
           accept: "Accept All",
           reject: "Reject All",
           preferences: "Preferences"
@@ -947,9 +1130,9 @@ const resources = {
         title: "Nuestro equipo",
         description: "Conoce a las personas que impulsan nuestra misión y valores.",
         members: [
-          { name: "David González", role: "Director Ejecutivo", image: "/team/David1.jpeg", linkedin: "https://www.linkedin.com/" },
-          { name: "Juan García", role: "Asesor", image: "/team/Juan2.jpeg", linkedin: "https://www.linkedin.com/" },
-          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.jpeg", linkedin: "https://www.linkedin.com/" },
+          { name: "David González", role: "CEO", image: "/team/David1.jpeg", linkedin: "https://www.linkedin.com/in/sond3r" },
+          { name: "Juan García", role: "Advisor", image: "/team/Juan2.jpeg", linkedin: "https://www.linkedin.com/in/juangarciamorgado/" },
+          { name: "Emmanuel Oluyemi", role: "CTO", image: "/team/Emmanuel3.jpeg", linkedin: "https://www.linkedin.com/in/emmanuel-oluyemi-43588a217/" },
         ],
         hiring: "¡Nuestro equipo está creciendo! Estamos formando un grupo diverso de expertos en la nube, ingenieros DevOps y especialistas en FinOps que comparten nuestra pasión por la transparencia y la excelencia técnica."
       },
@@ -1083,7 +1266,7 @@ const resources = {
         info: {
           email: {
             title: "Escríbenos",
-            value: "holla@devcloudpartners.com"
+            value: "hola@devcloudpartners.com"
           },
           phone: {
             title: "Llama",
@@ -1618,7 +1801,7 @@ const resources = {
       footer: {
         tagline: "Desde las Islas Canarias al mundo",
         location: "Islas Canarias, España",
-        email: "holla@devcloudpartners.com",
+        email: "hola@devcloudpartners.com",
         services: {
           title: "Servicios",
           optimization: "Optimización de Costos en la Nube",
@@ -1644,10 +1827,192 @@ const resources = {
         copyright: "© 2025 DevCloud Partners. Todos los derechos reservados.",
         poweredBy: "Desarrollado por: QUEVEDO TECH GROUP S.L."
       },
+      privacy: {
+        title: "Política de Privacidad",
+        lastUpdated: "Última actualización: 1 de octubre de 2025",
+        effectiveDate: "Fecha efectiva: 1 de octubre de 2025",
+        version: "Versión 2.0",
+        subtitle: "Su privacidad y protección de datos son importantes para nosotros. Esta política explica cómo recopilamos, usamos y protegemos su información personal.",
+        
+        // Sección 1: Responsable del Tratamiento
+        dataController: {
+          title: "Responsable del Tratamiento",
+          description: "En cumplimiento del Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), y la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), se informa a los usuarios de que el sitio web https://devcloudpartners.com/ (en adelante, el \"Sitio Web\") es titularidad de Quevedo Tech Group, S.L. (en adelante, \"QTG\"), con los siguientes datos de identificación:",
+          companyName: "Quevedo Tech Group, S.L.",
+          taxId: "B-22969661",
+          address: "Calle Guimar, 12 – Piso 2, 35110 Santa Lucía de Tirajana (Las Palmas), España",
+          email: "rgpd@devcloudpartners.com",
+          phone: "+34 603 479 347"
+        },
+        
+        // Sección 2: Alcance
+        scope: {
+          title: "Alcance de la Política",
+          text1: "La presente Política de Privacidad regula el tratamiento de los datos personales que los usuarios faciliten o que puedan ser recabados a través del Sitio Web y de los distintos canales asociados al mismo, incluyendo formularios de contacto, solicitudes de información, suscripción a newsletters, descargas de contenidos, participación en eventos o cualquier otra interacción con QTG.",
+          text2: "El acceso y utilización del Sitio Web implica el conocimiento y la aceptación de esta Política, así como de lo dispuesto en el <a href='/legal-notice' class='text-brand-accent hover:underline'>Aviso Legal</a> y en la <a href='/cookie-policy' class='text-brand-accent hover:underline'>Política de Cookies</a>.",
+          text3: "Cualquier información adicional más allá del presente sitio web relativa a la recogida y tratamiento de datos personales se proporciona en cada caso de forma clara y accesible, y queda regulada en los correspondientes formularios, contratos, encargos o condiciones específicas que resulten de aplicación."
+        },
+        
+        // Sección 3: Principios
+        principles: {
+          title: "Principios Aplicables al Tratamiento de Datos Personales",
+          description: "QTG tratará los datos personales conforme a los principios recogidos en el art. 5 RGPD y normativa nacional aplicable:",
+          lawfulness: "Cada tratamiento se ampara en una base jurídica válida y se le informa sobre sus finalidades, destinatarios y derechos antes de la recogida de datos.",
+          purposeLimitation: "Los datos se recaban con fines determinados, explícitos y legítimos y no se tratan ulteriormente de modo incompatible con dichos fines. Si la finalidad varía, se informará al interesado y, cuando proceda, se recabará nuevo consentimiento.",
+          dataMinimization: "Se tratarán datos adecuados, pertinentes y limitados a lo estrictamente necesario en relación con cada finalidad.",
+          accuracy: "Se adoptarán medidas razonables para que los datos sean exactos y estén actualizados; se habilitan cauces para su rectificación o actualización.",
+          storageLimitation: "Los datos se conservarán durante los plazos estrictamente necesarios y, cumplidas las finalidades o las obligaciones legales, se procederá a su bloqueo, anonimización y/o supresión.",
+          integrity: "Desde QTG se aplican medidas técnicas y organizativas apropiadas para garantizar la seguridad de los datos y evitar su alteración, pérdida, tratamiento o acceso no autorizado.",
+          processorNote: "Estos principios rigen igualmente la relación con los encargados del tratamiento, que quedan sujetos a obligaciones equivalentes mediante el correspondiente contrato de encargado del tratamiento."
+        },
+
+        // Sección 4: Finalidades y Bases de Legitimación
+        purposes: {
+          title: "Finalidades del Tratamiento y Bases de Legitimación",
+          description: "QTG trata los datos personales para las finalidades indicadas a continuación, con su base jurídica (art. 6 RGPD). Abajo se facilita, primero, qué datos podemos recoger y, después, para qué los usamos y con qué base de legitimación conforme al RGPD.",
+          dataWeCollect: "Datos que recogemos",
+          dataItems: [
+            "Identificación y contacto: nombre, email, teléfono.",
+            "Profesionales: empresa, cargo, área/sector (cuando proceda).",
+            "Interacciones y datos del proyecto: ubicación/país, presupuesto disponible, cronograma del proyecto, servicio de interés, contenido del mensaje y preferencias de comunicación.",
+            "Uso de la web: Cookies, IP y logs técnicos vinculados al funcionamiento del Sitio Web. Puedes obtener más información a través de nuestra Política de Cookies.",
+            "Candidaturas (RR. HH.): CV, carta de presentación y enlaces profesionales."
+          ],
+          dataNote: "Los datos personales se facilitan directamente por la persona interesada; los datos técnicos (IP y logs mínimos) los genera el servidor al usar la web de conformidad con lo dispuesto en nuestra Política de Cookies.",
+          noSpecialData: "QTG no trata categorías especiales de datos a través del Sitio Web",
+          userGuarantee: "El usuario garantiza que los datos aportados son veraces, exactos y están actualizados, y se compromete a comunicar cualquier modificación.",
+          thirdPartyData: "Si el Usuario facilita datos personales de terceras personas, declara contar con su autorización y se comprometen a informarles de la presente Política de Privacidad antes de comunicarnos sus datos.",
+          
+          processingPurposes: "Finalidades del tratamiento",
+          purposesList: [
+            {
+              title: "Atención de consultas y solicitudes",
+              description: "Usamos datos identificativos, profesionales y de proyecto (incl. ubicación, presupuesto, cronograma y servicio de interés) para responder, valorar tu necesidad y, en su caso, coordinar una cita o propuesta. Base jurídica: medidas precontractuales/contrato (art. 6.1.b RGPD) y Consentimiento (art. 6.1.a RGPD) para el contacto. Si se estableciera una relación comercial, la base será la ejecución del contrato e interés legítimo."
+            },
+            {
+              title: "Newsletters y comunicaciones comerciales",
+              description: "Empleamos tus datos de contacto para enviarte contenidos y novedades. Base: consentimiento (art. 6.1.a RGPD). Si ya eres cliente, podemos informarte sobre productos o servicios propios similares en interés legítimo, con posibilidad de baja en cada envío (art. 6.1.f RGPD y art. 21.2 LSSI)."
+            },
+            {
+              title: "Descarga de recursos",
+              description: "Tratamos tus datos para enviarte el recurso y realizar un seguimiento acotado y relacionado con esa descarga. Base: consentimiento (art. 6.1.a)."
+            },
+            {
+              title: "Procesos de selección",
+              description: "Usamos los datos de tu candidatura para valorar tu perfil y contactarte. Base: medidas precontractuales (art. 6.1.b). Para conservar tu CV para futuras vacantes, solicitaremos consentimiento (art. 6.1.a)."
+            },
+            {
+              title: "Segmentación básica en CRM",
+              description: "Organizamos información declarada (contacto, empresa/cargo, servicio de interés y señales derivadas de la relación) para mantener comunicaciones actualizadas y no intrusivas. Base: interés legítimo con opción de oponerte en cualquier momento (art. 6.1.f). No usamos datos de navegación para segmentar salvo que exista consentimiento de cookies, en cuyo caso se rige por la Política de Cookies."
+            },
+            {
+              title: "Seguridad y funcionamiento técnico del Sitio Web",
+              description: "Tratamos IP y logs mínimos para monitorizar disponibilidad, prevenir abusos y proteger la plataforma. Base: interés legítimo (art. 6.1.f)."
+            },
+            {
+              title: "Cumplimiento de obligaciones legales y defensa ante reclamaciones",
+              description: "Tratamos lo necesario para cumplir obligaciones legales (p. ej., atender requerimientos de autoridades judiciales) y defender nuestros derechos. Base: obligación legal (art. 6.1.c) e interés legítimo (art. 6.1.f)."
+            }
+          ],
+          legitimateInterestNote: "Cuando la base sea el interés legítimo, QTG ha realizado la ponderación correspondiente para asegurar que no prevalezcan los derechos y libertades de las personas, y puedes oponerte en cualquier momento. Desde QTG no se ejecutan decisiones automatizadas ni se realizan perfilados."
+        },
+
+        // Sección 5: Comunicación de Datos
+        disclosure: {
+          title: "Comunicación de Datos a Terceros",
+          description: "QTG no vende datos personales. Los datos podrán comunicarse únicamente cuando sea necesario a:",
+          items: [
+            "Proveedores que prestan servicios en nombre de QTG (actuando como encargados del tratamiento): alojamiento web/CDN y plataforma del sitio, mantenimiento y seguridad, gestión de formularios y correo corporativo, herramientas de colaboración y almacenamiento de archivos y, en su caso, servicios de RR. HH./screening de candidaturas. Con todos ellos QTG obtiene las garantías contractuales estándar conforme al RGPD y exige garantías adecuadas de seguridad.",
+            "Administraciones y autoridades cuando exista obligación legal o sea necesario para formular, ejercer o defender reclamaciones.",
+            "Terceros de cookies y tecnologías similares, solo si el usuario las acepta, según la Política de Cookies (estos terceros actúan como responsables independientes de esos tratamientos)."
+          ],
+          additionalInfo: "Fuera de los supuestos anteriores, QTG no realizará ninguna comunicación de datos a terceros. En caso de que para prestar un servicio concreto o para activar alguna funcionalidad de la web resulte necesaria dicha comunicación, se informará al usuario sobre los destinatarios y la finalidad, solicitando su consentimiento cuando proceda o indicando que la comunicación es necesaria para la ejecución del servicio/funcionalidad que haya solicitado."
+        },
+
+        // Sección 6: Transferencias Internacionales
+        transfers: {
+          title: "Transferencias Internacionales",
+          description: "Con carácter general, QTG no realiza transferencias internacionales de datos. No obstante, si para la prestación de ciertos servicios fuera necesario utilizar herramientas cuya infraestructura esté ubicada fuera del Espacio Económico Europeo (por ejemplo, proveedores de correo electrónico o almacenamiento en la nube), QTG adoptará las garantías exigidas por el RGPD, como la suscripción de cláusulas contractuales tipo o la verificación de decisiones de adecuación por parte de la Comisión Europea."
+        },
+
+        // Sección 7: Conservación de Datos
+        retention: {
+          title: "Conservación de los Datos",
+          description: "Conservamos los datos solo el tiempo necesario para cumplir la finalidad para la que fueron recabados. Una vez cumplida, los datos quedan bloqueados y se conservan únicamente para atender responsabilidades legales durante los plazos de prescripción aplicables; después se suprimen o anonimizan.",
+          periodsTitle: "Plazos orientativos por finalidad:",
+          periods: [
+            "Consultas, soporte y propuestas (4.2-I): mientras se gestiona la solicitud y, como máximo, 12 meses desde la última interacción.",
+            "Newsletters y comunicaciones comerciales (4.2-II): mientras siga suscrito o hasta que se oponga el usuario. Los registros de consentimiento/oposición se conservarán bloqueados durante los plazos necesarios para acreditar el cumplimiento.",
+            "Descarga de recursos (4.2-III): hasta completar el envío y un seguimiento relacionado por un máximo de 12 meses, salvo oposición. Si el usuario se transfiere a la lista de comunicaciones, rigen los plazos del punto anterior.",
+            "Candidaturas – RR. HH. (4.2-IV): durante el proceso de selección; si no resultas seleccionado, 12 meses desde el cierre del proceso o hasta que se retire el consentimiento.",
+            "Segmentación básica en CRM (4.2-V): mientras exista relación activa o interés demostrado; en ausencia de actividad, hasta 12 meses desde la última interacción, o antes si el usuario se opone.",
+            "Seguridad y funcionamiento técnico (4.2-VI): IP y logs mínimos hasta 12 meses. En caso de incidentes de seguridad, se conservarán bloqueados el tiempo imprescindible para investigar y cumplir obligaciones.",
+            "Cumplimiento legal y defensa (4.2-VII): durante los plazos de prescripción aplicables. Orientativamente: 4 años obligaciones fiscales (LGT), 6 años documentación mercantil (art. 30 C. de Comercio), hasta 5 años para acciones personales (art. 1964 CC) y hasta 10 años en los casos previstos por la normativa de PBCFT; se aplicará el plazo más largo que corresponda.",
+            "Cookies y analítica: según la duración indicada en la Política de Cookies; tus preferencias/consentimientos se conservan mientras no los modifiques y el tiempo necesario para acreditar su gestión. En todo caso, conservaremos las Cookies por un plazo de 1 año desde la última entrada al sitio web. Transcurrido ese plazo, QTG recabará de nuevo el consentimiento del usuario."
+          ]
+        },
+
+        // Sección 8: Derechos de Usuarios
+        userRights: {
+          title: "Derechos de los Usuarios",
+          description: "Como interesado, usted puede ejercitar en cualquier momento los siguientes derechos:",
+          rights: [
+            "Derecho de acceso: conocer qué datos personales están siendo tratados y con qué finalidad.",
+            "Derecho de rectificación: solicitar la corrección de datos inexactos o incompletos.",
+            "Derecho de supresión: solicitar la eliminación de sus datos cuando ya no sean necesarios o cuando retire su consentimiento.",
+            "Derecho de oposición: oponerse al tratamiento de sus datos por motivos relacionados con su situación particular.",
+            "Derecho a la limitación del tratamiento: solicitar que se suspenda el tratamiento en determinados casos.",
+            "Derecho a la portabilidad de los datos: recibir sus datos en un formato estructurado y transmitirlos a otro responsable, cuando sea aplicable."
+          ],
+          exerciseRights: "Puede ejercer estos derechos remitiendo una solicitud por escrito, junto con copia de su DNI o documento identificativo, a:",
+          complaintInfo: "Asimismo, puede presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es) si considera que se han vulnerado sus derechos en materia de protección de datos."
+        },
+
+        // Sección 9: Medidas de Seguridad
+        security: {
+          title: "Medidas de Seguridad",
+          description: "QTG ha implantado medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad adecuado al riesgo, orientadas a preservar la confidencialidad, integridad, disponibilidad y resiliencia de la información y datos personales, así como a prevenir accesos no autorizados, su pérdida, alteración o destrucción.",
+          details: "A título enunciativo y sin carácter exhaustivo, QTG aplica controles técnicos y organizativos adecuados al riesgo en materia de comunicaciones seguras, gestión de identidades y accesos, protección y cifrado de la información, continuidad y copias de seguridad y registro y trazabilidad de actividades.",
+          review: "QTG revisa y actualiza periódicamente sus políticas y controles para mantenerlos alineados con los riesgos identificados y con la evolución tecnológica y normativa, y exige a sus proveedores que apliquen medidas equivalentes mediante los correspondientes contratos de encargo del tratamiento."
+        },
+
+        // Sección 10: Menores
+        minors: {
+          title: "Menores de Edad",
+          description: "Este sitio web no está dirigido a menores de edad. En caso de que QTG tenga conocimiento de que se han recopilado datos personales de un menor sin autorización, procederá a su eliminación inmediata."
+        },
+
+        // Sección 11: Cambios en la Política
+        changes: {
+          title: "Cambios en la Política de Privacidad",
+          description: "QTG podrá modificar la presente Política de Privacidad para adaptarla a exigencias legales, cambios en los tratamientos, mejoras del servicio o criterios internos. Cuando haya cambios relevantes, lo comunicaremos a través del Sitio Web y, cuando proceda, por canales directos, indicando la fecha de entrada en vigor.",
+          effectiveDate: "La nueva versión será aplicable desde su publicación. Si los cambios implican nuevas finalidades o bases jurídicas que requieran el consentimiento del Usuario, QTG lo solicitará antes de aplicar dichos cambios"
+        },
+        
+        // Contacto y Ejercicio de Derechos
+        contactRights: {
+          title: "Ejercer sus Derechos",
+          description: "Puede ejercitar sus derechos de protección de datos remitiendo una solicitud por escrito, junto con copia de su DNI o documento identificativo, a la siguiente información de contacto:",
+          emailContact: "Contacto por Email",
+          postalAddress: "Dirección Postal",
+          contactGDPR: "Contactar Equipo RGPD",
+          dataProtectionAgency: "Agencia Española de Protección de Datos",
+          complaintInfo: "También puede presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es) si considera que se han vulnerado sus derechos en materia de protección de datos."
+        },
+        
+        // Sección de Actualizaciones
+        updates: {
+          title: "Actualizaciones Recientes",
+          update1: "1 de octubre de 2025 - Actualización integral de la política de privacidad con cumplimiento RGPD",
+          update2: "Añadidos períodos de retención de datos y bases legales detallados",
+          update3: "Actualizada información de contacto y detalles del responsable de datos"
+        }
+      },
       cookies: {
         banner: {
           title: "Usamos cookies",
-          description: "Utilizamos cookies para mejorar su experiencia de navegación, servir contenido personalizado y analizar nuestro tráfico. Al hacer clic en \"Aceptar todo\", usted consiente nuestro uso de cookies.",
+          description: "Este sitio web utiliza cookies propias y de terceros para garantizar su funcionamiento, analizar la navegación y, si lo autorizas, personalizar contenidos y mostrar publicidad según tus hábitos de navegación. Puedes obtener más información y acceder a nuestra ",
+          link: "Política de Cookies",
           accept: "Aceptar todo",
           reject: "Rechazar todo",
           preferences: "Preferencias"

@@ -42,7 +42,7 @@ const Footer = () => {
                 <div className="flex items-center space-x-2 text-gray-400 text-sm">
                   <HugeiconsIcon icon={Mail01Icon} size={16} />
                   <span>
-                    <a href="mailto:holla@devcloudpartners.com" className="hover:text-white transition-colors duration-200">
+                    <a href="mailto:hola@devcloudpartners.com" className="hover:text-white transition-colors duration-200">
                       {t('footer.email')}
                     </a>
                   </span>
