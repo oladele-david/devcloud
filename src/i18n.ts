@@ -990,6 +990,307 @@ const resources = {
           cancel: "Cancel",
           save: "Save Preferences"
         }
+      },
+      cookiePolicy: {
+        title: "Cookie Policy",
+        lastUpdated: "Last Update: 1 October 2025",
+        effectiveDate: "Effective Date: 1 October 2025",
+        version: "Version 1.0",
+        subtitle: "Learn about how we use cookies and similar technologies to ensure website functionality, analyze browsing activity, and—if you consent—personalize content and show advertising based on your browsing habits.",
+
+        // 1. What Are Cookies
+        whatAreCookies: {
+          title: "What Are Cookies?",
+          description1: "Cookies are small text files that are stored on the user's device when accessing certain web pages. Their main purpose is to enable the technical operation of the website, facilitate browsing, remember preferences, or collect anonymous statistical information.",
+          description2: "These cookies do not damage the user's device and are essential for the proper functioning of the internet. When enabled in the browser, they help identify potential malfunctions and optimize site performance."
+        },
+
+        // 2. Legal Information
+        legalInfo: {
+          title: "Legal Information",
+          description: "In compliance with Law 34/2002 of 11 July on Information Society Services and Electronic Commerce (LSSI) and the legislation in force on personal data protection, we inform users that the website <a href='https://devcloudpartners.com' class='text-brand-accent hover:underline'>https://devcloudpartners.com</a> uses cookies and similar technologies as data storage and retrieval devices on users' terminal equipment. If you wish to obtain more information about the website owner, please consult our <a href='/legal-notice' class='text-brand-accent hover:underline'>Legal Notice</a>.",
+          companyInfo: "Company Information",
+          companyName: "Company name",
+          companyNameValue: "Quevedo Tech Group, S.L.",
+          taxId: "CIF (Tax ID)",
+          taxIdValue: "B-22969661",
+          email: "Email",
+          emailValue: "rgpd@devcloudpartners.com",
+          address: "Registered Address",
+          addressValue: "Calle Guimar, 12 – 2nd Floor, 35110 Santa Lucía de Tirajana (Las Palmas), Spain"
+        },
+
+        // 3. Types Used
+        typesUsed: {
+          title: "Types of Cookies We Use",
+          description: "QTG’s  website uses both first-party and third-party cookies:",
+          firstParty: {
+            title: "First-party cookies",
+            description: "Sent to the user's device from a domain managed by QTG from which the requested service is provided."
+          },
+          thirdParty: {
+            title: "Third-party cookies", 
+            description: "Sent to the user's device from a domain not managed by QTG’s, but by another entity that processes the data obtained through these cookies (e.g., social networks, analytics tools, or external content integrations)."
+          },
+          byDuration: {
+            title: "By Duration:",
+            session: {
+              title: "Session cookies",
+              description: "Temporary; they remain in the browser's cookie file until you leave the website. Their use is limited to facilitating navigation and enabling basic functions such as session identification or maintaining options during browsing."
+            },
+            persistent: {
+              title: "Persistent cookies",
+              description: "Stored on the user's device for a set period and allow the site to remember browsing information on subsequent visits, such as selected preferences or language."
+            }
+          },
+          byPurpose: {
+            title: "By Purpose:"
+          },
+          required: "Required",
+          optional: "Optional"
+        },
+
+        // Cookie Types
+        types: {
+          essential: {
+            title: "Technical or Necessary Cookies",
+            description: "Essential for the basic operation of the website, enabling functions such as navigating between sections, accessing secure areas, or user authentication. These cookies do not require user consent.",
+            examples: ["Authentication", "Security", "Load balancing", "User preferences", "Session management", "Form data"]
+          },
+          analytics: {
+            title: "Analytics or Measurement Cookies", 
+            description: "Allow us to quantify the number of users and perform statistical measurement and analysis of website use. Their purpose is to introduce improvements based on aggregated browsing data analysis.",
+            examples: ["Google Analytics", "Page views", "User behavior", "Performance metrics", "Traffic sources", "Bounce rate"]
+          },
+          functional: {
+            title: "Preference or Functionality Cookies",
+            description: "Remember choices made by the user (such as language, region, or login credentials), thereby improving the browsing experience. The information stored by these cookies is generally anonymous.",
+            examples: ["Language settings", "Theme preferences", "Form data", "Customization", "User interface", "Accessibility"]
+          },
+          marketing: {
+            title: "Marketing or Behavioral Advertising Cookies",
+            description: "Analyze the user's browsing habits to show advertising related to their profile. These cookies require the user's express consent before being activated.",
+            examples: ["Ad targeting", "Social media", "Retargeting", "Campaign tracking", "Conversion tracking", "Audience segmentation"]
+          }
+        },
+
+        // 4. Cookie Details Table
+        cookieDetailsTable: {
+          title: "Details of Cookies Used by QTG",
+          headers: {
+            controller: "Controller",
+            category: "Category", 
+            functionality: "Functionality",
+            ownership: "Ownership",
+            duration: "Duration"
+          }
+        },
+
+        cookieDetails: [
+          {
+            name: "_ga",
+            purpose: "Google Analytics - Distinguishes unique users and provides analytics data",
+            duration: "2 years",
+            type: "Analytics"
+          },
+          {
+            name: "_gid",
+            purpose: "Google Analytics - Distinguishes unique users for short term analytics",
+            duration: "24 hours", 
+            type: "Analytics"
+          },
+          {
+            name: "session_id",
+            purpose: "Maintains user session state and authentication",
+            duration: "Session",
+            type: "Essential"
+          },
+          {
+            name: "user_preferences",
+            purpose: "Stores user interface preferences and settings",
+            duration: "1 year",
+            type: "Functional"
+          },
+          {
+            name: "cookie_consent",
+            purpose: "Remembers user's cookie consent choices",
+            duration: "1 year",
+            type: "Essential"
+          },
+          {
+            name: "language",
+            purpose: "Stores user's preferred language selection",
+            duration: "1 year",
+            type: "Functional"
+          }
+        ],
+
+        // 5. Management
+        management: {
+          title: "How to Allow, Reject, or Block Cookies",
+          description: "When you first access the website, a cookie banner allows you to accept all cookies, reject them, or customize the settings by cookie type. You can also configure your browser at any time to allow, block, or delete cookies installed on your device.",
+          browser: {
+            title: "Browser Settings",
+            description: "Most browsers allow you to control cookies through their settings. You can block or delete cookies, but this may affect website functionality.",
+            instructions: [
+              "Chrome: Settings → Privacy and security → Cookies",
+              "Firefox: Settings → Privacy & Security → Cookies", 
+              "Safari: Preferences → Privacy → Manage Website Data",
+              "Edge: Settings → Cookies and site permissions"
+            ]
+          },
+          banner: {
+            title: "Our Cookie Banner",
+            description: "When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies to accept.",
+            essential: "Essential cookies are always enabled",
+            analytics: "Analytics cookies are optional",
+            marketing: "Marketing cookies are optional"
+          },
+          googleOptOut: {
+            title: "Google Analytics Opt-out",
+            description: "Google also offers a browser add-on to disable Google Analytics cookies in Chrome and other compatible browsers:",
+            link: "Google Analytics Opt-out Add-on"
+          }
+        },
+
+        // 6. Third Party
+        thirdParty: {
+          title: "Third-Party Cookies",
+          description: "Some of the cookies used on this Website are managed by third parties whose services may involve data processing. Detailed information about such processing is available in the privacy policies of the respective providers.",
+          analytics: {
+            title: "Google Analytics",
+            description: "We use Google Analytics to understand how visitors use our website. This helps us improve our services and user experience.",
+            link: "Google Privacy Policy"
+          },
+          socialMedia: {
+            title: "Social Media",
+            description: "We may embed social media content that sets cookies. These are controlled by the respective social media platforms.",
+            link: "Facebook Privacy Policy"
+          }
+        },
+
+        // 7. International Transfers  
+        transfers: {
+          title: "International Data Transfers",
+          description: "Some of the cookies used on this Website are managed by third parties whose services may involve international data transfers outside the European Economic Area (EEA). Detailed information about such transfers is available in the privacy policies of the respective providers."
+        },
+
+        // 8. Contact
+        contact: {
+          title: "Questions About Cookies?",
+          description: "For more details on the processing of personal data, please consult our Privacy Policy or contact us using the means indicated therein. If you need assistance or have any additional questions regarding the use of cookies on this website, you can write to us.",
+          email: "rgpd@devcloudpartners.com",
+          emailButton: "Contact Privacy Team", 
+          generalContact: "General Contact"
+        },
+
+        // 9. Updates
+        updates: {
+          title: "Changes to the Cookie Policy",
+          description: "QTG may amend this Cookie Policy to adapt it to new legal requirements, guidance from supervisory authorities, or technical improvements implemented on the Website. Any relevant changes will be communicated to users via a notice on the Website or, where appropriate, through other suitable channels.",
+          recentTitle: "Recent Updates",
+          recent: [
+            "October 1, 2025 - Comprehensive cookie policy update with GDPR compliance",
+            "Added detailed cookie descriptions and legal bases",
+            "Updated third-party cookie information and management options"
+          ]
+        }
+      },
+      legalNotice: {
+        title: "Legal Notice",
+        lastUpdated: "Last Update: 1 October 2025", 
+        effectiveDate: "Effective Date: 1 October 2025",
+        version: "Version 1.0",
+        subtitle: "This legal notice provides important information about our company, services, and legal obligations in compliance with applicable laws and regulations. Please read this notice carefully.",
+
+        introduction: "In compliance with Law 34/2002 of 11 July on Information Society Services and Electronic Commerce (LSSI), as well as Regulation (EU) 2016/679, the General Data Protection Regulation (GDPR), and Organic Law 3/2018 on the Protection of Personal Data and guarantee of digital rights (LOPDGDD), this Legal Notice is made available to you. It governs access to, browsing on, and use of the website owned by Quevedo Tech Group, S.L.",
+
+        ownership: {
+          title: "Website Ownership",
+          description: "In compliance with Article 10 of the LSSI, it is hereby stated that the website <a href='https://devcloudpartners.com' class='text-brand-accent hover:underline'>https://devcloudpartners.com</a> is managed by Quevedo Tech Group, S.L., with the following identification details:",
+          companyInfo: "Company Information",
+          taxId: "CIF (Tax ID)",
+          taxIdValue: "B-22969661",
+          email: "Contact email",
+          emailValue: "rgpd@devcloudpartners.com", 
+          phone: "Telephone",
+          phoneValue: "+34 603 479 347",
+          address: "Registered address",
+          addressValue: "Calle Guimar, 12 – 2nd Floor, 35110 Santa Lucía de Tirajana (Las Palmas), Spain",
+          purpose: "The purpose of the Website is to provide technology consulting services, cloud solutions, and related digital services."
+        },
+
+        termsOfUse: {
+          title: "Terms of Use",
+          description1: "Access to and browsing on the Website confer the status of User, which implies full and unreserved acceptance of this Legal Notice.",
+          description2: "The User undertakes to use the Website appropriately, in accordance with applicable law, good faith, public order, accepted customs, and these terms. Use of the Website for unlawful purposes or purposes harmful to QTG and/or any third party is prohibited.",
+          description3: "QTG reserves the right to modify at any time the presentation, configuration, content, and services of the Website, as well as the conditions required for access and/or use."
+        },
+
+        liability: {
+          title: "Liability",
+          intro1: "QTG implements reasonable and proportionate technical and organizational measures to maintain the proper functioning of the Website and the security of information, aimed at preserving its integrity, confidentiality, and availability. Nevertheless, the User understands and accepts that using internet-based services entails certain technical risks that cannot be completely eliminated.",
+          intro2: "Accordingly, QTG does not guarantee the availability, continuity, or infallibility of the Website or its contents. QTG may temporarily interrupt access for maintenance, updates, improvements, security, or circumstances requiring it (including incidents involving third-party hosting, communications, or infrastructure providers), and may, at its discretion, announce such interruptions or carry them out during low-impact hours.",
+          exclusionsTitle: "QTG shall not be liable for damages of any kind that may arise from",
+          exclusions: [
+            "Interference, omissions, interruptions, failures, or disconnections in the operation of the electronic system, the telecommunications network, or the User's equipment due to causes beyond QTG's control.",
+            "The presence of malware, viruses, trojans, vulnerabilities, or any other harmful software elements on the Website or in accessible content when introduced by third parties or inherent to the use of open networks.",
+            "Improper or negligent use of the Website by the User or third parties, as well as non-compliance with these terms of use.",
+            "Decisions taken by the User based on information available on the Website, which is general and informational in nature and does not constitute professional advice.",
+            "The lack of truthfulness, accuracy, completeness, timeliness, lawfulness, or availability of third-party content and/or services that the User may access through hyperlinks.",
+            "Interactive content published by users in comments, forums, or other participation spaces that may infringe third-party rights or violate applicable regulations.",
+            "Integration of third-party services, widgets, plugins, or external content that may cause operational failures, security vulnerabilities, or data privacy issues.",
+            "Errors, bugs, or security vulnerabilities in the Website's software, hosting infrastructure, or associated third-party systems that may affect functionality or user data.",
+            "Unauthorized access, data breaches, or security incidents affecting the Website or user information when caused by sophisticated attacks, zero-day exploits, or advanced persistent threats beyond standard security measures.",
+            "Loss of data, business interruption, or consequential damages arising from the use or inability to use the Website, regardless of whether QTG has been advised of the possibility of such damages."
+          ],
+          disclaimer: "The foregoing is without prejudice to liabilities that cannot be excluded or limited under applicable law. For additional information on the processing of personal data and tracking technologies used on the Website, the User may consult the <a href='/privacy-policy' class='text-brand-accent hover:underline'>Privacy Policy</a> and the <a href='/cookie-policy' class='text-brand-accent hover:underline'>Cookie Policy</a> available on the Website itself."
+        },
+
+        scraping: {
+          title: "Prohibition of Scraping, Data Mining, and Automated Access",
+          warning: "Prohibited Activities",
+          description: "The Website is offered for personal consultation. Without QTG's prior written authorization, it is prohibited to:",
+          prohibited: [
+            "Systematically extract or reuse content or data (web scraping, crawling, harvesting).",
+            "Use bots or scripts to access, collect information, or circumvent technical measures (e.g., robots.txt, rate limitations).",
+            "Carry out text and data mining for commercial purposes (including training AI models).",
+            "Reproduce, publish, or create repositories containing substantial copies of the Website."
+          ],
+          consequence: "Basic indexing by search engines that respect robots.txt is permitted. QTG may block access and reserves the right to take any legal action available to protect its rights."
+        },
+
+        intellectualProperty: {
+          title: "Intellectual and Industrial Property",
+          description1: "All content on the Website (texts, images, logos, structure, design, source code, etc.) is owned by QTG or used under license or express authorization. Such content is protected by applicable intellectual and industrial property regulations.",
+          description2: "Reproduction, distribution, public communication, transformation, or any other form of unauthorized exploitation is prohibited, except with QTG's express written consent. QTG reserves all legal actions available to enforce this clause.",
+          description3: "Unauthorized use of the Website's content may give rise to the corresponding legal actions."
+        },
+
+        dataProtection: {
+          title: "Personal Data Protection", 
+          description1: "Legal Core Labs acts as the data controller for the personal data collected through this Website. Processing shall be carried out in accordance with the GDPR and the LOPDGDD, safeguarding data subjects' rights at all times.",
+          description2: "For more information on the processing of your personal data, please consult our <a href='/privacy-policy' class='text-brand-accent hover:underline'>Privacy Policy</a>."
+        },
+
+        applicableLaw: {
+          title: "Applicable Law and Jurisdiction",
+          description: "This Legal Notice is governed in its entirety by Spanish law. Any dispute that may arise from access to or use of the Website shall be submitted to the courts and tribunals of Las Palmas de Gran Canaria, except in cases where a different mandatory forum is provided by law."
+        },
+
+        contact: {
+          title: "Questions About This Legal Notice?",
+          description: "If you have any questions about this legal notice or our legal obligations, please contact us for clarification.",
+          email: "rgpd@devcloudpartners.com",
+          emailButton: "Contact Legal Team",
+          generalContact: "General Contact"
+        },
+
+        updates: {
+          title: "Legal Notice Updates",
+          recentTitle: "Recent Updates",
+          recent: "October 1, 2025 - Comprehensive legal notice update with LSSI and GDPR compliance"
+        }
       }
       ,
       // Additional portfolio keys used by new components
@@ -2043,6 +2344,307 @@ const resources = {
           },
           cancel: "Cancelar",
           save: "Guardar preferencias"
+        }
+      },
+      cookiePolicy: {
+        title: "Política de Cookies",
+        lastUpdated: "Última actualización: 1 de octubre de 2025",
+        effectiveDate: "Fecha efectiva: 1 de octubre de 2025",
+        version: "Versión 1.0",
+        subtitle: "Aprende sobre cómo utilizamos cookies y tecnologías similares para garantizar el funcionamiento del sitio web, analizar la actividad de navegación y—si consientes—personalizar contenidos y mostrar publicidad según tus hábitos de navegación.",
+
+        // 1. ¿Qué son las cookies?
+        whatAreCookies: {
+          title: "¿Qué son las cookies?",
+          description1: "Las cookies son pequeños archivos de texto que se almacenan en el dispositivo del usuario al acceder a determinadas páginas web. Su finalidad principal es permitir el funcionamiento técnico del sitio web, facilitar la navegación, recordar preferencias o recopilar información estadística de carácter anónimo.",
+          description2: "Estas cookies no dañan el dispositivo del usuario y resultan esenciales para el correcto funcionamiento de internet. Cuando están habilitadas en el navegador, permiten identificar posibles errores de funcionamiento y optimizar el rendimiento del sitio."
+        },
+
+        // 2. Información Legal
+        legalInfo: {
+          title: "Información Legal",
+          description: "En cumplimiento de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y del comercio electrónico (LSSI) y de la normativa vigente en materia de protección de datos personales, informamos a los usuarios de que el sitio web <a href='https://devcloudpartners.com' class='text-brand-accent hover:underline'>https://devcloudpartners.com</a> utiliza cookies y tecnologías similares como dispositivos de almacenamiento y recuperación de datos en los equipos terminales de los usuarios. Si desea obtener más información acerca del titular del sitio web, puede consultar nuestro <a href='/legal-notice' class='text-brand-accent hover:underline'>Aviso Legal</a>.",
+          companyInfo: "Información de la Empresa",
+          companyName: "Nombre de la empresa",
+          companyNameValue: "Quevedo Tech Group, S.L.",
+          taxId: "CIF",
+          taxIdValue: "B-22969661", 
+          email: "Email",
+          emailValue: "rgpd@devcloudpartners.com",
+          address: "Domicilio Social",
+          addressValue: "Calle Guimar, 12 – Piso 2, 35110 Santa Lucía de Tirajana (Las Palmas), España"
+        },
+
+        // 3. Tipos Utilizados
+        typesUsed: {
+          title: "Tipos de Cookies que Utilizamos",
+          description: "El sitio web de QTG’s utiliza tanto cookies propias como de terceros:",
+          firstParty: {
+            title: "Cookies propias",
+            description: "Se envían al dispositivo del usuario desde un dominio gestionado por QTG’s y desde el que se presta el servicio solicitado."
+          },
+          thirdParty: {
+            title: "Cookies de terceros",
+            description: "Se envían al dispositivo del usuario desde un dominio no gestionado por QTG’s, sino por otra entidad que trata los datos obtenidos a través de estas cookies (por ejemplo, redes sociales, herramientas de análisis o integraciones de contenido externo)."
+          },
+          byDuration: {
+            title: "Según su duración:",
+            session: {
+              title: "Cookies de sesión",
+              description: "Son temporales y permanecen en el archivo de cookies del navegador del usuario hasta que se abandona el sitio web. Su uso está limitado a facilitar la navegación y permitir funcionalidades básicas como identificar la sesión o mantener opciones durante la navegación."
+            },
+            persistent: {
+              title: "Cookies persistentes", 
+              description: "Se almacenan en el dispositivo del usuario durante un periodo determinado, y permiten recordar información de navegación en sucesivas visitas, como preferencias seleccionadas o el idioma."
+            }
+          },
+          byPurpose: {
+            title: "Según su finalidad:"
+          },
+          required: "Requerido",
+          optional: "Opcional"
+        },
+
+        // Tipos de Cookies
+        types: {
+          essential: {
+            title: "Cookies técnicas o necesarias",
+            description: "Son imprescindibles para el funcionamiento básico del sitio web, permitiendo funciones como la navegación entre secciones, el acceso a zonas seguras o la autenticación del usuario. Estas cookies no requieren el consentimiento del usuario.",
+            examples: ["Autenticación", "Seguridad", "Balanceo de carga", "Preferencias del usuario", "Gestión de sesiones", "Datos de formulario"]
+          },
+          analytics: {
+            title: "Cookies de análisis o medición",
+            description: "Estas cookies permiten cuantificar el número de usuarios y realizar la medición y análisis estadístico de la utilización que hacen los usuarios del sitio web. Su finalidad es introducir mejoras en función del análisis de los datos agregados de navegación.",
+            examples: ["Google Analytics", "Páginas vistas", "Comportamiento del usuario", "Métricas de rendimiento", "Fuentes de tráfico", "Tasa de rebote"]
+          },
+          functional: {
+            title: "Cookies de preferencias o funcionalidad",
+            description: "Permiten recordar elecciones realizadas por el usuario (como el idioma, región o credenciales de acceso), mejorando así la experiencia de navegación. La información que almacenan estas cookies es generalmente anónima.",
+            examples: ["Configuración de idioma", "Preferencias de tema", "Datos de formulario", "Personalización", "Interfaz de usuario", "Accesibilidad"]
+          },
+          marketing: {
+            title: "Cookies de marketing o publicidad comportamental", 
+            description: "Permiten analizar los hábitos de navegación del usuario para mostrarle publicidad relacionada con su perfil. Estas cookies requieren del consentimiento expreso del usuario antes de ser activadas.",
+            examples: ["Segmentación publicitaria", "Redes sociales", "Retargeting", "Seguimiento de campañas", "Seguimiento de conversiones", "Segmentación de audiencias"]
+          }
+        },
+
+        // 4. Tabla de Detalles de Cookies
+        cookieDetailsTable: {
+          title: "Detalle de las Cookies utilizadas por QTG",
+          headers: {
+            controller: "Responsable",
+            category: "Categoría",
+            functionality: "Funcionalidad",
+            ownership: "Titularidad", 
+            duration: "Duración"
+          }
+        },
+
+        cookieDetails: [
+          {
+            name: "_ga",
+            purpose: "Google Analytics - Distingue usuarios únicos y proporciona datos de análisis",
+            duration: "2 años",
+            type: "Análisis"
+          },
+          {
+            name: "_gid", 
+            purpose: "Google Analytics - Distingue usuarios únicos para análisis a corto plazo",
+            duration: "24 horas",
+            type: "Análisis"
+          },
+          {
+            name: "session_id",
+            purpose: "Mantiene el estado de sesión del usuario y autenticación",
+            duration: "Sesión",
+            type: "Esencial"
+          },
+          {
+            name: "user_preferences",
+            purpose: "Almacena las preferencias y configuraciones de la interfaz del usuario",
+            duration: "1 año",
+            type: "Funcional"
+          },
+          {
+            name: "cookie_consent", 
+            purpose: "Recuerda las opciones de consentimiento de cookies del usuario",
+            duration: "1 año",
+            type: "Esencial"
+          },
+          {
+            name: "language",
+            purpose: "Almacena la selección de idioma preferido del usuario",
+            duration: "1 año", 
+            type: "Funcional"
+          }
+        ],
+
+        // 5. Gestión
+        management: {
+          title: "Cómo permitir, rechazar o bloquear las cookies",
+          description: "Al acceder por primera vez al sitio web, se muestra un aviso de cookies que permite al usuario aceptar todas las cookies, rechazarlas o personalizar la configuración en función del tipo de cookie. Asimismo, el usuario podrá en cualquier momento configurar su navegador para permitir, bloquear o eliminar las cookies instaladas en su dispositivo.",
+          browser: {
+            title: "Configuración del Navegador",
+            description: "La mayoría de los navegadores permiten controlar las cookies a través de su configuración. Puedes bloquear o eliminar cookies, pero esto puede afectar la funcionalidad del sitio web.",
+            instructions: [
+              "Chrome: Configuración → Privacidad y seguridad → Cookies",
+              "Firefox: Configuración → Privacidad y Seguridad → Cookies", 
+              "Safari: Preferencias → Privacidad → Gestionar datos del sitio web",
+              "Edge: Configuración → Permisos de cookies y sitios"
+            ]
+          },
+          banner: {
+            title: "Nuestro Banner de Cookies",
+            description: "Cuando visites por primera vez nuestro sitio web, verás un banner de consentimiento de cookies donde puedes elegir qué tipos de cookies aceptar.",
+            essential: "Las cookies esenciales están siempre habilitadas",
+            analytics: "Las cookies de análisis son opcionales", 
+            marketing: "Las cookies de marketing son opcionales"
+          },
+          googleOptOut: {
+            title: "Exclusión de Google Analytics",
+            description: "Google también ofrece un complemento para navegadores que permite desactivar las cookies analíticas de Google Analytics en Chrome y otros navegadores compatibles:",
+            link: "Complemento de exclusión de Google Analytics"
+          }
+        },
+
+        // 6. Terceros
+        thirdParty: {
+          title: "Cookies de terceros",
+          description: "Algunas de las cookies utilizadas en este sitio web están gestionadas por terceros cuyos servicios pueden implicar el procesamiento de datos. La información detallada sobre dicho procesamiento está disponible en las políticas de privacidad de los respectivos proveedores.",
+          analytics: {
+            title: "Google Analytics",
+            description: "Utilizamos Google Analytics para entender cómo los visitantes usan nuestro sitio web. Esto nos ayuda a mejorar nuestros servicios y la experiencia del usuario.",
+            link: "Política de Privacidad de Google"
+          },
+          socialMedia: {
+            title: "Redes Sociales",
+            description: "Podemos incrustar contenido de redes sociales que establece cookies. Estas están controladas por las respectivas plataformas de redes sociales.",
+            link: "Política de Privacidad de Facebook"
+          }
+        },
+
+        // 7. Transferencias Internacionales
+        transfers: {
+          title: "Transferencias Internacionales de Datos",
+          description: "Algunas de las cookies utilizadas en este sitio web están gestionadas por terceros cuyos servicios pueden implicar transferencias internacionales de datos fuera del Espacio Económico Europeo (EEE). La información detallada sobre dichas transferencias está disponible en las políticas de privacidad de los respectivos proveedores."
+        },
+
+        // 8. Contacto
+        contact: {
+          title: "¿Preguntas sobre las cookies?",
+          description: "Para más detalles sobre el procesamiento de datos personales, consulte nuestra Política de Privacidad o contáctenos usando los medios indicados en ella. Si necesita asistencia o tiene preguntas adicionales sobre el uso de cookies en este sitio web, puede escribirnos.",
+          email: "rgpd@devcloudpartners.com",
+          emailButton: "Contactar Equipo de Privacidad",
+          generalContact: "Contacto General"
+        },
+
+        // 9. Actualizaciones
+        updates: {
+          title: "Cambios en la Política de Cookies",
+          description: "QTG puede modificar esta Política de Cookies para adaptarla a nuevos requisitos legales, orientación de las autoridades de supervisión o mejoras técnicas implementadas en el sitio web. Cualquier cambio relevante será comunicado a los usuarios mediante un aviso en el sitio web o, cuando sea apropiado, a través de otros canales adecuados.",
+          recentTitle: "Actualizaciones Recientes",
+          recent: [
+            "1 de octubre de 2025 - Actualización integral de la política de cookies con cumplimiento RGPD",
+            "Añadidas descripciones detalladas de cookies y bases legales",
+            "Actualizada información de cookies de terceros y opciones de gestión"
+          ]
+        }
+      },
+      legalNotice: {
+        title: "Aviso Legal",
+        lastUpdated: "Última actualización: 1 de octubre de 2025",
+        effectiveDate: "Fecha efectiva: 1 de octubre de 2025", 
+        version: "Versión 1.0",
+        subtitle: "Este aviso legal proporciona información importante sobre nuestra empresa, servicios y obligaciones legales en cumplimiento de las leyes y reglamentos aplicables. Por favor, lea este aviso detenidamente.",
+
+        introduction: "En cumplimiento de lo dispuesto en la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y del comercio electrónico (LSSI), así como en el Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), y en la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), se pone a su disposición el presente Aviso Legal, que regula el acceso, navegación y uso del sitio web titularidad de Quevedo Tech Group, S.L.",
+
+        ownership: {
+          title: "Titularidad del Sitio Web",
+          description: "En cumplimiento del artículo 10 de la LSSI, se informa que el sitio web <a href='https://devcloudpartners.com' class='text-brand-accent hover:underline'>https://devcloudpartners.com</a> es gestionado por Quevedo Tech Group, S.L., con los siguientes datos identificativos:",
+          companyInfo: "Información de la Empresa",
+          taxId: "CIF",
+          taxIdValue: "B-22969661",
+          email: "Correo electrónico de contacto", 
+          emailValue: "rgpd@devcloudpartners.com",
+          phone: "Teléfono",
+          phoneValue: "+34 603 479 347",
+          address: "Domicilio",
+          addressValue: "Calle Guimar, 12 – Piso 2, 35110 Santa Lucía de Tirajana (Las Palmas), España",
+          purpose: "El Sitio Web tiene por objeto la prestación de servicios de consultoría tecnológica, soluciones cloud y servicios digitales asociados."
+        },
+
+        termsOfUse: {
+          title: "Condiciones de Uso",
+          description1: "El acceso y navegación por el Sitio Web atribuyen la condición de Usuario, lo que implica la aceptación plena y sin reservas del presente Aviso Legal.",
+          description2: "El Usuario se compromete a hacer un uso adecuado del Sitio Web, con respeto a la normativa vigente, la buena fe, el orden público, los usos del tráfico y las presentes condiciones. Queda prohibido el uso del Sitio Web con fines ilícitos o lesivos para QTG y/o para cualquier tercero.",
+          description3: "QTG se reserva el derecho de modificar en cualquier momento la presentación, configuración, contenidos y servicios del Sitio Web, así como las condiciones requeridas para su acceso y/o utilización."
+        },
+
+        liability: {
+          title: "Responsabilidad",
+          intro1: "QTG aplica medidas técnicas y organizativas razonables y proporcionadas para mantener el correcto funcionamiento del Sitio Web y la seguridad de la información, orientadas a preservar su integridad, confidencialidad y disponibilidad. No obstante, el Usuario entiende y acepta que el uso de servicios en internet implica asumir ciertos riesgos técnicos que no pueden eliminarse totalmente.",
+          intro2: "En este sentido, QTG no garantiza la disponibilidad, continuidad o infalibilidad del Sitio Web ni de sus contenidos. QTG podrá interrumpir temporalmente el acceso por razones de mantenimiento, actualización, mejora, seguridad o por circunstancias que lo exijan (incluidas incidencias de terceros proveedores de hosting, comunicaciones o infraestructura), pudiendo a su discreción anunciar dichas interrupciones o ejecutarlas en horarios de menor impacto.",
+          exclusionsTitle: "QTG no será responsable de los daños y perjuicios de cualquier naturaleza que pudieran derivarse de",
+          exclusions: [
+            "Interferencias, omisiones, interrupciones, fallos o desconexiones en el funcionamiento operativo del sistema electrónico, de la red de telecomunicaciones o de los equipos del Usuario, por causas ajenas a QTG.",
+            "La presencia de malware, virus, troyanos, vulnerabilidades o cualesquiera otros elementos informáticos dañinos en el Sitio Web o en los contenidos a los que se pueda acceder, cuando hayan sido introducidos por terceros o resulten inherentes al uso de redes abiertas.",
+            "El uso indebido o negligente del Sitio Web por parte del Usuario o de terceros, así como del incumplimiento de las presentes condiciones de uso.",
+            "Las decisiones adoptadas por el Usuario con base en la información disponible en el Sitio Web, la cual tiene carácter general, informativo y no constituye asesoramiento profesional.",
+            "La falta de veracidad, exactitud, exhaustividad, actualización, legalidad o disponibilidad de contenidos y/o servicios prestados por terceros a los que el Usuario pueda acceder mediante hipervínculos.",
+            "Contenido interactivo publicado por usuarios en comentarios, foros u otros espacios de participación que puedan vulnerar derechos de terceros o infringir la normativa aplicable.",
+            "La integración de servicios de terceros, widgets, plugins o contenido externo que puedan causar fallos operativos, vulnerabilidades de seguridad o problemas de privacidad de datos.",
+            "Errores, bugs o vulnerabilidades de seguridad en el software del Sitio Web, infraestructura de hosting o sistemas de terceros asociados que puedan afectar la funcionalidad o los datos del usuario.",
+            "Accesos no autorizados, violaciones de datos o incidentes de seguridad que afecten al Sitio Web o la información del usuario cuando sean causados por ataques sofisticados, exploits de día cero o amenazas persistentes avanzadas que superen las medidas de seguridad estándar.",
+            "Pérdida de datos, interrupción del negocio o daños consecuenciales derivados del uso o la imposibilidad de usar el Sitio Web, independientemente de si QTG ha sido advertida de la posibilidad de tales daños."
+          ],
+          disclaimer: "Lo anterior se entiende sin perjuicio de las responsabilidades que no puedan excluirse o limitarse conforme a la normativa aplicable. Para información adicional sobre el tratamiento de datos personales y las tecnologías de rastreo utilizadas en el Sitio Web, el Usuario puede consultar la <a href='/privacy-policy' class='text-brand-accent hover:underline'>Política de Privacidad</a> y la <a href='/cookie-policy' class='text-brand-accent hover:underline'>Política de Cookies</a> disponibles en el propio Sitio Web."
+        },
+
+        scraping: {
+          title: "Prohibición de scraping, data mining y accesos automatizados",
+          warning: "Actividades Prohibidas",
+          description: "El Sitio Web se ofrece para consulta personal. Sin autorización previa y por escrito de QTG queda prohibido:",
+          prohibited: [
+            "Extraer o reutilizar de forma sistemática contenidos o datos (web scraping, crawling, harvesting).",
+            "Usar bots o scripts para acceder, recopilar información o eludir medidas técnicas (p. ej., robots.txt, limitaciones de ritmo).",
+            "Realizar minería de textos y datos con fines comerciales (incluido entrenar modelos de IA).",
+            "Reproducir, publicar o crear repositorios con copias sustanciales del Sitio Web."
+          ],
+          consequence: "Se admite la indexación básica por motores de búsqueda que respeten robots.txt. QTG podrá bloquear accesos y se reserva el derecho de ejercer cuantas acciones legales le asistan para proteger sus derechos."
+        },
+
+        intellectualProperty: {
+          title: "Propiedad Intelectual e Industrial",
+          description1: "Todos los contenidos del sitio web (textos, imágenes, logotipos, estructura, diseño, código fuente, etc.) son titularidad de QTG o cuentan con licencia o autorización expresa para su uso. Están protegidos por la normativa vigente en materia de propiedad intelectual e industrial.",
+          description2: "Queda prohibida la reproducción, distribución, comunicación pública, transformación o cualquier otra forma de explotación no autorizada, salvo consentimiento expreso y por escrito de QTG. QTG se reserva cuantas acciones legales le asisten para hacer valer lo dispuesto en la presente cláusula.",
+          description3: "El uso no autorizado de los contenidos del sitio web podrá dar lugar al ejercicio de las acciones legales correspondientes."
+        },
+
+        dataProtection: {
+          title: "Protección de Datos Personales",
+          description1: "Legal Core Labs actúa como responsable del tratamiento de los datos personales que se recogen a través del presente sitio web. El tratamiento se realizará conforme al RGPD y la LOPDGDD, garantizando en todo momento los derechos de los interesados.",
+          description2: "Para más información sobre el tratamiento de sus datos personales, puede consultar nuestra <a href='/privacy-policy' class='text-brand-accent hover:underline'>Política de Privacidad</a>."
+        },
+
+        applicableLaw: {
+          title: "Legislación Aplicable y Jurisdicción",
+          description: "Este Aviso Legal se rige íntegramente por la legislación española. Cualquier controversia que pudiera derivarse del acceso o uso del sitio web será sometida a los juzgados y tribunales de Las Palmas de Gran Canaria, salvo en los casos en que la normativa prevea fuero imperativo distinto."
+        },
+
+        contact: {
+          title: "¿Preguntas sobre este Aviso Legal?",
+          description: "Si tiene alguna pregunta sobre este aviso legal o nuestras obligaciones legales, contáctenos para obtener aclaraciones.",
+          email: "rgpd@devcloudpartners.com",
+          emailButton: "Contactar Equipo Legal",
+          generalContact: "Contacto General"
+        },
+
+        updates: {
+          title: "Actualizaciones del Aviso Legal",
+          recentTitle: "Actualizaciones Recientes", 
+          recent: "1 de octubre de 2025 - Actualización integral del aviso legal con cumplimiento LSSI y RGPD"
         }
       }
       ,
