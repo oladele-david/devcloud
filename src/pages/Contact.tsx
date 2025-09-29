@@ -9,6 +9,7 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { Mail01Icon, Call02Icon, Location01Icon, SentIcon } from '@hugeicons/core-free-icons';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { toast } from 'sonner';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -29,12 +30,73 @@ export default function Contact() {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/.netlify/functions/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Check if the response is ok first
+      if (!response.ok) {
+        if (response.status === 404) {
+          throw new Error('Email service is not available. Please try again later or contact us directly.');
+        }
+        // Try to get error message from response
+        let errorMessage = 'Failed to send message';
+        try {
+          const errorResult = await response.json();
+          errorMessage = errorResult.error || errorMessage;
+        } catch {
+          // If JSON parsing fails, use status text
+          errorMessage = response.statusText || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success(t('contact.form.success') || 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.');
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          company: '',
+          phone: '',
+          location: '',
+          budget: '',
+          timeline: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Sorry, there was an error sending your message. Please try again.';
+      toast.error(t('contact.form.error') || errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   useEffect(() => {
@@ -98,7 +160,7 @@ export default function Contact() {
               </div>
 
               <div className="bg-white border border-gray-200 rounded-xl p-3 sm:p-4 flex-1 flex flex-col">
-                <form className="space-y-3 sm:space-y-4 flex-1 flex flex-col">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 flex-1 flex flex-col">
                   <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
@@ -285,10 +347,11 @@ export default function Contact() {
 
                   <Button 
                     type="submit" 
-                    className="w-full h-10 bg-brand-accent hover:bg-brand-accent-700 text-white font-semibold text-sm sm:text-base"
+                    disabled={isSubmitting}
+                    className="w-full h-10 bg-brand-accent hover:bg-brand-accent-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm sm:text-base"
                   >
                     <HugeiconsIcon icon={SentIcon} size={18} className="mr-2" />
-                    {t('contact.form.submit')}
+                    {isSubmitting ? (t('contact.form.sending') || 'Sending...') : (t('contact.form.submit') || 'Send Message')}
                   </Button>
                 </form>
 

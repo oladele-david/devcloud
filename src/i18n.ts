@@ -503,7 +503,10 @@ const resources = {
           subjectPlaceholder: "What can we help you with?",
           message: "Message",
           messagePlaceholder: "Tell us about your project, goals, and any specific requirements...",
-          submit: "Send Message"
+          submit: "Send Message",
+          sending: "Sending...",
+          success: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+          error: "Sorry, there was an error sending your message. Please try again."
         },
         info: {
           email: {
@@ -1563,7 +1566,10 @@ const resources = {
           subjectPlaceholder: "¿En qué podemos ayudarte?",
           message: "Mensaje",
           messagePlaceholder: "Cuéntanos sobre tu proyecto, objetivos y cualquier requisito específico...",
-          submit: "Enviar Mensaje"
+          submit: "Enviar Mensaje",
+          sending: "Enviando...",
+          success: "¡Gracias! Tu mensaje se ha enviado exitosamente. Te responderemos pronto.",
+          error: "Lo sentimos, hubo un error enviando tu mensaje. Por favor inténtalo de nuevo."
         },
         info: {
           email: {
