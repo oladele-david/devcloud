@@ -64,20 +64,21 @@ const TestimonialsSection = () => {
     },
     {
       author: {
-        name: "Laura Sánchez",
-        handle: "@laura_architect",
-        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+        name: "Ismael Martín – Cloudima",
+        handle: "@cloudima_ai",
+        avatar: "/partners/cloudima-cl.png"
       },
       text: t('testimonials.items.4.text'),
     },
     {
       author: {
-        name: "Roberto Vega",
-        handle: "@roberto_cio",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+        name: "Laura Sánchez",
+        handle: "@laura_architect",
+        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
       },
       text: t('testimonials.items.5.text'),
-    }
+    },
+    
   ]
 
   return (

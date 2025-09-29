@@ -549,8 +549,9 @@ const resources = {
           { text: "Their success-based model gives us complete confidence. We only pay when we see real value in our systems." },
           { text: "24/7 support and continuous optimization have transformed our operations. Highly recommended." },
           { text: "Their AWS and Azure expertise helped us design a robust, scalable architecture. Excellent collaboration." },
+          { text: "With DevCloud Partners, we’ve turned our cloud infrastructure into a true growth lever: measurable results, optimized costs, and a team that supports us every step of the way." },
+
           { text: "From the Canary Islands to the world. A local team with global vision that truly delivers results." },
-          { text: "DevCloud Partners reduced our infrastructure costs significantly with transparent FinOps practices." }
         ]
       },
       faq: {
@@ -1904,8 +1905,8 @@ const resources = {
           { text: "El modelo basado en éxito nos da total confianza. Solo pagamos cuando vemos valor real." },
           { text: "El soporte 24/7 y la optimización continua han transformado nuestras operaciones." },
           { text: "Su experiencia en AWS y Azure nos permitió diseñar una arquitectura robusta y escalable." },
+          { text: "Con DevCloud Partners hemos logrado que nuestra infraestructura en la nube sea una palanca real de crecimiento: resultados medibles, costes optimizados y un equipo que acompaña cada paso del camino." },
           { text: "De Canarias al mundo. Un equipo local con visión global que entrega resultados." },
-          { text: "DevCloud Partners redujo significativamente nuestros costes con prácticas FinOps transparentes." }
         ]
       },
       faq: {
