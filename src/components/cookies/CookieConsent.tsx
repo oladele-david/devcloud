@@ -71,7 +71,10 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ onAccept, onReject }) => 
                     {t('cookies.banner.title', 'We use cookies')}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {t('cookies.banner.description', 'We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.')}
+                    {t('cookies.banner.description', 'This website uses first-party and third-party cookies to ensure it functions properly, analyze browsing activity, and—if you consent—personalize content and show advertising based on your browsing habits. You can learn more and access our cookie settings at any time by visiting our')} {' '}
+                    <a href="/cookie-policy" className="text-brand-accent hover:underline">
+                      {t('cookies.banner.link', 'Cookie Policy')}
+                    </a>
                   </p>
                 </div>
               </div>
