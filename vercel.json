@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "name": "devcloudpartners",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "api/**/*.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "SMTP_HOST": "@smtp_host",
+    "SMTP_PORT": "@smtp_port",
+    "SMTP_USER": "@smtp_user", 
+    "SMTP_PASS": "@smtp_pass",
+    "SMTP_FROM": "@smtp_from",
+    "CONTACT_EMAIL": "@contact_email"
+  },
+  "build": {
+    "env": {
+      "VITE_DEPLOYMENT_PLATFORM": "vercel"
+    }
+  }
+}

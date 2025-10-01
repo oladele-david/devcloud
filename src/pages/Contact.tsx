@@ -10,6 +10,7 @@ import { Mail01Icon, Call02Icon, Location01Icon, SentIcon } from '@hugeicons/cor
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { toast } from 'sonner';
+import deploymentConfig from '@/config/deployment';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -45,7 +46,8 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/.netlify/functions/contact', {
+      const contactEndpoint = deploymentConfig.getContactEndpoint();
+      const response = await fetch(contactEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
